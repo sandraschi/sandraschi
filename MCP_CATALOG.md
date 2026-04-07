@@ -39,10 +39,15 @@ A detailed look at the core Model Context Protocol (MCP) servers in the sandrasc
 | **[blender-mcp](https://github.com/sandraschi/blender-mcp)** | **[gimp-mcp](https://github.com/sandraschi/gimp-mcp)** |
 | Automated 3D mesh and scene generation via Blender Python API. | Automated image processing and texture pipeline for asset creation. |
 
-| <img src="assets/card_inkscape.svg" width="400"> | |
+| <img src="assets/card_inkscape.svg" width="400"> | <img src="assets/card_worldlabs.svg" width="400"> |
 | :--- | :--- |
-| **[inkscape-mcp](https://github.com/sandraschi/inkscape-mcp)** | |
-| Vector graphics and SVG illustration automation substrate. | |
+| **[inkscape-mcp](https://github.com/sandraschi/inkscape-mcp)** | **[worldlabs-mcp](https://github.com/sandraschi/worldlabs-mcp)** |
+| Vector graphics and SVG illustration automation substrate. | AI-driven world and scene generation for virtual environments. |
+
+| <img src="assets/card_davinci.svg" width="400"> | |
+| :--- | :--- |
+| **[davinci-resolve-mcp](https://github.com/sandraschi/davinci-resolve-mcp)** | |
+| Automated post-production and color grading pipeline for video. | |
 
 ---
 
@@ -58,6 +63,11 @@ A detailed look at the core Model Context Protocol (MCP) servers in the sandrasc
 | **[advanced-memory-mcp](https://github.com/sandraschi/advanced-memory-mcp)** | **[devices-mcp](https://github.com/sandraschi/devices-mcp)** |
 | Zettelkasten knowledge base with 200+ curated semantic skills and memory. | Unified interface for Smart Home control and IoT grid management. |
 
+| <img src="assets/card_arxiv.svg" width="400"> | <img src="assets/card_xkcd.svg" width="400"> |
+| :--- | :--- |
+| **[arxiv-mcp](https://github.com/sandraschi/arxiv-mcp)** | **[xkcd-mcp](https://github.com/sandraschi/xkcd-mcp)** |
+| Scientific paper search and RAG ingestion for academic research. | Comic retrieval and semantic search over the xkcd humor corpus. |
+
 ---
 
-*Explore the live fleet on [Glama](https://glama.ai/mcp/servers?query=sandraschi).*
+*Homespun Fleet · Alsergrund Node · Vienna*
