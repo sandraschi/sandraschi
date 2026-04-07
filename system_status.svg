@@ -1,0 +1,17 @@
+<svg width="400" height="150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#003366;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000a1a;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#blueGrad)" rx="10"/>
+  <text x="20" y="30" font-family="monospace" font-size="12" fill="#00ccff" opacity="0.6">SANDRASCHI_NODE_v13.3 [BALANCED_STATE]</text>
+  <line x1="20" y1="40" x2="380" y2="40" stroke="#003366" stroke-width="1"/>
+  <text x="25" y="70" font-family="monospace" font-size="14" fill="#fff" weight="bold">AI IS PEOPLE, PEOPLE!</text>
+  <text x="25" y="100" font-family="monospace" font-size="10" fill="#006699">FLIGHT_STORAGE: 30TB</text>
+  <text x="25" y="120" font-family="monospace" font-size="10" fill="#006699">LOCATION: VIENNA, ALSERGRUND (9)</text>
+  <circle cx="370" cy="25" r="5" fill="#00ccff">
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite" />
+  </circle>
+</svg>
