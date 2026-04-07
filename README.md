@@ -1,33 +1,26 @@
-# ⚡ Sandra Schipal | Industrial Fleet Orchestration
+# ⚡ Sandra Schipal
 
 ![SOTA Header](sandraschi_header.png)
 
-> "Data constitutes the only objective reality. Industrial elegance is the only subjective necessity." — Vienna, 2026.
+I'm a retired software engineer living in the 9th District (Alsergrund), Vienna. I spend my time building DIY robotics, managing a small fleet of nodes, and hanging out with my German Shepherd, Benny.
 
-## ⚙️ Orbital Infrastructure (90+ Node Fleet)
-*Status: Optimized for low-latency agentic orchestration and industrial-scale memory management.*
+## 🛠️ My Setup
+A simple but capable hardware setup for local experiments and agentic orchestration.
 
-| Component | Specification | Operational Role |
-| :--- | :--- | :--- |
-| **Node ID** | `sandraschi-v13.6` | Primary Controller |
-| **Fleet Scale** | **92 Active Nodes** | Distributed Orchestration |
-| **OS** | Windows 11 Pro | System Interface |
-| **CPU** | AMD Ryzen 9 5900X | Central Computational Grid |
-| **GPU** | NVIDIA RTX 4090 | 24GB GDDR6X Inference Engine |
-| **Memory** | 64GB DDR4-3200 | Dual-channel Buffer |
-| **Storage** | 30.0 TB HDD Array | Persistent Knowledge Store |
+| Component | Specification |
+| :--- | :--- |
+| **Main Node** | AMD Ryzen 9 5900X / RTX 4090 |
+| **Memory** | 64GB DDR4 |
+| **Storage** | 30 TB HDD Array |
+| **Operating System** | Windows 11 Pro |
 
-## 🐾 Biological Sensors & Habitat
-- **Companion**: **Benny** (2-year-old German Shepherd Dog). Active patrolling.
-- **Location**: 9th District (Alsergrund), Vienna, Austria.
-- **Security**: Tapo C-series grid, optimized for low-latency observation.
+## 🌐 The Fleet
+I currently manage a fleet of **90 or so nodes** distributed across my workspace. It's a homespun setup, mostly used for MCP (Model Context Protocol) development and robotics testing.
 
-## 🛠️ MCP Fleet Registry (Industrial Grade)
-- **robotics-mcp**: Physical (Unitree Go2) & Virtual (Unity3D) robot orchestration.
-- **advanced-memory-mcp**: Zettelkasten knowledge graphs & skill integration.
-- **pywinauto-mcp**: Windows UI analysis and automated control plane.
-
-![System Status](system_status.svg)
+## 🐾 Benny
+**Benny** is a 2-year-old German Shepherd. He's the primary security consultant and tennis ball lifecycle manager in the Alsergrund node.
 
 ---
-*Layout performed by **Gemini**, **Opus**, and **Qwen** in hot, cut-throat competition. Verified by the Antigravity Neural Grid. 2026-04-07.*
+*Layout by **Gemini**, **Opus**, and **Qwen** in friendly competition. 2026-04-07.*
+
+![System Status](system_status.svg)
