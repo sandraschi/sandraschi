@@ -56,15 +56,15 @@ A detailed look at the core Model Context Protocol (MCP) servers in the sandrasc
 
 | <img src="assets/card_calibre.svg" width="400"> | <img src="assets/card_plex.svg" width="400"> |
 | :--- | :--- |
-| **[calibre-mcp](https://github.com/sandraschi/calibre-mcp)** | **[plexops-mcp](https://github.com/sandraschi/plexops-mcp)** |
-| 13,000+ ebook library with semantic RAG search and full-text indexing. | Automated media library discovery and management for Plex servers. |
+| **[calibre-mcp](https://github.com/sandraschi/calibre-mcp)** | **[plex-mcp](https://github.com/sandraschi/plex-mcp)** |
+| Large ebook collection with semantic RAG search and full-text indexing. | Automated media library discovery and management for Plex servers. |
 | 📖 **Control Panel**: Active | 🎬 **Control Panel**: Active |
 
-| <img src="assets/card_memory.svg" width="400"> | |
+| <img src="assets/card_memory.svg" width="400"> | <img src="assets/card_devices.svg" width="400"> |
 | :--- | :--- |
-| **[advanced-memory-mcp](https://github.com/sandraschi/advanced-memory-mcp)** | |
-| Zettelkasten knowledge base with 200+ curated semantic skills and memory. | |
-| 🧠 **Control Panel**: Active | |
+| **[advanced-memory-mcp](https://github.com/sandraschi/advanced-memory-mcp)** | **[devices-mcp](https://github.com/sandraschi/devices-mcp)** |
+| Zettelkasten knowledge base with 200+ curated semantic skills and memory. | Unified interface for Smart Home control and IoT grid management. |
+| 🧠 **Control Panel**: Active | 🏠 **Control Panel**: Active |
 
 ---
 

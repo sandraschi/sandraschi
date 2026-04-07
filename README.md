@@ -44,7 +44,7 @@ A few repos that push further than the usual MCP tooling:
 | **[openmanus-mcp](https://github.com/sandraschi/openmanus-mcp)** | Subprocess runner for OpenManus FOSS agent CLI — open-source agentic AI from the command line. |
 | **[yahboom-mcp](https://github.com/sandraschi/yahboom-mcp)** | ROS 2 bridge for a Yahboom Raspbot V2 ("Boomy") running on a Raspberry Pi 5. Two-brain cognition: Gemma 4 on Pi + Claude/Ollama on Goliath. |
 | **[robofang](https://github.com/sandraschi/robofang)** | Sovereign orchestration hub ("OpenClaw++"). Multi-agent council system, MCP fleet management, ROS 2 + Resonite VR bridges. |
-| **[calibre-mcp](https://github.com/sandraschi/calibre-mcp)** | 13,000+ ebook library with semantic RAG search, arXiv/Gutenberg import, and location-aware full-text search. |
+| **[calibre-mcp](https://github.com/sandraschi/calibre-mcp)** | Large ebook collection with semantic RAG search, arXiv/Gutenberg import, and location-aware full-text search. |
 | **[advanced-memory-mcp](https://github.com/sandraschi/advanced-memory-mcp)** | Zettelkasten knowledge base with 200+ curated skills, BM25 CodeMode tool discovery, and multi-IDE skill management. |
 
 ## 🐾 Benny
