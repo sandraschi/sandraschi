@@ -47,10 +47,12 @@ A few repos that push further than the usual MCP tooling:
 
 ---
 
+![Status](assets/system_status.svg)
+
 <p align="center">
   <img src="assets/pelican.svg" alt="sandraschi mascot" width="320"/>
 </p>
 
-*Layout by **Gemini**, **Opus**, and **Qwen** in friendly competition. Pelican animation and SVG refinement by **Claude Sonnet 4.6**. 2026-04-07.*
+---
 
-![System Status](assets/system_status.svg)
+*Layout drafted in friendly competition by **Gemini**, **Opus**, and **Qwen**. Pelican animated by **Claude Sonnet 4.6**. 2026-04-07.*
