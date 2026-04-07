@@ -4,18 +4,21 @@
 
 > "Data constitutes the only objective reality. Industrial elegance is the only subjective necessity." — Vienna, 2026.
 
-## ⚙️ Primary Infrastructure (9-Node Grid)
+## ⚙️ Orbital Infrastructure (90+ Node Fleet)
+A high-fidelity distributed computational substrate for agentic orchestration and robotics experimentation.
+
 | Component | Specification | Operational Role |
 | :--- | :--- | :--- |
-| **Node ID** | `sandraschi-v13.2` | Primary Controller |
+| **Node ID** | `sandraschi-v13.4` | Primary Controller |
+| **Fleet Scale** | **90+ Active Nodes** | Distributed Orchestration |
 | **OS** | Windows 11 Pro | System Interface |
-| **CPU** | AMD Ryzen 9 5900X | 24-core Computational Grid |
+| **CPU** | AMD Ryzen 9 5900X | Central Computational Grid |
 | **GPU** | NVIDIA RTX 4090 | 24GB GDDR6X Inference Engine |
 | **Memory** | 64GB DDR4-3200 | Dual-channel Buffer |
 | **Storage** | 30.0 TB HDD Array | Persistent Knowledge Store |
 
 ## 🐾 Biological Sensors & Habitat
-- **Companion**: **Benny** (2-year-old German Shepherd Dog). Monochromatic patrolling.
+- **Companion**: **Benny** (2-year-old German Shepherd Dog). Active patrolling.
 - **Location**: 9th District (Alsergrund), Vienna, Austria.
 - **Security**: Tapo C-series grid, optimized for low-latency observation.
 
