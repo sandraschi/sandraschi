@@ -24,7 +24,7 @@ I'm a reactivated software engineer living in the 9th District (Alsergrund), Vie
 
 ![Fleet Topology](assets/hero.svg)
 
-I maintain a fleet of **135+ repos**, mostly MCP (Model Context Protocol) servers built on [FastMCP 3.2](https://gofastmcp.com). It's a homespun setup, connecting Claude Desktop to everything: files, git, Plex, Calibre, robotics, 3D tools, music production, Vienna transit, and a lot more.
+I maintain a fleet of **135+ repos**, mostly MCP (Model Context Protocol) servers built on [FastMCP 3.2](https://gofastmcp.com). It's a homespun setup, connecting an **MCP Client** to everything: files, git, Plex, Calibre, robotics, 3D tools, music production, Vienna transit, and a lot more.
 
 All public servers are listed on [Glama](https://glama.ai/mcp/servers?query=sandraschi).
 
