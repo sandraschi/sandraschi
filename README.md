@@ -28,6 +28,12 @@ I maintain a fleet of **135+ repos**, mostly MCP (Model Context Protocol) server
 
 All public servers are listed on [Glama](https://glama.ai/mcp/servers?query=sandraschi).
 
+## ⚡ Human-Centric Interface
+
+While these servers are built for AI consumption, they all feature **vibrant webapp sidecars**. This "Human-in-the-Loop" design allows for manual oversight, fleet telemetry, and direct control of the underlying systems (Robotics, Media, VR) through a premium, responsive dashboard.
+
+Explore the full [**MCP Project Catalog**](MCP_CATALOG.md) for a detailed look at the fleet →
+
 ## 🤖 Radical Projects
 
 A few repos that push further than the usual MCP tooling:
