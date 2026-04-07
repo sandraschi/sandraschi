@@ -10,13 +10,11 @@ A detailed look at the core Model Context Protocol (MCP) servers in the sandrasc
 | :--- | :--- |
 | **[openclaude-mcp](https://github.com/sandraschi/openclaude-mcp)** | **[openmanus-mcp](https://github.com/sandraschi/openmanus-mcp)** |
 | Control plane for the 2026 Claude Code harness. Hardened FastMCP 3.2 infrastructure. | Subprocess runner for OpenManus FOSS agent CLI — open-source agentic AI. |
-| 🧪 **Control Panel**: Active | 🛡️ **Control Panel**: Active |
 
 | <img src="assets/card_yahboom.svg" width="400"> | <img src="assets/card_robofang.svg" width="400"> |
 | :--- | :--- |
 | **[yahboom-mcp](https://github.com/sandraschi/yahboom-mcp)** | **[robofang](https://github.com/sandraschi/robofang)** |
 | ROS 2 bridge for Raspberry Pi 5 robotics. Two-brain cognition (Gemma/Claude). | Sovereign orchestration hub. Multi-agent council system and fleet management. |
-| ⚙️ **Control Panel**: Active | 🌐 **Control Panel**: Active |
 
 ---
 
@@ -26,13 +24,11 @@ A detailed look at the core Model Context Protocol (MCP) servers in the sandrasc
 | :--- | :--- |
 | **[resonite-mcp](https://github.com/sandraschi/resonite-mcp)** | **[unity3d-mcp](https://github.com/sandraschi/unity3d-mcp)** |
 | Real-time VR integration. Connects Claude to Resonite via ProtoFlux/Websockets. | Virtual robotics and physics simulation lab for training and testing. |
-| 🥽 **Control Panel**: Active | 🎮 **Control Panel**: Active |
 
 | <img src="assets/card_osc.svg" width="400"> | <img src="assets/card_avatar.svg" width="400"> |
 | :--- | :--- |
 | **[osc-mcp](https://github.com/sandraschi/osc-mcp)** | **[avatar-mcp](https://github.com/sandraschi/avatar-mcp)** |
 | Universal protocol bridge for real-time sensor and controller transport. | Identity and animation control for VRChat and Resonite avatars. |
-| 📡 **Control Panel**: Active | 🎭 **Control Panel**: Active |
 
 ---
 
@@ -42,13 +38,11 @@ A detailed look at the core Model Context Protocol (MCP) servers in the sandrasc
 | :--- | :--- |
 | **[blender-mcp](https://github.com/sandraschi/blender-mcp)** | **[gimp-mcp](https://github.com/sandraschi/gimp-mcp)** |
 | Automated 3D mesh and scene generation via Blender Python API. | Automated image processing and texture pipeline for asset creation. |
-| 🏛️ **Control Panel**: Active | 🖼️ **Control Panel**: Active |
 
 | <img src="assets/card_inkscape.svg" width="400"> | |
 | :--- | :--- |
 | **[inkscape-mcp](https://github.com/sandraschi/inkscape-mcp)** | |
 | Vector graphics and SVG illustration automation substrate. | |
-| ✒️ **Control Panel**: Active | |
 
 ---
 
@@ -58,13 +52,11 @@ A detailed look at the core Model Context Protocol (MCP) servers in the sandrasc
 | :--- | :--- |
 | **[calibre-mcp](https://github.com/sandraschi/calibre-mcp)** | **[plex-mcp](https://github.com/sandraschi/plex-mcp)** |
 | Large ebook collection with semantic RAG search and full-text indexing. | Automated media library discovery and management for Plex servers. |
-| 📖 **Control Panel**: Active | 🎬 **Control Panel**: Active |
 
 | <img src="assets/card_memory.svg" width="400"> | <img src="assets/card_devices.svg" width="400"> |
 | :--- | :--- |
 | **[advanced-memory-mcp](https://github.com/sandraschi/advanced-memory-mcp)** | **[devices-mcp](https://github.com/sandraschi/devices-mcp)** |
 | Zettelkasten knowledge base with 200+ curated semantic skills and memory. | Unified interface for Smart Home control and IoT grid management. |
-| 🧠 **Control Panel**: Active | 🏠 **Control Panel**: Active |
 
 ---
 
