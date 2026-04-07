@@ -26,9 +26,23 @@ I'm a reactivated software engineer living in the 9th District (Alsergrund), Vie
 
 I maintain a fleet of **135+ repos**, mostly MCP (Model Context Protocol) servers built on [FastMCP 3.2](https://gofastmcp.com). It's a homespun setup, connecting an **MCP Client** to everything: files, git, Plex, Calibre, robotics, 3D tools, music production, Vienna transit, and a lot more.
 
-## ⚡ Human-Centric Interface
+### 🏛️ Human-Centric Interface
+Every MCP server in the fleet features a **custom webapp sidecar**. These interfaces allow for real-time human oversight, manual tool intervention, and high-fidelity telemetry visualization—ensuring the fleet remains a collaborative extension of human intent.
 
-While these servers are built for AI consumption, they all feature **vibrant webapp sidecars**. This "Human-in-the-Loop" design allows for manual oversight, fleet telemetry, and direct control of the underlying systems (Robotics, Media, VR) through a premium, responsive dashboard.
+---
+
+## 🛠️ Interactive Workshop Tools
+
+Live interactive components rendered directly from Gists using Simon Willison's [**Gisthost**](https://gisthost.github.io/).
+
+[![Alsergrund Terminal](assets/terminal_link.svg)](https://gisthost.github.io/?730d1a6f370a2799d04147fc45877b1b)
+
+> [!NOTE]
+> **Node: Alsergrund_01** — Live telemetry for the 90-node fleet, local GPU status, and real-time Vienna Transit (U6) monitoring.
+
+---
+
+## 🏗️ The Fleet Topology
 
 Explore the full [**MCP Project Catalog**](MCP_CATALOG.md) for a detailed look at the fleet →
 
