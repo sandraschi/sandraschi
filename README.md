@@ -1,16 +1,16 @@
-# ⚡ Sandra Schipal | AI is people, people!
+# ⚡ Sandra Schipal | Industrial Fleet Orchestration
 
 ![SOTA Header](sandraschi_header.png)
 
 > "Data constitutes the only objective reality. Industrial elegance is the only subjective necessity." — Vienna, 2026.
 
 ## ⚙️ Orbital Infrastructure (90+ Node Fleet)
-*Warning: Total node count may fluctuate based on local power grid stability and hardware-induced existential crises.*
+*Status: Optimized for low-latency agentic orchestration and industrial-scale memory management.*
 
 | Component | Specification | Operational Role |
 | :--- | :--- | :--- |
-| **Node ID** | `sandraschi-v13.5` | Primary Controller |
-| **Fleet Scale** | **~90 Active Nodes** | Distributed Orchestration |
+| **Node ID** | `sandraschi-v13.6` | Primary Controller |
+| **Fleet Scale** | **92 Active Nodes** | Distributed Orchestration |
 | **OS** | Windows 11 Pro | System Interface |
 | **CPU** | AMD Ryzen 9 5900X | Central Computational Grid |
 | **GPU** | NVIDIA RTX 4090 | 24GB GDDR6X Inference Engine |
@@ -18,9 +18,9 @@
 | **Storage** | 30.0 TB HDD Array | Persistent Knowledge Store |
 
 ## 🐾 Biological Sensors & Habitat
-- **Companion**: **Benny** (2-year-old German Shepherd Dog). Active patrolling and unauthorized tennis ball deployment.
+- **Companion**: **Benny** (2-year-old German Shepherd Dog). Active patrolling.
 - **Location**: 9th District (Alsergrund), Vienna, Austria.
-- **Security**: Tapo C-series grid, optimized for low-latency observation and dog-snack detection.
+- **Security**: Tapo C-series grid, optimized for low-latency observation.
 
 ## 🛠️ MCP Fleet Registry (Industrial Grade)
 - **robotics-mcp**: Physical (Unitree Go2) & Virtual (Unity3D) robot orchestration.

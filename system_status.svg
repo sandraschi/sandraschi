@@ -1,11 +1,11 @@
 <svg width="400" height="150" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="#0a0a0a"/>
-  <text x="20" y="30" font-family="monospace" font-size="12" fill="#ff00ff" opacity="0.8">SANDRASCHI_NODE_v13.4 [WHIMSICAL_STATE]</text>
+  <text x="20" y="30" font-family="monospace" font-size="12" fill="#ff00ff" opacity="0.8">SANDRASCHI_NODE_v13.5 [INDUSTRIAL_STEADY]</text>
   <line x1="20" y1="40" x2="380" y2="40" stroke="#333" stroke-width="1"/>
-  <text x="25" y="70" font-family="monospace" font-size="14" fill="#00ffff" weight="bold">AI IS PEOPLE, PEOPLE!</text>
-  <text x="25" y="100" font-family="monospace" font-size="10" fill="#888">FLEET_CAPACITY: 90+ NODES [ACTIVE]</text>
-  <text x="25" y="120" font-family="monospace" font-size="10" fill="#888">STORAGE_SUBSTRATE: 30.0 TB REDUNDANT</text>
+  <text x="25" y="70" font-family="monospace" font-size="14" fill="#00ffff" weight="bold">INDUSTRIAL_FLEET_ORCHESTRATION_90_NODES</text>
+  <text x="25" y="100" font-family="monospace" font-size="10" fill="#888">FLEET_STATUS: NOMINAL (92/92)</text>
+  <text x="25" y="120" font-family="monospace" font-size="10" fill="#888">LOCATION: VIENNA, ALSERGRUND (9)</text>
   <rect x="370" y="10" width="10" height="10" fill="#ff00ff" opacity="0.3">
-    <animate attributeName="opacity" values="0.3;1;0.3" dur="1s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
   </rect>
 </svg>
