@@ -11,63 +11,95 @@ A detailed look at the core Model Context Protocol (MCP) servers in the sandrasc
 | **[openclaude-mcp](https://github.com/sandraschi/openclaude-mcp)** | **[openmanus-mcp](https://github.com/sandraschi/openmanus-mcp)** |
 | Control plane for the 2026 Claude Code harness. Hardened FastMCP 3.2 infrastructure. | Subprocess runner for OpenManus FOSS agent CLI — open-source agentic AI. |
 
-| [![Yahboom](assets/card_yahboom.svg)](https://github.com/sandraschi/yahboom-mcp#readme) | [![Robofang](assets/card_robofang.svg)](https://github.com/sandraschi/robofang#readme) |
+| [![Robofang](assets/card_robofang.svg)](https://github.com/sandraschi/robofang#readme) | [![Yahboom](assets/card_yahboom.svg)](https://github.com/sandraschi/yahboom-mcp#readme) |
 | :--- | :--- |
-| **[yahboom-mcp](https://github.com/sandraschi/yahboom-mcp)** | **[robofang](https://github.com/sandraschi/robofang)** |
-| ROS 2 bridge for Raspberry Pi 5 robotics. Two-brain cognition (Gemma/Claude). | Sovereign orchestration hub. Multi-agent council system and fleet management. |
+| **[robofang](https://github.com/sandraschi/robofang)** | **[yahboom-mcp](https://github.com/sandraschi/yahboom-mcp)** |
+| Sovereign orchestration hub. Multi-agent council system, fleet management, and VR bridges. | ROS 2 bridge for Raspberry Pi 5 robotics. Two-brain cognition (Gemma/Claude). |
 
 ---
 
 ## 🌐 Virtual Worlds & VR
+
+| [![Avatar](assets/card_avatar.svg)](https://github.com/sandraschi/avatar-mcp#readme) | [![OSC](assets/card_osc.svg)](https://github.com/sandraschi/osc-mcp#readme) |
+| :--- | :--- |
+| **[avatar-mcp](https://github.com/sandraschi/avatar-mcp)** | **[osc-mcp](https://github.com/sandraschi/osc-mcp)** |
+| Identity and animation control for VRChat and Resonite avatars. | Universal protocol bridge for real-time sensor and controller transport. |
 
 | [![Resonite](assets/card_resonite.svg)](https://github.com/sandraschi/resonite-mcp#readme) | [![Unity3D](assets/card_unity3d.svg)](https://github.com/sandraschi/unity3d-mcp#readme) |
 | :--- | :--- |
 | **[resonite-mcp](https://github.com/sandraschi/resonite-mcp)** | **[unity3d-mcp](https://github.com/sandraschi/unity3d-mcp)** |
 | Real-time VR integration. Connects Claude to Resonite via ProtoFlux/Websockets. | Virtual robotics and physics simulation lab for training and testing. |
 
-| [![OSC](assets/card_osc.svg)](https://github.com/sandraschi/osc-mcp#readme) | [![Avatar](assets/card_avatar.svg)](https://github.com/sandraschi/avatar-mcp#readme) |
+| [![VRoidStudio](assets/card_vroidstudio.svg)](https://github.com/sandraschi/vroidstudio-mcp#readme) | |
 | :--- | :--- |
-| **[osc-mcp](https://github.com/sandraschi/osc-mcp)** | **[avatar-mcp](https://github.com/sandraschi/avatar-mcp)** |
-| Universal protocol bridge for real-time sensor and controller transport. | Identity and animation control for VRChat and Resonite avatars. |
+| **[vroidstudio-mcp](https://github.com/sandraschi/vroidstudio-mcp)** | |
+| Automated 3D character and asset pipeline for virtual identities. | |
 
 ---
 
 ## 🎨 Creative Tooling
 
-| [![Blender](assets/card_blender.svg)](https://github.com/sandraschi/blender-mcp#readme) | [![GIMP](assets/card_gimp.svg)](https://github.com/sandraschi/gimp-mcp#readme) |
+| [![Blender](assets/card_blender.svg)](https://github.com/sandraschi/blender-mcp#readme) | [![DaVinci](assets/card_davinci.svg)](https://github.com/sandraschi/davinci-resolve-mcp#readme) |
 | :--- | :--- |
-| **[blender-mcp](https://github.com/sandraschi/blender-mcp)** | **[gimp-mcp](https://github.com/sandraschi/gimp-mcp)** |
-| Automated 3D mesh and scene generation via Blender Python API. | Automated image processing and texture pipeline for asset creation. |
+| **[blender-mcp](https://github.com/sandraschi/blender-mcp)** | **[davinci-resolve-mcp](https://github.com/sandraschi/davinci-resolve-mcp)** |
+| Automated 3D mesh and scene generation via Blender Python API. | Automated post-production and color grading pipeline for video editing. |
 
-| [![Inkscape](assets/card_inkscape.svg)](https://github.com/sandraschi/inkscape-mcp#readme) | [![WorldLabs](assets/card_worldlabs.svg)](https://github.com/sandraschi/worldlabs-mcp#readme) |
+| [![GIMP](assets/card_gimp.svg)](https://github.com/sandraschi/gimp-mcp#readme) | [![Inkscape](assets/card_inkscape.svg)](https://github.com/sandraschi/inkscape-mcp#readme) |
 | :--- | :--- |
-| **[inkscape-mcp](https://github.com/sandraschi/inkscape-mcp)** | **[worldlabs-mcp](https://github.com/sandraschi/worldlabs-mcp)** |
-| Vector graphics and SVG illustration automation substrate. | AI-driven world and scene generation for virtual environments. |
+| **[gimp-mcp](https://github.com/sandraschi/gimp-mcp)** | **[inkscape-mcp](https://github.com/sandraschi/inkscape-mcp)** |
+| Automated image processing and texture pipeline for asset creation. | Vector graphics and SVG illustration automation substrate. |
 
-| [![DaVinci](assets/card_davinci.svg)](https://github.com/sandraschi/davinci-resolve-mcp#readme) | |
+| [![WorldLabs](assets/card_worldlabs.svg)](https://github.com/sandraschi/worldlabs-mcp#readme) | |
 | :--- | :--- |
-| **[davinci-resolve-mcp](https://github.com/sandraschi/davinci-resolve-mcp)** | |
-| Automated post-production and color grading pipeline for video. | |
+| **[worldlabs-mcp](https://github.com/sandraschi/worldlabs-mcp)** | |
+| AI-driven world and scene generation for virtual environments. | |
 
 ---
 
-## 📚 Knowledge & Media
+## 🧠 Knowledge Engineering
 
-| [![Calibre](assets/card_calibre.svg)](https://github.com/sandraschi/calibre-mcp#readme) | [![Plex](assets/card_plex.svg)](https://github.com/sandraschi/plex-mcp#readme) |
+| [![AdvancedMemory](assets/card_memory.svg)](https://github.com/sandraschi/advanced-memory-mcp#readme) | [![arXiv](assets/card_arxiv.svg)](https://github.com/sandraschi/arxiv-mcp#readme) |
 | :--- | :--- |
-| **[calibre-mcp](https://github.com/sandraschi/calibre-mcp)** | **[plex-mcp](https://github.com/sandraschi/plex-mcp)** |
-| Large ebook collection with semantic RAG search and full-text indexing. | Automated media library discovery and management for Plex servers. |
+| **[advanced-memory-mcp](https://github.com/sandraschi/advanced-memory-mcp)** | **[arxiv-mcp](https://github.com/sandraschi/arxiv-mcp)** |
+| Zettelkasten knowledge base with 200+ curated semantic skills and memory. | Scientific paper search and RAG ingestion for academic research. |
 
-| [![Memory](assets/card_memory.svg)](https://github.com/sandraschi/advanced-memory-mcp#readme) | [![Devices](assets/card_devices.svg)](https://github.com/sandraschi/devices-mcp#readme) |
+| [![Calibre](assets/card_calibre.svg)](https://github.com/sandraschi/calibre-mcp#readme) | |
 | :--- | :--- |
-| **[advanced-memory-mcp](https://github.com/sandraschi/advanced-memory-mcp)** | **[devices-mcp](https://github.com/sandraschi/devices-mcp)** |
-| Zettelkasten knowledge base with 200+ curated semantic skills and memory. | Unified interface for Smart Home control and IoT grid management. |
-
-| [![arXiv](assets/card_arxiv.svg)](https://github.com/sandraschi/arxiv-mcp#readme) | [![xkcd](assets/card_xkcd.svg)](https://github.com/sandraschi/xkcd-mcp#readme) |
-| :--- | :--- |
-| **[arxiv-mcp](https://github.com/sandraschi/arxiv-mcp)** | **[xkcd-mcp](https://github.com/sandraschi/xkcd-mcp)** |
-| Scientific paper search and RAG ingestion for academic research. | Comic retrieval and semantic search over the xkcd humor corpus. |
+| **[calibre-mcp](https://github.com/sandraschi/calibre-mcp)** | |
+| Large ebook collection with semantic RAG search and full-text indexing. | |
 
 ---
 
-*Homespun Fleet · Alsergrund Node · Vienna*
+## 🎮 Fun & Games
+
+| [![Games](assets/card_games.svg)](https://github.com/sandraschi/games-mcp#readme) | [![xkcd](assets/card_xkcd.svg)](https://github.com/sandraschi/xkcd-mcp#readme) |
+| :--- | :--- |
+| **[games-mcp](https://github.com/sandraschi/games-mcp)** | **[xkcd-mcp](https://github.com/sandraschi/xkcd-mcp)** |
+| Local entertainment grid management and emulation orchestration. | Comic retrieval and semantic search over the xkcd humor corpus. |
+
+---
+
+## 🏠 Home & Infrastructure
+
+| [![Devices](assets/card_devices.svg)](https://github.com/sandraschi/devices-mcp#readme) | [![Transit](assets/card_transit.svg)](https://github.com/sandraschi/transit-mcp#readme) |
+| :--- | :--- |
+| **[devices-mcp](https://github.com/sandraschi/devices-mcp)** | **[transit-mcp](https://github.com/sandraschi/transit-mcp)** |
+| Unified interface for Smart Home control and IoT grid management. | Real-time Vienna city transit (Wiener Linien) api integration. |
+
+---
+
+## 🛠️ Dev & Platform
+
+| [![DarkFactory](assets/card_darkfactory.svg)](https://github.com/sandraschi/dark-factory-mcp#readme) | [![FileOps](assets/card_fileops.svg)](https://github.com/sandraschi/fileops-mcp#readme) |
+| :--- | :--- |
+| **[dark-factory-mcp](https://github.com/sandraschi/dark-factory-mcp)** | **[fileops-mcp](https://github.com/sandraschi/fileops-mcp)** |
+| Unattended fleet automation plane for industrial-grade operations. | Hardened distributed file management and storage substrate. |
+
+| [![GitOps](assets/card_gitops.svg)](https://github.com/sandraschi/gitops-mcp#readme) | [![MetaMCP](assets/card_metamcp.svg)](https://github.com/sandraschi/meta-mcp#readme) |
+| :--- | :--- |
+| **[gitops-mcp](https://github.com/sandraschi/gitops-mcp)** | **[meta-mcp](https://github.com/sandraschi/meta-mcp)** |
+| Autonomous repository lifecycle and version control orchestration. | Self-aware MCP server management and tool diagnostics. |
+
+---
+
+*Homespun Fleet · Alsergrund Node · Vienna · 2026*
