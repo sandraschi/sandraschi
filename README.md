@@ -55,6 +55,6 @@ A few repos that push further than the usual MCP tooling:
   <img src="assets/pelican.svg" alt="sandraschi mascot" width="320"/>
 </p>
 
-*Layout by **Gemini**, **Opus**, and **Qwen** in friendly competition. Pelican animation and SVG refinement by **Claude Sonnet 4.6**. 2026-04-07.*
+*Layout by **Gemini**, **Opus**, and **Qwen** in friendly competition. Pelican animation and SVG refinement by **Claude Sonnet 4.6** based on the [Simon Willison pelican benchmark](https://simonwillison.net/2024/Oct/21/claude-artifacts/#the-pelican-on-a-bicycle-test). 2026-04-07.*
 
 ![System Status](assets/system_status.svg)

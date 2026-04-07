@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200">
+  <defs>
+    <style>
+      /* wheel spin */
+      @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      /* body bob */
+      @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+      /* leg pedal — left crank */
+      @keyframes crankL { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+      /* leg pedal — right crank (offset) */
+      @keyframes crankR { from { transform: rotate(180deg); } to { transform: rotate(540deg); } }
+      /* beak chomp */
+      @keyframes chomp { 0%,100% { transform: rotate(0deg); } 40%,60% { transform: rotate(18deg); } }
+      /* pouch wobble */
+      @keyframes pouch { 0%,100% { transform: scaleY(1); } 50% { transform: scaleY(1.18); } }
+      /* eye blink */
+      @keyframes blink { 0%,94%,100% { transform: scaleY(1); } 96%,98% { transform: scaleY(0.08); } }
+      /* whole bike rolling */
+      @keyframes roll { from { transform: translateX(-340px); } to { transform: translateX(340px); } }
+
+      .bike    { animation: roll 5s linear infinite; }
+      .body    { animation: bob 0.45s ease-in-out infinite; }
+      .whl     { animation: spin 0.45s linear infinite; transform-box: fill-box; transform-origin: center; }
+      .crankL  { animation: crankL 0.45s linear infinite; transform-box: fill-box; transform-origin: center; }
+      .crankR  { animation: crankR 0.45s linear infinite; transform-box: fill-box; transform-origin: center; }
+      .beak-lo { animation: chomp 0.45s ease-in-out infinite; transform-box: fill-box; transform-origin: 84px 88px; }
+      .pouch   { animation: pouch 0.9s ease-in-out infinite; transform-box: fill-box; transform-origin: 88px 98px; }
+      .eye     { animation: blink 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    </style>
+  </defs>
+
+  <!-- dark background -->
+  <rect width="320" height="200" fill="#0d1117" rx="10"/>
+
+  <!-- ground line -->
+  <line x1="0" y1="168" x2="320" y2="168" stroke="#1e2030" stroke-width="1"/>
+
+  <!-- clip so pelican doesn't bleed outside -->
+  <clipPath id="clip"><rect width="320" height="200" rx="10"/></clipPath>
+  <g clip-path="url(#clip)">
+
+  <!-- the whole rolling assembly, centered at x=160 -->
+  <g class="bike" style="transform-origin:160px 150px">
+
+    <!-- ── BIKE FRAME (static relative to assembly) ── -->
+    <!-- rear wheel -->
+    <g class="whl" style="transform-origin:120px 150px">
+      <circle cx="120" cy="150" r="22" fill="none" stroke="#534AB7" stroke-width="2"/>
+      <line x1="120" y1="128" x2="120" y2="172" stroke="#534AB7" stroke-width="1.2"/>
+      <line x1="98"  y1="150" x2="142" y2="150" stroke="#534AB7" stroke-width="1.2"/>
+      <line x1="104" y1="134" x2="136" y2="166" stroke="#534AB7" stroke-width="0.8" opacity="0.5"/>
+      <line x1="136" y1="134" x2="104" y2="166" stroke="#534AB7" stroke-width="0.8" opacity="0.5"/>
+      <circle cx="120" cy="150" r="3" fill="#7F77DD"/>
+    </g>
+    <!-- front wheel -->
+    <g class="whl" style="transform-origin:200px 150px">
+      <circle cx="200" cy="150" r="22" fill="none" stroke="#534AB7" stroke-width="2"/>
+      <line x1="200" y1="128" x2="200" y2="172" stroke="#534AB7" stroke-width="1.2"/>
+      <line x1="178" y1="150" x2="222" y2="150" stroke="#534AB7" stroke-width="1.2"/>
+      <line x1="184" y1="134" x2="216" y2="166" stroke="#534AB7" stroke-width="0.8" opacity="0.5"/>
+      <line x1="216" y1="134" x2="184" y2="166" stroke="#534AB7" stroke-width="0.8" opacity="0.5"/>
+      <circle cx="200" cy="150" r="3" fill="#7F77DD"/>
+    </g>
+    <!-- frame: chainstay + seatstay -->
+    <line x1="120" y1="150" x2="155" y2="128" stroke="#5DCAA5" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="120" y1="150" x2="155" y2="128" stroke="#0F6E56" stroke-width="1" stroke-linecap="round"/>
+    <!-- downtube -->
+    <line x1="155" y1="128" x2="200" y2="150" stroke="#5DCAA5" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="155" y1="128" x2="200" y2="150" stroke="#0F6E56" stroke-width="1"/>
+    <!-- seat tube -->
+    <line x1="155" y1="128" x2="158" y2="108" stroke="#5DCAA5" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- fork -->
+    <line x1="185" y1="118" x2="200" y2="150" stroke="#5DCAA5" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- top tube -->
+    <line x1="158" y1="108" x2="185" y2="118" stroke="#5DCAA5" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- handlebar stem + bar -->
+    <line x1="185" y1="118" x2="184" y2="106" stroke="#AFA9EC" stroke-width="2" stroke-linecap="round"/>
+    <line x1="178" y1="103" x2="190" y2="103" stroke="#AFA9EC" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- saddle -->
+    <rect x="150" y="103" width="16" height="4" rx="2" fill="#AFA9EC"/>
+
+    <!-- crank + pedals -->
+    <g class="crankL" style="transform-origin:155px 128px">
+      <line x1="155" y1="120" x2="155" y2="136" stroke="#EF9F27" stroke-width="2" stroke-linecap="round"/>
+      <rect x="148" y="119" width="10" height="3" rx="1.5" fill="#BA7517"/>
+      <rect x="148" y="134" width="10" height="3" rx="1.5" fill="#BA7517"/>
+    </g>
+    <g class="crankR" style="transform-origin:155px 128px">
+      <line x1="155" y1="120" x2="155" y2="136" stroke="#EF9F27" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    </g>
+
+    <!-- ── PELICAN body (bobs) ── -->
+    <g class="body" style="transform-origin:160px 105px">
+      <!-- body -->
+      <ellipse cx="155" cy="95" rx="28" ry="18" fill="#e8e0d0"/>
+      <!-- wing fold -->
+      <path d="M 132 92 Q 140 82 155 88 Q 148 96 132 96 Z" fill="#c8bfae"/>
+      <!-- neck -->
+      <path d="M 165 80 Q 178 70 182 60" stroke="#e8e0d0" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <!-- head -->
+      <ellipse cx="183" cy="57" rx="11" ry="10" fill="#e8e0d0"/>
+      <!-- eye -->
+      <g class="eye" style="transform-origin:187px 54px">
+        <ellipse cx="187" cy="54" rx="3.5" ry="3.5" fill="#111"/>
+        <circle cx="188.5" cy="53" r="1" fill="white"/>
+      </g>
+      <!-- orange eye ring -->
+      <circle cx="187" cy="54" r="4.5" fill="none" stroke="#EF9F27" stroke-width="1"/>
+      <!-- upper beak (fixed) -->
+      <path d="M 190 57 L 215 60 L 210 64 L 190 62 Z" fill="#EF9F27"/>
+      <!-- lower beak (chomps) -->
+      <g class="beak-lo">
+        <path d="M 190 62 L 210 64 L 205 72 L 190 65 Z" fill="#BA7517"/>
+        <!-- pouch -->
+        <g class="pouch">
+          <path d="M 191 64 Q 202 78 204 71" fill="#F0997B" opacity="0.85"/>
+        </g>
+      </g>
+      <!-- crest tuft -->
+      <path d="M 180 48 Q 182 40 178 36 Q 183 42 186 38 Q 184 44 188 42 Q 184 48 183 48 Z" fill="#EF9F27"/>
+      <!-- legs (simple, static — pedalling implied by cranks) -->
+      <line x1="148" y1="110" x2="152" y2="124" stroke="#EF9F27" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="160" y1="112" x2="158" y2="126" stroke="#EF9F27" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+
+  </g><!-- end .bike -->
+  </g><!-- end clip -->
+
+  <!-- caption -->
+  <text x="160" y="190" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="9" fill="#3a3a3a">sandraschi · Vienna · 2026</text>
+</svg>
