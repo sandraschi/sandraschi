@@ -102,4 +102,32 @@ A detailed look at the core Model Context Protocol (MCP) servers in the sandrasc
 
 ---
 
+<details>
+<summary><strong>🤓 How do these visual cards work?</strong></summary>
+
+Each card above is a plain `.svg` file sitting in the `assets/` folder. GitHub's Markdown renderer displays inline images natively — so `[![label](assets/card_foo.svg)](https://github.com/...)` gives you a clickable image that renders as a styled card, with no JavaScript, no external fonts, no CDN, no CSS files, no build step.
+
+The SVG itself carries everything inline:
+
+```xml
+<svg width="400" height="120" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#0d1117" rx="10"/>
+  <rect width="100%" height="30" fill="#993556" rx="10" opacity="0.4"/>
+  <text x="20" y="20" font-family="sans-serif" font-size="12"
+        font-weight="bold" fill="#ED93B1" letter-spacing="1">CATEGORY</text>
+  <text x="20" y="75" font-family="sans-serif" font-size="24"
+        font-weight="800" fill="#e6edf3">Server Name</text>
+  <text x="20" y="100" font-family="sans-serif" font-size="10"
+        fill="#555">SHORT DESCRIPTION</text>
+</svg>
+```
+
+"Where's the CSS?" — it's in the `fill=`, `font-family=`, `font-size=` attributes. SVG has its own presentation model; CSS is optional. The dark background, rounded corners, and coloured header strip are just two `<rect>` elements. The whole card is ~600 bytes.
+
+The grid layout is a Markdown table where each cell contains an image link. GitHub renders the table, the images render inside it, and the links wrap the images. Three nested Markdown features doing exactly what they were designed to do.
+
+</details>
+
+---
+
 *Homespun Fleet · Alsergrund Node · Vienna · 2026*
