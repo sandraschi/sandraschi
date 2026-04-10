@@ -6,7 +6,7 @@ In Q1 2026, the threshold was crossed. The industrialization of software develop
 ## 🛠️ The Process (SOTA 2026)
 The days of developers hunched over keyboards, manually mashing `py` and `ps1` files, debugging via console logs in VS Code, and writing a few sparse tests are **officially over**.
 
-In the 2026 workflow, we utilize **Agentic IDEs** (Antigravity, Cursor, Windsurf, Zed, Xcode 26+) and **SOTA LLMs** (Claude Opus 4.6, Gemini 3.1 Pro/Flash, Codex 5.3) as primary architects.
+In the 2026 workflow, we utilize **Agentic IDEs** (Antigravity, Cursor, Windsurf, Zed, Xcode 26+) and **SOTA LLMs** (Claude Opus 4.6, Gemini 3.1 Pro/Flash, Codex 5.3) as primary agents.
 
 - **Architecture**: Blueprints are drafted through multi-agent consensus protocols.
 - **Implementation**: Code is generated with zero-friction semantic precision.
