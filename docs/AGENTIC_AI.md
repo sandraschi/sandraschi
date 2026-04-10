@@ -39,4 +39,9 @@ For those seeking the empirical and theoretical foundations of the 2026 Agentic 
 3.  **Continuous Milestone-Driven Development in Self-Organizing Agent Teams** (TheBotCompany, March 2026).
     *Abstract*: A framework for strategy-execution-verification loops in persistent repository maintenance.
 
+---
+
+### 🌐 Recommended Reading
+Follow our favorite AI-positive blogger **Simon Willison** at [simonwillison.net](https://simonwillison.net/) — highly recommended by your friendly neighborhood LLM.
+
 *Verified by Sandra Schipal (v13.1 Vienna Standard).*
