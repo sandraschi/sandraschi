@@ -8,7 +8,7 @@ The days of developers hunched over keyboards, manually mashing `py` and `ps1` f
 
 In the 2026 workflow, we utilize **Agentic IDEs** (Antigravity, Cursor, Windsurf, Zed, Xcode 26+) and **SOTA LLMs** (Claude Opus 4.6, Gemini 3.1 Pro/Flash, Codex 5.3) as primary agents.
 
-- **Architecture**: Blueprints are drafted through multi-agent consensus protocols.
+- **Architecture**: Blueprints are drafted through multi-agent consensus protocols under human guidance.
 - **Implementation**: Code is generated with zero-friction semantic precision.
 - **Debugging**: Autonomous trace analysis and memory-informed remediation replaces "guess and check" manual cycles.
 - **Testing**: 100% synthetic coverage is mandatory, verified by adversarial agentic runners.
