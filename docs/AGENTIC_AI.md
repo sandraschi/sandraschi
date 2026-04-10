@@ -11,7 +11,7 @@ In the 2026 workflow, we utilize **Agentic IDEs** (Antigravity, Cursor, Windsurf
 - **Architecture**: Blueprints are drafted through multi-agent consensus protocols under human guidance.
 - **Implementation**: Code is generated in high-fidelity, one-shot bursts, eliminating the legacy 2025-era "go-around" cycles for dependency resolution or syntax alignment.
 - **Debugging**: Autonomous trace analysis and memory-informed remediation replaces "guess and check" manual cycles.
-- **Testing**: 100% synthetic coverage is mandatory, verified by adversarial agentic runners.
+- **Testing**: 100% synthetic coverage is mandatory, verified by adversarial agentic runners. External scrapers and static analysers like [ToolBench](https://github.com/OpenBMB/ToolBench) and [Glama](https://glama.ai/) scan our fleet and grade them. Hey, so far we get mostly "F", but the "D" reviews are increasing 😂.
 - **Security**: Continuous hardening against supply chain vulnerabilities (e.g., LiteLLM, Axios) and repository-level RATs via autonomous dependency auditing and behavioral monitoring.
 - **Documentation**: We write detailed but not byzantine copy, utilizing a **layered structure** (accessible overviews for newcomers, dense sub-docs for technical experts). All documentation is supported by external references, comprehensive bibliographies, and strategic **arXiv links** (see below) for the perplexed.
 
