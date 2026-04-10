@@ -38,6 +38,8 @@ For those seeking the empirical and theoretical foundations of the 2026 Agentic 
     *Abstract*: Introduces dynamic workflow generation based on query-specific latent difficulty signals. [arXiv:2509.11079](https://arxiv.org/abs/2509.11079).
 3.  **Continuous Milestone-Driven Development in Self-Organizing Agent Teams** (TheBotCompany, March 2026).
     *Abstract*: A framework for strategy-execution-verification loops in persistent repository maintenance.
+4.  **ToolBench: A Multi-Agent Benchmark for Real-World Tool Manipulation** (OpenBMB/Arcade).
+    *Abstract*: Standardized infrastructure for evaluating agentic competence in complex software environments. [toolbench.arcade.dev](https://toolbench.arcade.dev/).
 
 ---
 
