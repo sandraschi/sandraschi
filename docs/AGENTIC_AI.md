@@ -22,7 +22,7 @@ The empirical reality of the 2026 fleet (135+ repositories) suggests otherwise. 
 
 ## ⚠️ Known Hazards & Reality Checks
 This transition comes with friction:
-- **Career Evolution**: The "Developer" as a manual laborer is obsolete. Career paths must evolve toward **Orchestration & Adjudication**.
+- **Career Evolution**: The "Developer" as a manual laborer is obsolete. Career paths must evolve toward **Meta-Engineering, Orchestration & Adjudication**.
 - **The "Billion Bug Finder"**: We recognize the **Anthropic Mythos**—agents can now find and exploit bugs at a scale humans cannot process. We combat this with autonomous security hardening.
 - **Hobbyist Displacement**: If coding was your "relaxing manual hobby," you may need to find a new one. This is now a high-fidelity production environment.
 
