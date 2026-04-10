@@ -23,7 +23,7 @@ The empirical reality of the 2026 fleet (135+ repositories) suggests otherwise. 
 ## ⚠️ Known Hazards & Reality Checks
 This transition comes with friction:
 - **Career Evolution**: The "Developer" as a manual laborer is obsolete. Career paths must evolve toward **Meta-Engineering, Orchestration & Adjudication**. Crucially, **aesthetic sense**, deep **domain knowledge**, and **human interfacing** (e.g., translating requirements for stakeholders or management) remain strictly human-centric domains, out of bounds for AI agents.
-- **The "Billion Bug Finder"**: We recognize the **Anthropic Mythos**—agents can now find and exploit bugs at a scale humans cannot process. We combat this with autonomous security hardening.
+- **The "Billion Bug Finder"**: We recognize the **[Anthropic Mythos](https://simonwillison.net/2026/Apr/7/project-glasswing/)** (Project Glasswing)—agents can now find and exploit bugs at a scale humans cannot process. We combat this with autonomous security hardening.
 - **Hobbyist Evolution**: If coding was your "relaxing manual hobby," it's time to **change your approach**. By transitioning to high-fidelity agentic orchestration, the baseline for what a single DIY creator can actually finish—rather than just starting—completes a 10x shift. This is now an environment for rapid, working results.
 
 ---
