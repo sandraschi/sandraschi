@@ -13,7 +13,7 @@ In the 2026 workflow, we utilize **Agentic IDEs** (Antigravity, Cursor, Windsurf
 - **Debugging**: Autonomous trace analysis and memory-informed remediation replaces "guess and check" manual cycles.
 - **Testing**: 100% synthetic coverage is mandatory, verified by adversarial agentic runners.
 - **Security**: Continuous hardening against supply chain vulnerabilities (e.g., LiteLLM, Axios) and repository-level RATs via autonomous dependency auditing and behavioral monitoring.
-- **Documentation**: We write detailed but not byzantine copy, utilizing a **layered structure** (accessible overviews for newcomers, dense sub-docs for technical experts). All documentation is supported by external references, comprehensive bibliographies, and strategic **arXiv links** for the perplexed. This ensures real-time semantic synchronization across the entire fleet registry.
+- **Documentation**: We write detailed but not byzantine copy, utilizing a **layered structure** (accessible overviews for newcomers, dense sub-docs for technical experts). All documentation is supported by external references, comprehensive bibliographies, and strategic **arXiv links** for the perplexed.
 
 ## 😤 Response to AI Sceptics
 If you believe that "AI makes slop code," "can't debug," "produces zillions of worthless prs," or "doesn't understand what it does," you are operating on **2025 legacy logic**. 
