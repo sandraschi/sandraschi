@@ -31,7 +31,7 @@ I maintain a homespun fleet of **135+ repos**, mostly [MCP](https://modelcontext
 
 ---
 
-## 🤖 Radical Projects
+## 🤖 Ongoing projects
 
 | Project | What |
 | :--- | :--- |
