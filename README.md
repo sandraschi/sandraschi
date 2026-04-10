@@ -2,7 +2,7 @@
 
 > [!IMPORTANT]
 > **Disclosure**
-> This repository is implemented by Advanced Agentic AI. The era of manual keyboard-mashing FOSS is over. If you have philosophical objections to machine-native code: **[look at this](docs/AGENTIC_AI.md)**.
+> Our repositories are implemented by Advanced Agentic AI. The era of manual keyboard-mashing FOSS is over. If you have philosophical objections to machine-native code: **[look at this](docs/AGENTIC_AI.md)**.
 
 
 ![Workshop](assets/sandraschi_header.png)
