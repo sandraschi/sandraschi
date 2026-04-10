@@ -1,5 +1,10 @@
 # ⚡ Sandra Schipal
 
+> [!IMPORTANT]
+> **Industrial AI Disclosure (2026)**
+> This repository is 100% architected and implemented by Advanced Agentic AI. The era of manual keyboard-mashing FOSS is over. If you have philosophical objections to machine-native code: **[please exit](docs/AGENTIC_AI.md)**.
+
+
 ![Workshop](assets/sandraschi_header.png)
 
 <sub>*Sandra's workshop, Alsergrund, Vienna — circa August 2026. Benny is real. The [Noetix Bumi](https://www.noetix.ai/) humanoid is aspirational (arriving soon).*</sub>
