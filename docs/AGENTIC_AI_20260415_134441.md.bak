@@ -51,16 +51,12 @@ search, full-text extraction where HTML exists, citation tracing, and a local co
 notes. If you want the empirical literature on agentic coding, autonomous software
 engineering, or multi-agent orchestration, that's the right tool for finding it.
 
-The short version of what the research shows: a widely-cited 2025 study (METR) found
-experienced developers using AI tools took 19% *longer* on tasks — but the design
-explains the result. Participants were working on mature codebases they already knew
-well, and the majority had never used Cursor before the study started. It was largely
-measuring the learning curve of an immature early-2025 tool, not steady-state
-productivity for someone who actually uses these tools daily. As a snapshot of
-Q1 2025 Cursor, it was probably accurate. As a claim about agentic coding in 2026,
-it's obsolete. The gains are largest for breadth tasks — building something new,
-spanning many domains, where the bottleneck is knowledge and implementation time
-rather than deep familiarity with an existing codebase. That's exactly the fleet use case.
+The short version of what the 2025–2026 research shows: experienced developers using
+AI tools on mature codebases they already know well don't see dramatic speedups (the
+overhead of prompting and reviewing can offset the generation speed). The gains are
+largest for breadth tasks — building something new, spanning many domains, where the
+human bottleneck is knowledge and implementation time rather than deep familiarity with
+an existing codebase. That's exactly the fleet use case.
 
 If you want good writing on what working in this mode actually feels like,
 Simon Willison's **[Agentic Engineering Patterns](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/)**
@@ -70,7 +66,5 @@ is the most grounded ongoing series on the subject. His distinction between
 fleet is built.
 
 ---
-
-*Still unconvinced? The "but can it even reverse a string?" thread opened in 2023 and is still accepting replies. →*
 
 *Sandra Schipal — Alsergrund, Vienna — 2026*

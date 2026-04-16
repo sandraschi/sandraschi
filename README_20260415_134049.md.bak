@@ -1,13 +1,13 @@
 # ⚡ Sandra Schipal
 
-> [!NOTE]
-> **These repositories are human-architected, AI-implemented.**
-> Architecture, design decisions, and system integration are mine. Code generation and iteration are done by AI agents under my direction. [More on what that means and why →](docs/AGENTIC_AI.md)
+> [!IMPORTANT]
+> **Disclosure**
+> Our repositories are implemented by Advanced Agentic AI. The era of manual keyboard-mashing FOSS is over. If you have philosophical objections to machine-native code: **[look at this](docs/AGENTIC_AI.md)**.
 
 
 ![Workshop](assets/sandraschi_header.png)
 
-<sub>*Sandra's workshop, Alsergrund, Vienna. Benny is real. The [Noetix Bumi](https://www.noetix.ai/) humanoid is aspirational (arriving soon).*</sub>
+<sub>*Sandra's workshop, Alsergrund, Vienna — circa August 2026. Benny is real. The [Noetix Bumi](https://www.noetix.ai/) humanoid is aspirational (arriving soon).*</sub>
 
 I'm a reactivated software engineer living in the 9th District (Alsergrund), Vienna. I build DIY robotics, maintain a fleet of 135+ MCP servers, and hang out with my German Shepherd Benny — and soon, a Noetix Bumi humanoid robot.
 
