@@ -27,9 +27,10 @@ I maintain a homespun fleet of **135+ repos**, mostly [MCP](https://modelcontext
 
 | Project | What |
 | :--- | :--- |
-| **[openclaude-mcp](https://github.com/sandraschi/openclaude-mcp)** | Control plane for the 2026 Claude Code harness. Zero token cost via local Ollama inference. |
+| **[godot-mcp](https://github.com/sandraschi/godot-mcp)** | Godot 4 engine control via MCP. STL import, CFD velocity fields, GPU particles, PBR materials, HTML5 export. Fleet visualization endpoint. |
+| **[freecad-mcp](https://github.com/sandraschi/freecad-mcp)** | Parametric CAD via MCP. STEP/BIM/IFC for architecture and mechanical engineering. |
+| **[qcad-mcp](https://github.com/sandraschi/qcad-mcp)** | 2D/3D drafting via MCP. DXF/STL export, depot management, file watchers. |
 | **[yahboom-mcp](https://github.com/sandraschi/yahboom-mcp)** | ROS 2 bridge for "Boomy" (Yahboom Raspbot V2, RPi 5). Two-brain cognition: Gemma 4 on Pi + Claude/Ollama on Goliath. |
-| **[robofang](https://github.com/sandraschi/robofang)** | Sovereign AI orchestration hub. Multi-agent council, MCP fleet management, ROS 2 + Resonite VR bridges. |
 | **[calibre-mcp](https://github.com/sandraschi/calibre-mcp)** | 13,000 ebook library with semantic RAG search, arXiv/Gutenberg import, and full-text indexing. |
 | **[advanced-memory-mcp](https://github.com/sandraschi/advanced-memory-mcp)** | Zettelkasten knowledge base with 200+ curated skills and BM25 CodeMode tool discovery. |
 
