@@ -34,7 +34,7 @@ on a single GPU, zero cloud cost. Currently, the fleet uses OpenRouter for model
 |------|--------|
 | **Windsurf** | $15/month for what opencode does free. Good UI, wrong price point. |
 | **Cursor** | $20/month. Better than Windsurf for large codebases, but same story — opencode covers the use case. |
-| **Claude Code** | Anthropic's pricing at scale is brutal. Excellent output, unaffordable for fleet-scale work. |
+| **Claude Code** | Anthropic models included in the subscription — much cheaper than raw API. Excellent output. But go past the monthly allotment and it gets expensive fast. Fleet-scale work blows through the cap in days. |
 | **Antigravity IDE** | Google's Gemini-powered IDE. Free with a Google Pro account (2TB, Gemini Advanced, Google One goodies). You *can* bring Anthropic models, but rate limits are brutal. The real problem: update cadence is zero — no new features, no community velocity. Meanwhile opencode ships nearly daily with non-trivial additions. |
 
 The common thread: they're all paid IDEs wrapping cloud models. Once you decouple
