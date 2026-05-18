@@ -23,14 +23,6 @@ I maintain a homespun fleet of **135+ repos**, mostly [MCP](https://modelcontext
 
 ---
 
-## 🛠️ Live Workshop Terminal
-
-[![Alsergrund Terminal](assets/terminal_link.svg)](https://gisthost.github.io/?730d1a6f370a2799d04147fc45877b1b)
-
-> **Node: Alsergrund_01** — Live telemetry, local GPU status, and real-time Vienna Transit (U6) monitoring.
-
----
-
 ## 🤖 Ongoing projects
 
 | Project | What |
