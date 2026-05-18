@@ -20,7 +20,8 @@ via tools, not via context-window abuse. Runs local and remote models transparen
 **[DeepSeek v4](https://openrouter.ai/deepseek/deepseek-v4)** — The model. Near-free
 via OpenRouter (fractions of a cent per million tokens). Code quality at parity with
 Claude Opus 4 on architecture/refactoring tasks, better at bulk generation. Used
-exclusively for this fleet since Q1 2026.
+exclusively for this fleet since Q1 2026. Not multimodal yet — text-only, but the team
+is actively working on vision support.
 
 **The RTX 4090 angle** — DeepSeek v4 at INT4 quantization fits comfortably in 24 GB
 VRAM. The v4 distilled models are expected to hit Ollama within a few months, at which
