@@ -35,7 +35,7 @@ on a single GPU, zero cloud cost. Currently, the fleet uses OpenRouter for model
 | **Windsurf** | $15/month for what opencode does free. Good UI, wrong price point. |
 | **Cursor** | $20/month. Better than Windsurf for large codebases, but same story — opencode covers the use case. |
 | **Claude Code** | Anthropic's pricing at scale is brutal. Excellent output, unaffordable for fleet-scale work. |
-| **Antigravity IDE** | Google's premium Gemini wrapper. Costs more than all others combined, and the Gemini 3 Flash model inside doesn't justify the IDE tax. |
+| **Antigravity IDE** | Google's Gemini-powered IDE. Free with a Google Pro account (which also includes 2TB storage, Gemini Advanced, and other Google One goodies). Strong IDE, but Gemini 3 Flash doesn't beat DeepSeek v4 for code, and it's locked to Google's model. |
 
 The common thread: they're all paid IDEs wrapping cloud models. Once you decouple
 the editor (opencode) from the model (DeepSeek v4 via OpenRouter), you're paying
