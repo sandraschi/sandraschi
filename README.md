@@ -15,7 +15,7 @@ I'm a reactivated software engineer living in the 9th District (Alsergrund), Vie
 
 ## 🌐 The MCP Fleet
 
-I maintain a homespun fleet of **135+ repos**, mostly [MCP](https://modelcontextprotocol.io/) servers built on [FastMCP 3.2](https://gofastmcp.com). One **MCP Client** to rule them all: files, git, Plex, Calibre, robotics, 3D tools, music production, Vienna transit, and a lot more.
+I maintain a homespun fleet of **135+ repos**, each an MCP server with an associated webapp. MCP for agents, webapp for humans — files, git, Plex, Calibre, robotics, 3D tools, music production, Vienna transit, and a lot more. Built on [FastMCP 3.2](https://gofastmcp.com).
 
 ![Fleet Topology](assets/hero.svg)
 
