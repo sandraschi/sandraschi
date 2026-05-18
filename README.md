@@ -63,6 +63,14 @@ I maintain a homespun fleet of **135+ repos**, mostly [MCP](https://modelcontext
 
 ---
 
+## 🙏 Thanks
+
+Shout-out to my brother **Stephan** — for the ideas, the dev war stories, and
+the years of shared experience that shaped how I think about building things.
+Best engineer I know.
+
+---
+
 <p align="center">
   <a href="assessment.md">Assessment</a> • 
   <a href="CHANGELOG.md">Changelog</a>
