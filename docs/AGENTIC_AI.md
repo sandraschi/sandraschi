@@ -66,6 +66,70 @@ well enough to direct the build, and knowing when the result is good.
 The fleet is real infrastructure I use daily. The calibre RAG, the transit monitor, the
 robotics bridges, the memory system — these run. They are not demos.
 
+## The mesh: what 135 MCP servers can do when they talk to each other
+
+The fleet isn't a collection of isolated tools. Each server exposes its domain via FastMCP
+3.2, and the MCP bridge layer lets them call each other. The result is a **composable
+maker pipeline** that didn't exist before — and wouldn't exist without agentic coding.
+
+### Maker input → CAD → Simulation → Viz → Export
+
+```
+blender-mcp ──┐
+gimp-mcp ────┤
+inkscape ────┤  ┌─────────────┐   ┌──────────┐   ┌─────────────┐
+osc-apps ────┼──│ freecad-mcp  │──▶│ FluidX3D │──▶│  godot-mcp  │
+worldlabs ───┘  │  qcad-mcp   │   │ (GPU CFD)│   │  (import +  │
+                └─────────────┘   └──────────┘   │   viz)      │
+                                                  └──────┬──────┘
+                                                         │
+                    ┌────────────┬────────────┬──────────┼──────────┐
+                    ▼            ▼            ▼          ▼          ▼
+               Resonite XR   HTML5 games   Tauri     Arch viz    CFD/FEM
+                            (export web)   native    (BIM)      scientific
+```
+
+**Creative input layer** — [blender-mcp](https://github.com/sandraschi/blender-mcp),
+[gimp-mcp](https://github.com/sandraschi/gimp-mcp), Inkscape, [worldlabs-mcp](https://github.com/sandraschi/worldlabs-mcp),
+[osc-mcp](https://github.com/sandraschi/osc-mcp). These wrap professional creative tools
+as MCP servers, giving an agent direct control over 3D modeling, image editing, vector
+graphics, terrain generation, and real-time OSC control surfaces.
+
+**CAD/BIM layer** — [freecad-mcp](https://github.com/sandraschi/freecad-mcp) and
+[qcad-mcp](https://github.com/sandraschi/qcad-mcp). Parametric CAD and 2D/3D drafting
+via MCP tools. FreeCAD handles STEP/BIM/IFC for architecture and mechanical engineering.
+QCAD produces DXF/STL for fabrication. Both export geometry downstream.
+
+**Simulation layer** — [FluidX3D](https://github.com/ProjectPhysX/FluidX3D) on the GPU.
+Computational fluid dynamics at interactive speeds. The qcad→freecad pipeline generates
+boundary geometry, FluidX3D simulates the flow, and godot-mcp ingests the velocity field
+as CSV.
+
+**Visualization layer** — [godot-mcp](https://github.com/sandraschi/godot-mcp). Imports
+STL geometry, loads CFD velocity fields, spawns GPU particle systems, assigns PBR materials,
+creates cameras with orbit controls, and exports to HTML5/WebAssembly. It's the render
+endpoint for the entire pipeline.
+
+**Export and distribution** — Godot scenes go to [Resonite](https://github.com/sandraschi/resonite-mcp)
+for collaborative XR, to the browser as lightweight HTML5 games, to desktop as Tauri native
+apps (~5 MB), or to architecture and scientific visualization toolchains. The same scene
+can be a game, a CFD demo, or a BIM walkthrough — the pipeline composes, not locks you in.
+
+### Why this matters
+
+No single company ships this pipeline. It crosses CAD vendors (Autodesk, Dassault),
+game engines (Unity, Unreal, Godot), creative suites (Adobe, Blender, GIMP), and
+scientific computing (Ansys, OpenFOAM). Each is a walled garden.
+
+The fleet doesn't ask permission. It wraps each tool as an MCP server, gives them a
+common protocol, and lets an agent orchestrate across all of them. The result is a
+maker pipeline that costs nothing, runs on a single machine, and is entirely under
+your control.
+
+This is what agentic coding unlocks: not writing one file faster, but **composing
+systems that were never designed to work together**, at a scale that was previously
+impossible for an individual.
+
 ## Further reading
 
 If you want the empirical literature on agentic coding, **[arxiv-mcp](https://github.com/sandraschi/arxiv-mcp)**
