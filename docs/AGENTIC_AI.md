@@ -57,7 +57,7 @@ on AI.
 
 ## What this means for this fleet
 
-135+ repos. One person. Working software, not prototypes.
+100+ repos. One person. Working software, not prototypes.
 
 That ratio wasn't possible before. The bottleneck used to be implementation bandwidth —
 the gap between what you could design and what you could type. That gap is now closed.

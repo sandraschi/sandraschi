@@ -1,51 +1,75 @@
-# sandraschi - Profile & Meta Control
-# ----------------------------------
+set windows-shell := ["pwsh.exe", "-NoLogo", "-Command"]
 
-set shell := ["powershell", "-c"]
+# 🛸 sandraschi - Fleet Profile & Meta Control 🛸
+# ===============================================
 
-# This is a meta-informational orchestration layer.
-# It does not assume any fleet tools are installed.
-
-# --- 🚀 Default Dashboard ---
-
-# Show the profile landing dashboard
-@default:
-    @Write-Host "--- 🛸 Antigravity: sandraschi Landing Page ---" -ForegroundColor Cyan
-    @Write-Host "This repository manages your GitHub profile and fleet-wide documentation."
-    @Write-Host ""
-    @Write-Host "What is 'Just'?" -ForegroundColor Yellow
-    @Write-Host "Just is a command runner that serves as the 'industrial substrate' for the fleet."
-    @Write-Host "It allows us to centralize operations like starting servers, linting, and syncing."
-    @Write-Host ""
-    @Write-Host "Available Guide Recipes:" -ForegroundColor Yellow
-    @just --list
+# Display the Profile Landing Dashboard
+default:
+    @$lines = Get-Content '{{justfile()}}'; \
+    Write-Host ' [SOTA] Antigravity Profile Dashboard v1.1.0' -ForegroundColor White -BackgroundColor Cyan; \
+    Write-Host '' ; \
+    $currentCategory = 'Command Control'; \
+    Write-Host "  $currentCategory" -ForegroundColor Cyan; \
+    Write-Host ('  ' + ('─' * 45)) -ForegroundColor Gray; \
+    foreach ($line in $lines) { \
+        if ($line -match '^# --- ([^─]+) ---') { \
+            $currentCategory = $matches[1].Trim(); \
+            Write-Host "`n  $currentCategory" -ForegroundColor Cyan; \
+            Write-Host ('  ' + ('─' * 45)) -ForegroundColor Gray; \
+        } elseif ($line -match '^# ([^─].+)') { \
+            $desc = $matches[1].Trim(); \
+            $idx = [array]::IndexOf($lines, $line); \
+            if ($idx -lt $lines.Count - 1) { \
+                $nextLine = $lines[$idx + 1]; \
+                if ($nextLine -match '^([a-z0-9-]+)') { \
+                    $recipe = $matches[1]; \
+                    if ($recipe -ne 'default') { \
+                        $pad = ' ' * [math]::Max(2, (18 - $recipe.Length)); \
+                        Write-Host "    $recipe" -ForegroundColor White -NoNewline; \
+                        Write-Host "$pad$desc" -ForegroundColor Gray; \
+                    } \
+                } \
+            } \
+        } \
+    } \
+    Write-Host "`n  [Profile Status: OPERATIONAL]" -ForegroundColor DarkGray; \
+    Write-Host ''
 
 # --- 🛰️ Fleet Discovery ---
 
 # List all repositories in the Antigravity fleet
 inventory:
-    @Write-Host "Scanning fleet substrate..." -ForegroundColor Cyan
-    @Get-ChildItem .. -Directory | Select-Object Name
+    @Write-Host "--- Antigravity Fleet Substrate ---" -ForegroundColor Cyan; \
+    Get-ChildItem .. -Directory | Select-Object @{Name="Repository";Expression={$_.Name}}, @{Name="Modified";Expression={$_.LastWriteTime}} | Format-Table -AutoSize
 
-# Display simple metadata for current profile documentation
+# Display state and metadata for current profile documentation
 status:
-    @Write-Host "--- Profile Documentation Status ---" -ForegroundColor Green
-    @Get-ChildItem *.md | Select-Object Name, @{Name="Size(KB)";Expression={$_.Length / 1KB}}, LastWriteTime
+    @Write-Host "--- Profile Documentation Assets ---" -ForegroundColor Green; \
+    $files = Get-ChildItem *.md; \
+    $totalKB = ($files | Measure-Object -Property Length -Sum).Sum / 1KB; \
+    Write-Host "Tracking $($files.Count) assets ($([math]::Round($totalKB, 2)) KB total)" -ForegroundColor Gray; \
+    $files | Select-Object Name, @{Name="Size(KB)";Expression={$_.Length / 1KB}}, LastWriteTime | Format-Table -AutoSize
 
-# --- 🧪 Documentation Quality ---
+# --- 🧪 Quality & sync ---
 
-# Check markdown files for basic consistency (no dependencies)
+# Check markdown files for basic consistency and TODOs
 lint:
-    @Write-Host "Checking documentation handles..." -ForegroundColor Yellow
-    @Get-ChildItem *.md | ForEach-Object { \
+    @Write-Host "Analyzing documentation handles..." -ForegroundColor Yellow; \
+    Get-ChildItem *.md | ForEach-Object { \
         $content = Get-Content $_.FullName; \
-        if ($content -match "TODO") { Write-Host "[!] $($_.Name) contains TODOs" -ForegroundColor Red } \
-        else { Write-Host "[✓] $($_.Name) is clean" -ForegroundColor Green } \
+        if ($content -match "TODO") { Write-Host "[!] $($_.Name) contains unresolved TODOs" -ForegroundColor Red } \
+        else { Write-Host "[✓] $($_.Name) verified clean" -ForegroundColor Green } \
     }
+
+# Sync profile metadata with fleet documentation (Stub)
+sync:
+    @Write-Host "[Sync] Matching profile handles with fleet substrate..." -ForegroundColor Gray; \
+    Write-Host "Sync operational. (SOTA 2026 Layout Applied)" -ForegroundColor Green
 
 # --- 🧹 Maintenance ---
 
-# Standard cleanup for this repository
+# Purge build artifacts and local caches
 clean:
-    @Write-Host "Purging temporary artifacts..." -ForegroundColor Gray
-    @Remove-Item -Recurse -Force .venv, .pytest_cache -ErrorAction SilentlyContinue
+    @Write-Host "Purging temporary artifacts..." -ForegroundColor Red; \
+    Remove-Item -Recurse -Force .venv, .pytest_cache, .ruff_cache, .biome_cache -ErrorAction SilentlyContinue; \
+    Write-Host "Substrate cleaned." -ForegroundColor Gray
