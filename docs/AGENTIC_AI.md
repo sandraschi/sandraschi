@@ -72,21 +72,26 @@ The fleet isn't a collection of isolated tools. Each server exposes its domain v
 3.2, and the MCP bridge layer lets them call each other. The result is a **composable
 maker pipeline** that didn't exist before — and wouldn't exist without agentic coding.
 
-### Maker input → CAD → Simulation → Viz → Export
+### Maker input → CAD → Simulation → Viz + Robotics → Export
 
 ```
 blender-mcp ──┐
 gimp-mcp ────┤
-inkscape ────┤  ┌─────────────┐   ┌──────────┐   ┌─────────────┐
-osc-apps ────┼──│ freecad-mcp  │──▶│ FluidX3D │──▶│  godot-mcp  │
-worldlabs ───┘  │  qcad-mcp   │   │ (GPU CFD)│   │  (import +  │
-                └─────────────┘   └──────────┘   │   viz)      │
-                                                  └──────┬──────┘
-                                                         │
-                    ┌────────────┬────────────┬──────────┼──────────┐
-                    ▼            ▼            ▼          ▼          ▼
-               Resonite XR   HTML5 games   Tauri     Arch viz    CFD/FEM
-                            (export web)   native    (BIM)      scientific
+inkscape ────┤  ┌─────────────┐   ┌──────────┐   ┌──────────┐
+osc-apps ────┼──│ freecad-mcp  │──▶│ FluidX3D │──▶│ godot-mcp │
+worldlabs ───┘  │  qcad-mcp   │   │ (GPU CFD)│   └─────┬────┘
+                └─────────────┘   └──────────┘         │
+                                                       │
+vroid-mcp ──┐                                          │
+avatar-mcp ─┼──────────────────────────────────────────┤
+yahboom ────┤         The Maker Mesh                    │
+robotics ───┤                                          │
+dreame ─────┘                                          │
+                                                       │
+        ┌──────────┬──────────┬──────────┬─────────────┼──────────┐
+        ▼          ▼          ▼          ▼             ▼          ▼
+   Resonite XR  Games    Architecture  CFD/FEM      Robotics    Avatars
+              (godot!)   (BIM/freecad)              (sim+real)  (VRM)
 ```
 
 **Creative input layer** — [blender-mcp](https://github.com/sandraschi/blender-mcp),
@@ -115,11 +120,32 @@ for collaborative XR, to the browser as lightweight HTML5 games, to desktop as T
 apps (~5 MB), or to architecture and scientific visualization toolchains. The same scene
 can be a game, a CFD demo, or a BIM walkthrough — the pipeline composes, not locks you in.
 
+**Robotics layer** — [robotics-mcp](https://github.com/sandraschi/robotics-mcp),
+[yahboom-mcp](https://github.com/sandraschi/yahboom-mcp), and
+[dreame-mcp](https://github.com/sandraschi/dreame-mcp). Physical and simulated robots
+controlled via MCP. Yahboom handles educational robotics kits (ROS-compatible, sensor
+telemetry, motor control). Dreame wraps the DreameHome robot vacuum API — mapping,
+navigation, cleaning schedules — which sounds trivial until you realize a lidar-equipped
+home robot with MCP control is a ready-made autonomous platform for indoor mapping and
+presence. robotics-mcp bridges ROS2 and simulation environments. The same agent that
+designs a CAD model can deploy it to a physical robot for fabrication or inspection.
+This is just the beginning — the mesh can absorb any MCP-wrappable hardware platform.
+
+**Avatar layer** — [vroid-mcp](https://github.com/sandraschi/vroidstudio-mcp) and
+[avatar-mcp](https://github.com/sandraschi/avatar-mcp). VRoid Studio produces VRM 3D
+avatars with full bone rigs and blend shapes. avatar-mcp manages the avatar pipeline:
+import, configure, animate, export. Take a VRM avatar from VRoid, give it to godot-mcp
+for game integration, and deploy it to Resonite for XR presence. The avatar becomes the
+visual embodiment of whatever agent is behind it — a game character, a virtual assistant,
+a robot interface. The robotics and avatar layers are converging: a virtual avatar that
+drives a physical robot, or a physical robot that streams its sensor data to a visualization.
+
 ### Why this matters
 
 No single company ships this pipeline. It crosses CAD vendors (Autodesk, Dassault),
-game engines (Unity, Unreal, Godot), creative suites (Adobe, Blender, GIMP), and
-scientific computing (Ansys, OpenFOAM). Each is a walled garden.
+game engines (Unity, Unreal, Godot), creative suites (Adobe, Blender, GIMP),
+scientific computing (Ansys, OpenFOAM), robotics frameworks (ROS, Yahboom), and
+XR platforms (Resonite, Meta Quest). Each is a walled garden.
 
 The fleet doesn't ask permission. It wraps each tool as an MCP server, gives them a
 common protocol, and lets an agent orchestrate across all of them. The result is a
