@@ -7,6 +7,9 @@
   <a href="https://github.com/PrefectHQ/fastmcp"><img src="https://img.shields.io/badge/FastMCP-3.2-7c5cfc?style=flat-square" alt="FastMCP"></a>
 </p>
 
+
+> 📖 **[Installation Guide](INSTALL.md)** — quick start, manual setup, and troubleshooting
+
 > [!NOTE]
 > **These repositories are human-architected, AI-implemented.**
 > Architecture, design decisions, and system integration are mine. Code generation and iteration are done by AI agents under my direction. [More on what that means and why →](docs/AGENTIC_AI.md)
@@ -55,9 +58,15 @@ I maintain a homespun fleet of **100+ repos**, each an MCP server with an associ
   <img src="assets/pelican.svg" alt="sandraschi mascot" width="320"/>
 </p>
 
+
+> 📖 **[Installation Guide](INSTALL.md)** — quick start, manual setup, and troubleshooting
+
 <p align="center">
   <a href="PELICAN.md"><sub>🐦 what's with the pelican?</sub></a>
 </p>
+
+
+> 📖 **[Installation Guide](INSTALL.md)** — quick start, manual setup, and troubleshooting
 
 ![System Status](assets/system_status.svg)
 
@@ -75,3 +84,6 @@ Best engineer I know.
   <a href="assessment.md">Assessment</a> • 
   <a href="CHANGELOG.md">Changelog</a>
 </p>
+
+> 📖 **[Installation Guide](INSTALL.md)** — quick start, manual setup, and troubleshooting
+
