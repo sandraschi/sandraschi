@@ -1,19 +1,8 @@
 # ⚡ Sandra Schipal
 
-<p align="center">
-  <a href="https://github.com/casey/just"><img src="https://img.shields.io/badge/just-ready_to_go-7c5cfc?style=flat-square&logo=just&logoColor=white" alt="Just"></a>
-  <a href="https://github.com/astral-sh/ruff"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json" alt="Ruff"></a>
-  <a href="https://python.org"><img src="https://img.shields.io/badge/Python-3.13+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"></a>
-  <a href="https://github.com/PrefectHQ/fastmcp"><img src="https://img.shields.io/badge/FastMCP-3.2-7c5cfc?style=flat-square" alt="FastMCP"></a>
-</p>
-
-
-> 📖 **[Installation Guide](INSTALL.md)** — quick start, manual setup, and troubleshooting
-
 > [!NOTE]
 > **These repositories are human-architected, AI-implemented.**
 > Architecture, design decisions, and system integration are mine. Code generation and iteration are done by AI agents under my direction. [More on what that means and why →](docs/AGENTIC_AI.md)
-
 
 ![Workshop](assets/sandraschi_header.png)
 
@@ -58,15 +47,9 @@ I maintain a homespun fleet of **100+ repos**, each an MCP server with an associ
   <img src="assets/pelican.svg" alt="sandraschi mascot" width="320"/>
 </p>
 
-
-> 📖 **[Installation Guide](INSTALL.md)** — quick start, manual setup, and troubleshooting
-
 <p align="center">
   <a href="PELICAN.md"><sub>🐦 what's with the pelican?</sub></a>
 </p>
-
-
-> 📖 **[Installation Guide](INSTALL.md)** — quick start, manual setup, and troubleshooting
 
 ![System Status](assets/system_status.svg)
 
@@ -84,6 +67,3 @@ Best engineer I know.
   <a href="assessment.md">Assessment</a> • 
   <a href="CHANGELOG.md">Changelog</a>
 </p>
-
-> 📖 **[Installation Guide](INSTALL.md)** — quick start, manual setup, and troubleshooting
-
