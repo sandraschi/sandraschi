@@ -30,7 +30,7 @@ I maintain a homespun fleet of **100+ repos**, each an MCP server with an associ
 | **[freecad-mcp](https://github.com/sandraschi/freecad-mcp)** | Parametric CAD via MCP. STEP/BIM/IFC for architecture and mechanical engineering. |
 | **[qcad-mcp](https://github.com/sandraschi/qcad-mcp)** | 2D/3D drafting via MCP. DXF/STL export, depot management, file watchers. |
 | **[yahboom-mcp](https://github.com/sandraschi/yahboom-mcp)** | ROS 2 bridge for "Boomy" (Yahboom Raspbot V2, RPi 5). Two-brain cognition: Gemma 4 on Pi + Claude/Ollama on Goliath. |
-| **[calibre-mcp](https://github.com/sandraschi/calibre-mcp)** | 13,000 ebook library with semantic RAG search, arXiv/Gutenberg import, and full-text indexing. |
+| **[calibre-mcp](https://github.com/sandraschi/calibre-mcp)** | Ebook library with semantic RAG search, arXiv/Gutenberg import, and full-text indexing. |
 | **[advanced-memory-mcp](https://github.com/sandraschi/advanced-memory-mcp)** | Zettelkasten knowledge base with 200+ curated skills and BM25 CodeMode tool discovery. |
 
 → **[Workshop & Hardware Details](WORKSHOP.md)**
