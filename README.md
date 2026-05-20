@@ -51,8 +51,6 @@ I maintain a homespun fleet of **100+ repos**, each an MCP server with an associ
   <a href="PELICAN.md"><sub>🐦 what's with the pelican?</sub></a>
 </p>
 
-![System Status](assets/system_status.svg)
-
 ---
 
 ## 🙏 Thanks
