@@ -28,11 +28,11 @@ The stack has three layers: editor, model, and the bridge between them.
 
 | Layer | Tool | Role |
 |-------|------|------|
-| **Editor** | [Cursor Ultra](https://cursor.com) or [opencode](https://github.com/anomalyco/opencode) | Cursor when the deal is good (currently 50% off). opencode as the permanent free fallback. Both are MCP-aware; the IDE choice matters less than the model behind it. |
+| **Editor** | [Cursor Ultra](https://cursor.com) or [opencode](https://github.com/anomalyco/opencode) | Cursor when the deal is good (currently 50% off). opencode as the permanent free fallback. Both are MCP-aware[^mcp]; the IDE choice matters less than the model behind it. |
 | **Primary model** | [DeepSeek v4](https://openrouter.ai/deepseek/deepseek-v4) via OpenRouter | Daily driver. Fractions of a cent per million tokens. Code quality at parity with Claude Opus 4 on architecture/refactoring, better at bulk generation. Text-only. |
 | **Premium model** | [Anthropic Fable 5](https://anthropic.com) | Temporary freebie (free until June 22, 2026). Outstanding quality — used for planning and complex architectural reasoning. Gets replaced when the deal ends. |
 | **Deal-driven** | Claude (Fable 5 freebie) | Temporary free tier — used while it lasts, dropped when it ends. The stack is fluid by design. |
-| **Local fallback** | RTX 4090, 24 GB VRAM | DeepSeek v4 INT4 quant fits. Distilled models expected soon — then the entire stack runs **zero-cloud** (no token costs, no subscriptions). |
+| **Local fallback** | RTX 4090, 24 GB VRAM | DeepSeek v4 INT4 quant fits. Distilled models expected soon — then the entire stack runs **zero-cloud**[^zerocloud] (no token costs, no subscriptions). |
 
 **Strategy: ride the deals.** Use what's best at the best price, switch when the deal
 changes. Cursor Ultra + Fable 5 today. opencode + DeepSeek v4 when deals lapse. Local
@@ -41,7 +41,7 @@ setup. The stack is fluid by design; only the separation of concerns is permanen
 
 **Why this matters:** 2026 is the year of the cloud token cost explosion. Enterprises
 that bet everything on GPT-4/Claude Opus API calls are seeing bills that make CFOs
-choke — tokenmaxxing every prompt, chasing leaderboard scores, CTOs publicly pumping
+choke — tokenmaxxing[^tokenmax] every prompt, chasing leaderboard[^leaderboard] scores, CTOs publicly pumping
 the brakes. The fleet sidestepped this entirely by design: DeepSeek v4 at fractional-cent
 pricing, deal-driven premium access, and a local GPU path that will eventually eliminate
 cloud costs altogether. The trap was obvious from the start: don't build your stack on
@@ -58,7 +58,7 @@ the agent is told "comply with fleet standards" and it does, because the standar
 are documented, not tribal.
 
 The failure mode is not code quality. The model produces solid code when the
-architecture is well-specified. The failure mode is **context drift** — an agent
+architecture is well-specified. The failure mode is **context drift**[^contextdrift] — an agent
 that worked perfectly on one repo starts hallucinating because it lost track of
 the constraints. The answer is aggressive context management (compact, /clear,
 spec-first planning) and not pretending agents have infinite memory.
@@ -182,7 +182,30 @@ impossible for an individual.
 - **[Fleet standards](https://github.com/sandraschi/mcp-central-docs/tree/master/standards)** — the playbook every repo follows. Tool design, response patterns, Tauri NSIS, PowerShell rules.
 - **[leanforge-mcp](https://github.com/sandraschi/leanforge-mcp)** — Lean 4 formal proof search via LLM + compiler feedback loop. The most ambitious current project.
 - **[arxiv-mcp](https://github.com/sandraschi/arxiv-mcp)** — pipe into arXiv for the empirical literature on agentic coding.
-- Simon Willison's **[Agentic Engineering Patterns](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/)** — the best writing on working in this mode. His *vibe coding* vs. *agentic engineering* distinction maps directly to how this fleet is built.
+- Simon Willison's **[Agentic Engineering Patterns](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/)** — the best writing on working in this mode. His *vibe coding*[^vibe] vs. *agentic engineering*[^agentic] distinction maps directly to how this fleet is built.
+
+---
+
+## Terms
+
+| Term | Meaning |
+|------|---------|
+| **MCP-aware** | An editor or tool that speaks the [Model Context Protocol](https://modelcontextprotocol.io) — letting AI agents discover and call external tools, APIs, and data sources. |
+| **Tokenmaxxing** | The pattern of pumping ever-larger token volumes into premium API models (GPT-4, Claude Opus), chasing marginal quality gains while the bill compounds. The opposite of efficient prompt design. |
+| **Leaderboard-chasing** | Optimizing for benchmark scores (LMSYS Chatbot Arena, HumanEval, etc.) rather than real-world task performance. Models that top leaderboards sometimes fail at simple production tasks. |
+| **Zero-cloud** | Running the entire AI stack on local hardware (RTX 4090) — no API calls, no token costs, no monthly subscriptions. The end-state goal once distilled models arrive. |
+| **Vibe coding** | Letting the AI generate code with minimal human direction, accepting whatever comes out. Term coined by [Andrej Karpathy](https://x.com/karpathy/status/1886192184808149383). |
+| **Agentic engineering** | The structured alternative: human specifies architecture and constraints, AI implements under supervision, tests verify, human reviews. Coined by [Simon Willison](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/). |
+| **Context drift** | The degradation of AI output quality over a long session as the model loses track of earlier constraints and decisions. Mitigated by compaction, fresh starts, and spec-first planning. |
+| **INT4 quantization** | Compressing a neural network so each weight uses 4 bits instead of the usual 16 or 32. Cuts VRAM usage by 4–8x with minimal quality loss, enabling 70B+ models to run on a single consumer GPU. |
+
+[^mcp]: The [Model Context Protocol](https://modelcontextprotocol.io) — a standard for AI tools to discover and call external capabilities. An MCP-aware editor can talk to any MCP server.
+[^tokenmax]: **Tokenmaxxing** — pumping ever-larger token volumes into premium API models, chasing marginal quality gains while the bill compounds. The opposite of efficient prompt design.
+[^leaderboard]: **Leaderboard-chasing** — optimizing for benchmark scores (LMSYS, HumanEval) rather than real-world task performance. Models that top leaderboards sometimes fail at simple production tasks.
+[^zerocloud]: **Zero-cloud** — running the entire AI stack on local hardware. No API calls, no token costs, no subscriptions.
+[^vibe]: **Vibe coding** — letting AI generate code with minimal direction. Term coined by [Andrej Karpathy](https://x.com/karpathy/status/1886192184808149383).
+[^agentic]: **Agentic engineering** — human specifies architecture and constraints, AI implements under supervision, tests verify, human reviews. Term coined by [Simon Willison](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/).
+[^contextdrift]: **Context drift** — the degradation of AI output quality over a long session as the model loses track of earlier constraints.
 
 ---
 
