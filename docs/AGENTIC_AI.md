@@ -1,5 +1,10 @@
 # The Agentic Revolution: Post-Keyboard FOSS
 
+> **TL;DR** — I design the architecture and judge the output. AI generates the code.
+> This fleet of 130+ MCP servers is built by one person because agentic coding collapsed
+> the gap between what I can design and what I can implement. Everything here runs daily.
+> It's not demos.
+
 ## What changed
 
 In early 2026, agentic coding quality crossed a threshold. The repositories in this fleet
@@ -12,67 +17,46 @@ work that used to be 80% of the job.
 
 ## Current Tool Stack (June 2026)
 
-**[Cursor Ultra](https://cursor.com)** — 50% price reduction (temporary deal). The IDE
-itself is excellent — the agentic diff view, inline edit preview, MCP server integration,
-and context-aware codebase indexing are genuinely better than the alternatives. At the
-discounted price it's a no-brainer. Would not pay full Ultra price; would revert to
-opencode.
+The stack has three layers: editor, model, and the bridge between them.
 
-**[opencode](https://github.com/anomalyco/opencode)** — Free, open-source CLI agentic
-coding tool. Terminal-native, MCP-aware, handles context management aggressively.
-Covers ~90% of what Cursor/Claude Code do, but costs nothing. Reads codebases
-via tools, not via context-window abuse. Runs local and remote models transparently.
-Fallback when subscription deals lapse.
+| Layer | Tool | Role |
+|-------|------|------|
+| **Editor** | [Cursor Ultra](https://cursor.com) or [opencode](https://github.com/anomalyco/opencode) | Cursor when the deal is good (currently 50% off). opencode as the permanent free fallback. Both are MCP-aware; the IDE choice matters less than the model behind it. |
+| **Primary model** | [DeepSeek v4](https://openrouter.ai/deepseek/deepseek-v4) via OpenRouter | Daily driver. Fractions of a cent per million tokens. Code quality at parity with Claude Opus 4 on architecture/refactoring, better at bulk generation. Text-only. |
+| **Premium model** | [Anthropic Fable 5](https://anthropic.com) | Temporary freebie (free until June 22, 2026). Outstanding quality — used for planning and complex architectural reasoning. Gets replaced when the deal ends. |
+| **Local fallback** | RTX 4090, 24 GB VRAM | DeepSeek v4 INT4 quant fits. Distilled models expected soon — then the entire stack runs zero-cloud. |
 
-**[DeepSeek v4](https://openrouter.ai/deepseek/deepseek-v4)** — Daily driver model.
-Near-free via OpenRouter (fractions of a cent per million tokens). Code quality at parity
-with Claude Opus 4 on architecture/refactoring tasks, better at bulk generation. Used
-exclusively for this fleet since Q1 2026. Not multimodal yet — text-only.
+**Strategy: ride the deals.** Use the best available at the best price, never get locked
+in. Cursor Ultra + Fable 5 when deals align. opencode + DeepSeek v4 at fractional-cent
+pricing as the permanent baseline. Decouple editor from model — that's the durable setup.
 
-**[Anthropic Fable 5](https://anthropic.com)** — Temporary freebie deal (free until June
-22, 2026). Absolutely incredible quality — like driving a Rolls. Hyper-expensive cloud
-APIs are fine when you catch these deals. Used for planning and complex architectural
-reasoning sessions where its superior nuance matters. After the freebie ends, it gets
-drop-kicked back to the expensive tier unless another deal appears.
+## Keeping 130+ repos coherent
 
-**The RTX 4090 angle** — DeepSeek v4 at INT4 quantization fits comfortably in 24 GB
-VRAM. The v4 distilled models are expected to hit Ollama within a few months, at which
-point the entire fleet toolchain (planning + implementation + review) runs fully local
-on a single GPU, zero cloud cost.
+A fleet this size doesn't stay healthy by accident. Every repo follows the same
+playbook: same tooling (FastMCP 3.2, uv, Ruff, justfile), same response patterns
+(dialogic returns with message + next_steps), same startup scripts (start.ps1),
+same CI (ruff + pytest), same Tauri NSIS installer template. The fleet standard
+lives in `mcp-central-docs/standards/` and is enforced by linting and code review —
+the agent is told "comply with fleet standards" and it does, because the standards
+are documented, not tribal.
 
-## Strategy: ride the deals
+The failure mode is not code quality. The model produces solid code when the
+architecture is well-specified. The failure mode is **context drift** — an agent
+that worked perfectly on one repo starts hallucinating because it lost track of
+the constraints. The answer is aggressive context management (compact, /clear,
+spec-first planning) and not pretending agents have infinite memory.
 
-The pattern: subscribe to the best deals, use the best model available at the time,
-and never get locked in. Cursor Ultra at 50% off? Yes. Fable 5 free until June 22?
-Yes, and use it for everything while it lasts. When these lapse, opencode + DeepSeek v4
-via OpenRouter at fractional-cent pricing is the permanent fallback.
+## The remaining challenges
 
-The expensive cloud APIs are worth it *when the deal is right*. The key is not getting
-dependent on any single provider's full price.
+The 2023–2024 critique of AI code (hallucinated APIs, confident wrongness) is
+largely solved by agentic loops — the model reads its output, tests it, fixes
+failures, iterates. What replaces it are subtler issues:
 
-## What we left behind
-
-| Tool | Reason |
-|------|--------|
-| **Windsurf** | $15/month for what opencode does free. Good UI, wrong price point. |
-| **Claude Code** | Anthropic models included in subscription — excellent output, but the cap is too low for fleet-scale work. Days to blow through it. |
-| **Antigravity IDE** | Google v2 update made it light and shadow — some genuinely useful Gemini integration, but plagued by regressions, inconsistent quality, and zero community velocity. At its best it's good. At its worst it's unusable. Not worth the context switch from Cursor/opencode. |
-
-The common thread: the best setup is decoupling the editor from the model.
-opencode + DeepSeek v4 via OpenRouter is the permanent baseline at ~$0/month.
-Cursor Ultra + Fable 5 is the upgrade when deals align.
-
-## AI slop: the objection that aged poorly
-
-The 2023–2024 critique was accurate for single-shot generation: hallucinated APIs,
-confident wrongness, code that looked plausible and didn't work. By mid-2026, agentic
-stacks — where the model reads its own output, runs tests, fixes failures, and iterates —
-produce qualitatively different results. The failure modes are different and much less
-frequent.
-
-The actual remaining challenge is **volume asymmetry**: generating a PR takes seconds,
-reviewing it takes an hour. The answer is better automated test gates, not a moratorium
-on AI.
+- **Volume asymmetry**: generating a PR takes seconds, reviewing it takes an hour.
+  Better automated test gates are the answer, not slowing down.
+- **Context drift**: long sessions degrade. Active compaction and fresh starts help.
+- **Stale PRs**: fast generation means hundreds of changes. Not all get reviewed
+  promptly. The answer is smaller, focused PRs and automated CI gates.
 
 ## What this means for this fleet
 
@@ -178,12 +162,10 @@ impossible for an individual.
 
 ## Further reading
 
-If you want the empirical literature on agentic coding, **[arxiv-mcp](https://github.com/sandraschi/arxiv-mcp)**
-gives a clean pipe into arXiv: search, full-text, citation tracing, local corpus.
-
-Simon Willison's **[Agentic Engineering Patterns](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/)**
-series is the best ongoing writing on working in this mode. His *vibe coding* vs.
-*agentic engineering* distinction maps directly to how this fleet is built.
+- **[Fleet standards](https://github.com/sandraschi/mcp-central-docs/tree/master/standards)** — the playbook every repo follows. Tool design, response patterns, Tauri NSIS, PowerShell rules.
+- **[leanforge-mcp](https://github.com/sandraschi/leanforge-mcp)** — Lean 4 formal proof search via LLM + compiler feedback loop. The most ambitious current project.
+- **[arxiv-mcp](https://github.com/sandraschi/arxiv-mcp)** — pipe into arXiv for the empirical literature on agentic coding.
+- Simon Willison's **[Agentic Engineering Patterns](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/)** — the best writing on working in this mode. His *vibe coding* vs. *agentic engineering* distinction maps directly to how this fleet is built.
 
 ---
 
