@@ -8,7 +8,7 @@
 
 <sub>*Sandra's workshop, Alsergrund, Vienna. Benny is real. The [Noetix Bumi](https://www.noetix.ai/) humanoid is aspirational (arriving soon).*</sub>
 
-I'm a software engineer living in the 9th District (Alsergrund), Vienna. I build DIY robotics, maintain a fleet of 130+ MCP servers, and hang out with my German Shepherd Benny — and soon, a Noetix Bumi humanoid robot.
+I'm a retired and vibe-reactivated software engineer living in the 9th District (Alsergrund), Vienna. I build DIY robotics, maintain a fleet of 130+ MCP servers, and hang out with my German Shepherd Benny — and soon, a Noetix Bumi humanoid robot.
 
 ---
 
