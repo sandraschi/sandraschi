@@ -52,6 +52,11 @@ People and sites worth following (no slop):
 | ⚡ **FastMCP** | [gofastmcp.com](https://gofastmcp.com) — the framework every server in this fleet is built on. |
 | 🧮 **Lean 4** | [lean-lang.org](https://lean-lang.org) — formal proof verification. leanforge-mcp runs on this. |
 | 📄 **arXiv** | [arxiv.org](https://arxiv.org) — where the useful papers live before the blog posts. |
+| 🎥 **Andrej Karpathy** | [YouTube](https://youtube.com/@andrejkarpathy) — zero-hype technical AI. The "Intro to LLMs" talk is still the best single explanation. |
+| 🎥 **AI Explained** | [YouTube](https://youtube.com/@aiexplained-official) — covers actual research, not product launches. Best depth-to-accessibility ratio. |
+| 🎥 **ThePrimeTime** | [YouTube](https://youtube.com/@ThePrimeTimeagen) — dev perspective on AI tooling. Skeptical, calls out bullshit, aligns with the vibe coding vs agentic engineering framing. |
+| 📝 **Ethan Mollick** | [One Useful Thing](https://oneusefulthing.substack.com) — AI in practice, short dense posts about what actually works. |
+| 📝 **Interconnects** (Nathan Lambert) | [Substack](https://interconnects.substack.com) — ML research without fluff. Open-weight models, alignment, actual paper analysis. |
 
 <p align="center">
   <img src="assets/pelican.svg" alt="" width="160"/>
