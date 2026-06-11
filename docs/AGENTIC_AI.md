@@ -39,6 +39,14 @@ changes. Cursor Ultra + Fable 5 today. opencode + DeepSeek v4 when deals lapse. 
 RTX 4090 when distilled models land. Decouple editor from model — that's the durable
 setup. The stack is fluid by design; only the separation of concerns is permanent.
 
+**Why this matters:** 2026 is the year of the cloud token cost explosion. Enterprises
+that bet everything on GPT-4/Claude Opus API calls are seeing bills that make CFOs
+choke — tokenmaxxing every prompt, chasing leaderboard scores, CTOs publicly pumping
+the brakes. The fleet sidestepped this entirely by design: DeepSeek v4 at fractional-cent
+pricing, deal-driven premium access, and a local GPU path that will eventually eliminate
+cloud costs altogether. The trap was obvious from the start: don't build your stack on
+a meter that runs $0.15 every time you tab-complete.
+
 ## Keeping 130+ repos coherent
 
 A fleet this size doesn't stay healthy by accident. Every repo follows the same
