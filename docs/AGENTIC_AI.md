@@ -31,11 +31,13 @@ The stack has three layers: editor, model, and the bridge between them.
 | **Editor** | [Cursor Ultra](https://cursor.com) or [opencode](https://github.com/anomalyco/opencode) | Cursor when the deal is good (currently 50% off). opencode as the permanent free fallback. Both are MCP-aware; the IDE choice matters less than the model behind it. |
 | **Primary model** | [DeepSeek v4](https://openrouter.ai/deepseek/deepseek-v4) via OpenRouter | Daily driver. Fractions of a cent per million tokens. Code quality at parity with Claude Opus 4 on architecture/refactoring, better at bulk generation. Text-only. |
 | **Premium model** | [Anthropic Fable 5](https://anthropic.com) | Temporary freebie (free until June 22, 2026). Outstanding quality — used for planning and complex architectural reasoning. Gets replaced when the deal ends. |
-| **Local fallback** | RTX 4090, 24 GB VRAM | DeepSeek v4 INT4 quant fits. Distilled models expected soon — then the entire stack runs zero-cloud. |
+| **Deal-driven** | Claude (Fable 5 freebie) | Temporary free tier — used while it lasts, dropped when it ends. The stack is fluid by design. |
+| **Local fallback** | RTX 4090, 24 GB VRAM | DeepSeek v4 INT4 quant fits. Distilled models expected soon — then the entire stack runs **zero-cloud** (no token costs, no subscriptions). |
 
-**Strategy: ride the deals.** Use the best available at the best price, never get locked
-in. Cursor Ultra + Fable 5 when deals align. opencode + DeepSeek v4 at fractional-cent
-pricing as the permanent baseline. Decouple editor from model — that's the durable setup.
+**Strategy: ride the deals.** Use what's best at the best price, switch when the deal
+changes. Cursor Ultra + Fable 5 today. opencode + DeepSeek v4 when deals lapse. Local
+RTX 4090 when distilled models land. Decouple editor from model — that's the durable
+setup. The stack is fluid by design; only the separation of concerns is permanent.
 
 ## Keeping 130+ repos coherent
 
