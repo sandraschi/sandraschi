@@ -1,4 +1,4 @@
-# The Agentic Shift: Post-Keyboard FOSS
+# The Agentic Revolution: Post-Keyboard FOSS
 
 ## What changed
 
@@ -10,38 +10,57 @@ The human job shifted from typing to thinking. Architecture, taste, judgment, kn
 the output is wrong. The agent handles syntax, plumbing, tests, formatting, and the grind
 work that used to be 80% of the job.
 
-## Current Tool Stack (May 2026)
+## Current Tool Stack (June 2026)
+
+**[Cursor Ultra](https://cursor.com)** — 50% price reduction (temporary deal). The IDE
+itself is excellent — the agentic diff view, inline edit preview, MCP server integration,
+and context-aware codebase indexing are genuinely better than the alternatives. At the
+discounted price it's a no-brainer. Would not pay full Ultra price; would revert to
+opencode.
 
 **[opencode](https://github.com/anomalyco/opencode)** — Free, open-source CLI agentic
 coding tool. Terminal-native, MCP-aware, handles context management aggressively.
-Covers ~90% of what Windsurf/Cursor/Claude Code do, but costs nothing. Reads codebases
+Covers ~90% of what Cursor/Claude Code do, but costs nothing. Reads codebases
 via tools, not via context-window abuse. Runs local and remote models transparently.
+Fallback when subscription deals lapse.
 
-**[DeepSeek v4](https://openrouter.ai/deepseek/deepseek-v4)** — The model. Near-free
-via OpenRouter (fractions of a cent per million tokens). Code quality at parity with
-Claude Opus 4 on architecture/refactoring tasks, better at bulk generation. Used
-exclusively for this fleet since Q1 2026. Not multimodal yet — text-only, but the team
-is actively working on vision support.
+**[DeepSeek v4](https://openrouter.ai/deepseek/deepseek-v4)** — Daily driver model.
+Near-free via OpenRouter (fractions of a cent per million tokens). Code quality at parity
+with Claude Opus 4 on architecture/refactoring tasks, better at bulk generation. Used
+exclusively for this fleet since Q1 2026. Not multimodal yet — text-only.
+
+**[Anthropic Fable 5](https://anthropic.com)** — Temporary freebie deal (free until June
+22, 2026). Absolutely incredible quality — like driving a Rolls. Hyper-expensive cloud
+APIs are fine when you catch these deals. Used for planning and complex architectural
+reasoning sessions where its superior nuance matters. After the freebie ends, it gets
+drop-kicked back to the expensive tier unless another deal appears.
 
 **The RTX 4090 angle** — DeepSeek v4 at INT4 quantization fits comfortably in 24 GB
 VRAM. The v4 distilled models are expected to hit Ollama within a few months, at which
 point the entire fleet toolchain (planning + implementation + review) runs fully local
-on a single GPU, zero cloud cost. Currently, the fleet uses OpenRouter for model access
-(DeepSeek v4-pro, ~$0.14/M input tokens) and opencode as the execution substrate.
+on a single GPU, zero cloud cost.
+
+## Strategy: ride the deals
+
+The pattern: subscribe to the best deals, use the best model available at the time,
+and never get locked in. Cursor Ultra at 50% off? Yes. Fable 5 free until June 22?
+Yes, and use it for everything while it lasts. When these lapse, opencode + DeepSeek v4
+via OpenRouter at fractional-cent pricing is the permanent fallback.
+
+The expensive cloud APIs are worth it *when the deal is right*. The key is not getting
+dependent on any single provider's full price.
 
 ## What we left behind
 
 | Tool | Reason |
 |------|--------|
 | **Windsurf** | $15/month for what opencode does free. Good UI, wrong price point. |
-| **Cursor** | $20/month. Better than Windsurf for large codebases, but same story — opencode covers the use case. |
-| **Claude Code** | Anthropic models included in the subscription — much cheaper than raw API. Excellent output. But go past the monthly allotment and it gets expensive fast. Fleet-scale work blows through the cap in days. |
-| **Antigravity IDE** | Google's Gemini-powered IDE. Free with a Google Pro account (2TB, Gemini Advanced, Google One goodies). You *can* bring Anthropic models, but rate limits are brutal. The real problem: update cadence is zero — no new features, no community velocity. Meanwhile opencode ships nearly daily with non-trivial additions. |
+| **Claude Code** | Anthropic models included in subscription — excellent output, but the cap is too low for fleet-scale work. Days to blow through it. |
+| **Antigravity IDE** | Google v2 update made it light and shadow — some genuinely useful Gemini integration, but plagued by regressions, inconsistent quality, and zero community velocity. At its best it's good. At its worst it's unusable. Not worth the context switch from Cursor/opencode. |
 
-The common thread: they're all paid IDEs wrapping cloud models. Once you decouple
-the editor (opencode) from the model (DeepSeek v4 via OpenRouter), you're paying
-$0 instead of $20–$40/month, and the output quality is the same or better for the
-breadth-heavy, multi-language, multi-repo fleet use case.
+The common thread: the best setup is decoupling the editor from the model.
+opencode + DeepSeek v4 via OpenRouter is the permanent baseline at ~$0/month.
+Cursor Ultra + Fable 5 is the upgrade when deals align.
 
 ## AI slop: the objection that aged poorly
 
@@ -57,7 +76,7 @@ on AI.
 
 ## What this means for this fleet
 
-100+ repos. One person. Working software, not prototypes.
+130+ repos. One person. Working software, not prototypes.
 
 That ratio wasn't possible before. The bottleneck used to be implementation bandwidth —
 the gap between what you could design and what you could type. That gap is now closed.
@@ -67,7 +86,7 @@ well enough to direct the build, and knowing when the result is good.
 The fleet is real infrastructure I use daily. The calibre RAG, the transit monitor, the
 robotics bridges, the memory system — these run. They are not demos.
 
-## The mesh: what 135 MCP servers can do when they talk to each other
+## The mesh: what 150+ MCP servers can do when they talk to each other
 
 The fleet isn't a collection of isolated tools. Each server exposes its domain via FastMCP
 3.2, and the MCP bridge layer lets them call each other. The result is a **composable
@@ -168,4 +187,4 @@ series is the best ongoing writing on working in this mode. His *vibe coding* vs
 
 ---
 
-*Sandra Schipal — Alsergrund, Vienna — May 2026*
+*Sandra Schipal — Alsergrund, Vienna — June 2026*
