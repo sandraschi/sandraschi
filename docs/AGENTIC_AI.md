@@ -5,6 +5,13 @@
 > the gap between what I can design and what I can implement. Everything here runs daily.
 > It's not demos.
 
+- [What changed](#what-changed)
+- [Current tool stack](#current-tool-stack-june-2026)
+- [Keeping 130+ repos coherent](#keeping-130-repos-coherent)
+- [The remaining challenges](#the-remaining-challenges)
+- [The mesh: what 150+ MCP servers can do](#the-mesh-what-150-mcp-servers-can-do-when-they-talk-to-each-other)
+- [Further reading](#further-reading)
+
 ## What changed
 
 In early 2026, agentic coding quality crossed a threshold. The repositories in this fleet
