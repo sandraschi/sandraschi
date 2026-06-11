@@ -42,12 +42,21 @@ I maintain a homespun fleet of **130+ repos**, each an MCP server with an associ
 
 ---
 
-<p align="center">
-  <img src="assets/pelican.svg" alt="sandraschi mascot" width="320"/>
-</p>
+## 📚 External references
+
+People and sites worth following (no slop):
+
+| | |
+|---|---|
+| 🐦 **Simon Willison** | [simonwillison.net](https://simonwillison.net) — agentic engineering patterns, AI benchmarks. The pelican test is his. |
+| ⚡ **FastMCP** | [gofastmcp.com](https://gofastmcp.com) — the framework every server in this fleet is built on. |
+| 🧮 **Lean 4** | [lean-lang.org](https://lean-lang.org) — formal proof verification. leanforge-mcp runs on this. |
+| 📄 **arXiv** | [arxiv.org](https://arxiv.org) — where the useful papers live before the blog posts. |
 
 <p align="center">
-  <a href="PELICAN.md"><sub>🐦 what's with the pelican?</sub></a>
+  <img src="assets/pelican.svg" alt="" width="160"/>
+  <br/>
+  <a href="PELICAN.md"><sub>🐦 about the pelican</sub></a>
 </p>
 
 ---
