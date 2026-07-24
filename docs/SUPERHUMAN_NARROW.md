@@ -99,7 +99,11 @@ manually-maintained project can match.
 
 ---
 
-## Case study: 300K lines of C++, one weekend
+## Case study: an MCP server, and a fork that changed everything
+
+[mixx-dj-mcp](https://github.com/sandraschi/mixx-dj-mcp) is a new MCP server and
+webapp — OSC bridge, deck control, BPM sync, full remote DJ dashboard. The deeper
+story is the fork it unlocked.
 
 [Mixxx](https://mixxx.org) is the flagship open-source DJ application — 300,000
 lines of C++ grown slowly over a decade by a team of conservative greybeard devs.
@@ -111,10 +115,10 @@ integration meant hiring a specialist they didn't have budget for. Stem separati
 meant shipping a 2 GB ONNX model. AI automation was a research project. So Mixxx
 stayed audio-only, no stems, no AI — stable but frozen.
 
-In July 2026, DeepSeek V4 on opencode added **5,000 lines of C++** and filled
-every gap. The conversation was not a technical specification. It was a dialogue
-between someone who knows what software *should* do and an AI that knows how to
-do it:
+In July 2026, DeepSeek V4 on opencode added **5,000 lines of C++** to the
+[mixxxx fork](https://github.com/sandraschi/mixxxxx) and filled every gap. The
+conversation was not a technical specification. It was a dialogue between someone
+who knows what software *should* do and an AI that knows how to do it:
 
 > *"We need VFX."* — "Use FFmpeg. It's fast, battle-tested, ships everywhere.
 > I'll add a video deck layer that crossfades synced video alongside audio."

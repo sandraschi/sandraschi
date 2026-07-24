@@ -26,15 +26,19 @@ I maintain a homespun fleet of **180+ repos**, each an MCP server with an associ
 
 ## 🔥 Current highlight
 
-### mixx-dj-mcp: 300K lines of C++, one weekend
+### mixx-dj-mcp: an MCP server, a webapp, and a fork that changed everything
+
+[mixx-dj-mcp](https://github.com/sandraschi/mixx-dj-mcp) is a new MCP server and
+webapp for Mixxx — OSC bridge, deck control, BPM sync, full remote DJ dashboard.
+But the bigger story is what it unlocked.
 
 [Mixxx](https://mixxx.org) is a 300,000-line C++ DJ application, grown slowly over
-years by conservative greybeard devs. It's solid, respected, and missing crucial
-features its users begged for: video mixing, stem separation, and AI-assisted
-automation. The dev team wanted to add them. Nobody had the bandwidth. Video alone
-meant hiring a specialist they didn't have budget for.
+years by conservative greybeard devs. Solid, respected, missing crucial features
+its users begged for: video mixing, stem separation, AI-assisted automation. The
+dev team wanted to add them. Nobody had the bandwidth.
 
-DeepSeek V4 on opencode added **5,000 lines of C++** and filled every gap:
+DeepSeek V4 on opencode added **5,000 lines of C++** to the [mixxxx fork](https://github.com/sandraschi/mixxxxx)
+and filled every gap:
 
 - *"We need VFX."* — "Use FFmpeg. It's fast, battle-tested, ships everywhere."
 - *"We need synced video like Resolume."* — "Use MilkDrop / [ButterChurn](https://github.com/jberg/butterchurn). It's WebGL, FOSS, and already handles audio-reactive visuals."
