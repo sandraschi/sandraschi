@@ -84,7 +84,17 @@ of both democratization curves. The AI handles the software. Shenzhen handles th
 hardware. The fleet handles the integration — the MCP bridges, the VR pipeline,
 the simulation layer.
 
-The [Noetix Bumi](https://www.noetix.ai) is the concrete example. A 94 cm, 12 kg,
+The fleet's own entry point was the [Yahboom RosCar V2](https://github.com/sandraschi/yahboom-mcp) —
+$250. That's the entire hardware stack: a ROS 2-compatible robot chassis, a
+Raspberry Pi 5 with 16 GB RAM, sensors, motor drivers, and an open-source
+software stack with a public GitHub repo. Two hundred and fifty dollars. For less
+than a nice dinner in Zurich, you get a fully functional ROS 2 robot with enough
+compute to run local AI inference. This is Chinese value — not "cheap" in the
+pejorative sense, but *cost-collapsed* through ecosystem density. The Shenzhen
+supply chain doesn't just make components cheaper. It makes entire product
+categories accessible at impulse-buy prices.
+
+The [Noetix Bumi](https://www.noetix.ai) scales the same economics to humanoids.
 16-DOF humanoid for ~$2,000. That price is only possible because the actuators
 come from Shenzhen, not Switzerland. The AI-driven software stack — ROS 2 bridges,
 MuJoCo simulation, VR teleoperation, embodied NPCs in Resonite — is the fleet's
