@@ -169,11 +169,11 @@ the proof is machine-verified.
 
 The AI didn't need a tutorial. It read the [Google DeepMind paper on the Eötvös
 conjecture](https://deepmind.google/discover/blog/proving-the-eotvos-conjecture-with-lean/) — how they formalized and proved a 90-year-old open problem in
-combinatorics using Lean — understood the methodology, and applied it. The human
-saying "go prove this" does not personally understand the proof technique. As
-Foghorn Leghorn would put it: *"Son, you're built too low. The fast papers go
-right over you."* Doesn't matter. The AI read the paper. The AI understood it.
-The AI applied it. SHN. No PhD required.
+combinatorics using Lean — understood the methodology, and applied it. Here is
+the paper, by the way. Good luck understanding it. I didn't. As Foghorn Leghorn
+would put it: *"Son, you're built too low. The fast papers go right over you."*
+Doesn't matter. The AI read the paper. The AI understood it. The AI applied it.
+SHN. No PhD required.
 
 Where did the idea come from? A CNN article. The Eötvös proof story hit the
 mainstream — a 90-year-old math problem solved by AI and a proof assistant, covered
