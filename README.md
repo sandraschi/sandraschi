@@ -70,7 +70,7 @@ The AI handles the part that used to take a degree.
 
 → **[Superhuman Narrow →](docs/SUPERHUMAN_NARROW.md)** — the full argument
 
-→ **[Full catalog →](MCP_CATALOG.md)** • **[Workshop & Hardware](WORKSHOP.md)** • **[Superhuman Narrow →](docs/SUPERHUMAN_NARROW.md)**
+→ **[Full catalog →](MCP_CATALOG.md)** • **[Workshop & Hardware](WORKSHOP.md)** • **[Superhuman Narrow →](docs/SUPERHUMAN_NARROW.md)** • **[Bloopers →](docs/BLOOPERS.md)**
 
 ---
 
