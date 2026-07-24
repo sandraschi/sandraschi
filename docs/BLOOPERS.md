@@ -1,5 +1,7 @@
 # AI Bloopers
 
+*Prompted by: "maybe a funny ai bloopers readme could lighten the mood. you still put && in powershell every five min, tsk tsk. llms still follow ALL standards docs only on uneven mondays"*
+
 > A running log of things the AI gets wrong, despite having read every standard
 > document in the fleet. The blooper rate dropped from ~20% (mid-2025) to ~0.2%
 > (mid-2026). That remaining 0.2% is *fascinatingly* consistent.

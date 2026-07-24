@@ -1,5 +1,7 @@
 # Superhuman Narrow (SHN)
 
+*Prompted by: "vibecoding (or agentic architecting to sound more pro) improved at insane speed, became a domain specific superhuman power. is there an acronym for it?"*
+
 > **SHN (Superhuman Narrow) is here. Nobody uses the acronym yet — but the phenomenon is real.**
 > AGI is still a pipedream. But for a growing list of specialized tasks — reading mammograms,
 > writing production software, generating and running test suites — the AI now reliably

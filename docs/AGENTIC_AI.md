@@ -1,5 +1,7 @@
 # The Agentic Revolution
 
+*Prompted by: "opencode and chinese open weight models, especially deepseek v4 and the jackrong qwopus distills you can run on local gpu. what do you think?"*
+
 > **TL;DR** — I design the architecture and judge the output. AI generates the code.
 > This fleet of 180+ MCP servers is built by one person because agentic coding collapsed
 > the gap between what I can design and what I can implement. Everything here runs daily.
