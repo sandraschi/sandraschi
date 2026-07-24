@@ -547,6 +547,7 @@ how cheaply it will happen.
 
 ## Further reading
 
+- **[SHENZHEN_ROBOTICS.md](SHENZHEN_ROBOTICS.md)** — the hardware parallel to SHN. How Shenzhen's component ecosystem collapsed the cost of precision actuators from $3,000 to $200, making humanoid robots a DIY-grade project. The motors got cheap first.
 - **[AGENTIC_AI.md](AGENTIC_AI.md)** — the June prediction that local GPU distills
   would arrive. They did. The architecture of decoupling editor from model, and model
   from provider.
