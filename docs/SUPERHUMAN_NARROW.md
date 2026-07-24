@@ -515,6 +515,23 @@ off-the-shelf. The integration layer — the part that used to require a defense
 contractor and a five-year procurement cycle — is now an afternoon with an AI
 agent and a GitHub account.
 
+Hello, Ukraine. The war there is already the most AI-saturated conflict in
+history. Commercial drones with off-the-shelf computer vision. Crowdsourced
+targeting from satellite imagery. Autonomous navigation in GPS-denied
+environments. These are not defense-contractor systems with decade-long
+development cycles. They're DJI drones, Raspberry Pis, and Python scripts —
+assembled in weeks by volunteers with GitHub accounts and an internet
+connection. SHN before anyone had the acronym.
+
+And hello, North Korea. A state with limited economic capacity, a large pool
+of technically trained personnel, and zero ethical constraints on what it
+builds. SHN is the perfect asymmetric force multiplier for a pariah state —
+no need for a defense industrial base, no need for materiel superiority, no
+need for human pilots. Just GPUs, open-weight models, and a willingness to
+deploy what nobody else will. The Kim regime doesn't need to match the US
+military budget. It needs a room full of RTX 4090s and an AI agent that
+doesn't care what domain it's operating in.
+
 This is not an argument against SHN. It's an argument for acknowledging that the
 technology is symmetric. The fleet builds DJ software, CAD pipelines, and formal
 proof assistants. The same architecture builds weapons. The protocols are
