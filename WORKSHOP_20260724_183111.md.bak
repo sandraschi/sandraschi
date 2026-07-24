@@ -26,7 +26,7 @@ RTX 4090 sweet spot: **Qwen3.5 27B @ Q4 quant** (~40 tok/s). For MoE efficiency:
 ## Fleet Architecture
 
 Every MCP server in the fleet follows the same pattern:
-- **FastMCP 3.4** server core with portmanteau tools (no tool explosion)
+- **FastMCP 3.2** server core with portmanteau tools (no tool explosion)
 - **Webapp sidecar** — React + Vite + Tailwind dark glass dashboard for human oversight
 - **`uv`** for Python environment management
 - **mcpb** packaging for Glama.ai publication

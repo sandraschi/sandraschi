@@ -80,7 +80,7 @@ well enough to direct the build, and knowing when the result is good.
 The fleet is real infrastructure I use daily. The calibre RAG, the transit monitor, the
 robotics bridges, the memory system — these run. They are not demos.
 
-## The mesh: what 126+ MCP servers can do when they talk to each other
+## The mesh: what 180+ MCP servers can do when they talk to each other
 
 The fleet isn't a collection of isolated tools. Each server exposes its domain via FastMCP
 3.4, and the MCP bridge layer lets them call each other. The result is a **composable

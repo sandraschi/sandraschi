@@ -105,6 +105,26 @@ AI was always going to get there. The motors had to get cheap first. They did.
 
 ---
 
+## The geopolitics nobody is discussing
+
+The same Shenzhen supply chain that makes $200 harmonic actuators for hobbyist
+humanoids makes $200 harmonic actuators for military UGVs. The same factories.
+The same components. The same Taobao listings.
+
+Unitree sold its Go2 robot dog — 12-DOF, lidar, onboard compute — for $1,600.
+At that price, anyone can field a swarm of autonomous quadrupeds. A university
+lab. A startup. A paramilitary group. A state actor with a VPN and a reshipping
+address. The Shenzhen component ecosystem doesn't have export controls. It has
+free shipping on orders over $99.
+
+This is the mirror of the SHN weapons trajectory but one layer lower in the
+stack. The AI handles recognition and decision-making. The motors handle the
+physical action. Both layers democratized simultaneously. Both layers have zero
+effective controls. Both layers are accessible to anyone with an internet
+connection and a credit card.
+
+---
+
 ## Further reading
 
 - **[BUMI.md](../BUMI.md)** — the Noetix Bumi humanoid, the fleet's primary
@@ -113,8 +133,8 @@ AI was always going to get there. The motors had to get cheap first. They did.
   democratization. SHN: what happens when AI outperforms humans in specific domains.
 - **[WORKSHOP.md](../WORKSHOP.md)** — the Alsergrund node hardware lab. Goliath
   workstation, 3D printers, Benny the German Shepherd.
-- **[DARK_AI_THOUGHTS.md](DARK_AI_THOUGHTS.md)** — the same actuator supply chain,
-  applied to weapons instead of workshops. Kept separate from the maker-tools framing here.
+- **[Unitree Go2](https://shop.unitree.com/products/unitree-go2)** — $1,600 robot
+  dog. 12-DOF, lidar, onboard compute. Available on Taobao. Think about that.
 
 ---
 

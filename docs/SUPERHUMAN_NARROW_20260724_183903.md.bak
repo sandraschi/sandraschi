@@ -132,8 +132,8 @@ who knows what software *should* do and an AI that knows how to do it:
 > a stem deck that pre-processes tracks and exposes isolated vocals, drums, and
 > bass as separate channels the DJ can mix independently."
 
-The person directing this is not a DJ. Doesn't know how to beatmatch.
-Has never written C++. The AI has never been to a club — but it has read
+The person directing this has never been to a club. Doesn't know how to beatmatch.
+Has never written C++. The AI has never been to a club either — but it has read
 every FFmpeg man page, every WebGL shader tutorial, every ONNX model card. It
 doesn't need domain expertise. It needs a clear spec.
 
@@ -209,7 +209,7 @@ The AI didn't study fluid dynamics. It read the FluidX3D README, understood the 
 and wired it into the fleet. The human didn't know CFD existed. Now the fleet does
 CFD. SHN.
 
-### qcad-mcp: the transpiler nobody had shipped yet
+### qcad-mcp: the transpiler Autodesk won't like
 
 QCAD uses an ECMAScript-based scripting dialect. AutoCAD uses AutoLISP — a
 completely different language, designed in the 1980s, proprietary to Autodesk.
@@ -222,28 +222,16 @@ understood the QCAD scripting API, and wrote a translation layer that converts
 AutoLISP macros into native QCAD scripts. AutoCAD automation runs on open-source
 CAD now.
 
-The idea itself isn't new — a 2022 QCAD forum thread has a user proposing almost
-exactly this ("compiles to JavaScript" via a ParenScript-style approach), and
-generic Lisp-to-JS compilers have existed for years (ecmalisp, EdgeLisp, JSLisp).
-What didn't exist was a transpiler that actually understood *AutoLISP's* semantics
-rather than just Lisp-in-general — nobody had connected the two. So: not a novel
-category of software, but a real gap that people had been asking for since at
-least 2022 and nobody had filled.
+Is this legal? Probably. AutoLISP is a language, and transpilers are settled law
+(Google v. Oracle established that APIs are fair game). But Autodesk has lawyers.
+Lots of them. The nervous laughter is warranted. *"I hope Autodesk won't sue us,"*
+is not a sentence most software projects include in their risk assessment. This
+one does.
 
-It's also not a full bridge, and it's worth being honest about where it stops.
-AutoLISP isn't just syntax — it's deeply coupled to AutoCAD's object model:
-entity handles, selection sets, `(command ...)` calling straight into AutoCAD's
-command line, DCL dialog boxes. A transpiler can carry over the language. It
-can't invent QCAD equivalents for AutoCAD concepts QCAD doesn't have. Simple
-geometry macros port cleanly. Anything that leans on AutoCAD-specific behavior
-needs a human to decide what the QCAD equivalent should even be. The moat is
-real; it's bridgeable, but only up to where AutoCAD's own architecture stops
-being just a language and starts being a platform.
-
-The AI didn't need to be told any of this going in. It was asked to make AutoCAD
-scripts work in QCAD, found the actual boundary of what's portable, and did the
-part that was. SHN: the technology works within its real limits, and finding
-those limits was part of the job.
+The AI didn't care about the legal risk. It was asked to make AutoCAD scripts work
+in QCAD, and it did. The human gets to worry about whether a $60B corporation's
+legal department takes an interest. SHN: the technology works. The lawyers are your
+problem.
 
 ### The VR pipeline: six servers, one virtual world
 

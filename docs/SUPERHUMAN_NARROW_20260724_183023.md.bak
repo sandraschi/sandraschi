@@ -132,8 +132,8 @@ who knows what software *should* do and an AI that knows how to do it:
 > a stem deck that pre-processes tracks and exposes isolated vocals, drums, and
 > bass as separate channels the DJ can mix independently."
 
-The person directing this is not a DJ. Doesn't know how to beatmatch.
-Has never written C++. The AI has never been to a club — but it has read
+The person directing this has never been to a club. Doesn't know how to beatmatch.
+Has never written C++. The AI has never been to a club either — but it has read
 every FFmpeg man page, every WebGL shader tutorial, every ONNX model card. It
 doesn't need domain expertise. It needs a clear spec.
 
@@ -209,7 +209,7 @@ The AI didn't study fluid dynamics. It read the FluidX3D README, understood the 
 and wired it into the fleet. The human didn't know CFD existed. Now the fleet does
 CFD. SHN.
 
-### qcad-mcp: the transpiler nobody had shipped yet
+### qcad-mcp: the transpiler Autodesk won't like
 
 QCAD uses an ECMAScript-based scripting dialect. AutoCAD uses AutoLISP — a
 completely different language, designed in the 1980s, proprietary to Autodesk.
@@ -222,28 +222,16 @@ understood the QCAD scripting API, and wrote a translation layer that converts
 AutoLISP macros into native QCAD scripts. AutoCAD automation runs on open-source
 CAD now.
 
-The idea itself isn't new — a 2022 QCAD forum thread has a user proposing almost
-exactly this ("compiles to JavaScript" via a ParenScript-style approach), and
-generic Lisp-to-JS compilers have existed for years (ecmalisp, EdgeLisp, JSLisp).
-What didn't exist was a transpiler that actually understood *AutoLISP's* semantics
-rather than just Lisp-in-general — nobody had connected the two. So: not a novel
-category of software, but a real gap that people had been asking for since at
-least 2022 and nobody had filled.
+Is this legal? Probably. AutoLISP is a language, and transpilers are settled law
+(Google v. Oracle established that APIs are fair game). But Autodesk has lawyers.
+Lots of them. The nervous laughter is warranted. *"I hope Autodesk won't sue us,"*
+is not a sentence most software projects include in their risk assessment. This
+one does.
 
-It's also not a full bridge, and it's worth being honest about where it stops.
-AutoLISP isn't just syntax — it's deeply coupled to AutoCAD's object model:
-entity handles, selection sets, `(command ...)` calling straight into AutoCAD's
-command line, DCL dialog boxes. A transpiler can carry over the language. It
-can't invent QCAD equivalents for AutoCAD concepts QCAD doesn't have. Simple
-geometry macros port cleanly. Anything that leans on AutoCAD-specific behavior
-needs a human to decide what the QCAD equivalent should even be. The moat is
-real; it's bridgeable, but only up to where AutoCAD's own architecture stops
-being just a language and starts being a platform.
-
-The AI didn't need to be told any of this going in. It was asked to make AutoCAD
-scripts work in QCAD, found the actual boundary of what's portable, and did the
-part that was. SHN: the technology works within its real limits, and finding
-those limits was part of the job.
+The AI didn't care about the legal risk. It was asked to make AutoCAD scripts work
+in QCAD, and it did. The human gets to worry about whether a $60B corporation's
+legal department takes an interest. SHN: the technology works. The lawyers are your
+problem.
 
 ### The VR pipeline: six servers, one virtual world
 
@@ -304,7 +292,7 @@ The individual case studies are impressive. The real SHN unlock is one layer up:
 the LLM has read every repo in the fleet.
 
 No human can do this. I wrote the architecture for each server, but I don't
-remember every tool signature across 126+ repos. I don't know which server exports
+remember every tool signature across 180 repos. I don't know which server exports
 what format, which server imports what format, which server has a WebSocket bridge
 and which speaks REST. The LLM does. It has near-perfect recall across the entire
 fleet. Every API. Every tool description. Every data format.
@@ -348,7 +336,7 @@ potential mesh node. Every existing repo is a potential consumer. The LLM sees
 both sides.
 
 SHN at the micro level: a non-DJ extending a 300K-line C++ codebase. SHN at the
-macro level: an AI with perfect recall across 126+ repos, connecting servers into
+macro level: an AI with perfect recall across 180 repos, connecting servers into
 pipelines that no human would have noticed were possible.
 
 ---
@@ -507,11 +495,58 @@ exist. The trajectory is clear.
 
 ---
 
+## The other side of SHN
+
+Every capability that democratizes creation also democratizes destruction. The
+same AI that added video mixing to Mixxx can pilot a drone. The same pattern
+matching that spots tumors in mammograms can identify human targets in a
+thermal feed. SHN is domain-specific by definition — and some domains are lethal.
+
+An SHN drone operator doesn't need a PhD in aerospace engineering. It needs a
+clear spec and a GPU. The AI handles flight dynamics, obstacle avoidance, target
+recognition, and terminal guidance. The human says "go here, find this, do that."
+The same gap-closing that let a non-DJ extend a 300K-line C++ codebase lets a
+non-pilot operate a weapons platform.
+
+An SHN autosniper is not science fiction. Computer vision models already
+outperform humans at object detection in cluttered environments. Ballistic
+calculation is a solved physics problem. Motorized rifle platforms exist
+off-the-shelf. The integration layer — the part that used to require a defense
+contractor and a five-year procurement cycle — is now an afternoon with an AI
+agent and a GitHub account.
+
+Hello, Ukraine. The war there is already the most AI-saturated conflict in
+history. Commercial drones with off-the-shelf computer vision. Crowdsourced
+targeting from satellite imagery. Autonomous navigation in GPS-denied
+environments. These are not defense-contractor systems with decade-long
+development cycles. They're DJI drones, Raspberry Pis, and Python scripts —
+assembled in weeks by volunteers with GitHub accounts and an internet
+connection. SHN before anyone had the acronym.
+
+And hello, North Korea. A state with limited economic capacity, a large pool
+of technically trained personnel, and zero ethical constraints on what it
+builds. SHN is the perfect asymmetric force multiplier for a pariah state —
+no need for a defense industrial base, no need for materiel superiority, no
+need for human pilots. Just GPUs, open-weight models, and a willingness to
+deploy what nobody else will. The Kim regime doesn't need to match the US
+military budget. It needs a room full of RTX 4090s and an AI agent that
+doesn't care what domain it's operating in.
+
+This is not an argument against SHN. It's an argument for acknowledging that the
+technology is symmetric. The fleet builds DJ software, CAD pipelines, and formal
+proof assistants. The same architecture builds weapons. The protocols are
+identical. The cost curve is the same. The democratization is the same.
+
+Nobody gets to choose which domains SHN applies to. The technology doesn't
+discriminate. The only variable is who wields it and for what purpose. The fleet
+chose maker tools. Someone else will choose differently. The question isn't
+whether SHN can be weaponized. It's whether anyone is prepared for how fast and
+how cheaply it will happen.
+
+---
+
 ## Further reading
 
-- **[DARK_AI_THOUGHTS.md](DARK_AI_THOUGHTS.md)** — the other side of SHN: the
-  same democratization applied to weapons instead of maker tools. Kept separate
-  from the fleet's own project framing.
 - **[SHENZHEN_ROBOTICS.md](SHENZHEN_ROBOTICS.md)** — the hardware parallel to SHN. How Shenzhen's component ecosystem collapsed the cost of precision actuators from $3,000 to $200, making humanoid robots a DIY-grade project. The motors got cheap first.
 - **[AGENTIC_AI.md](AGENTIC_AI.md)** — the June prediction that local GPU distills
   would arrive. They did. The architecture of decoupling editor from model, and model

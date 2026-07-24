@@ -3,15 +3,15 @@
 *Prompted by: "opencode and chinese open weight models, especially deepseek v4 and the jackrong qwopus distills you can run on local gpu. what do you think?"*
 
 > **TL;DR** — I design the architecture and judge the output. AI generates the code.
-> This fleet of 126+ MCP servers is built by one person because agentic coding collapsed
+> This fleet of 180+ MCP servers is built by one person because agentic coding collapsed
 > the gap between what I can design and what I can implement. Everything here runs daily.
 > It's not demos.
 
 - [What changed](#what-changed)
 - [Current tool stack](#current-tool-stack-july-2026)
-- [Keeping 126+ repos coherent](#keeping-126-repos-coherent)
+- [Keeping 180+ repos coherent](#keeping-180-repos-coherent)
 - [The remaining challenges](#the-remaining-challenges)
-- [The mesh: what 126+ MCP servers can do](#the-mesh-what-126-mcp-servers-can-do-when-they-talk-to-each-other)
+- [The mesh: what 180+ MCP servers can do](#the-mesh-what-180-mcp-servers-can-do-when-they-talk-to-each-other)
 - [Further reading](#further-reading)
 
 ## What changed
@@ -40,7 +40,7 @@ The stack has three layers: editor, model, and the bridge between them.
 
 **Why this matters:** The June prediction was right. The Fable 5 freebie ended on schedule. The Chinese open-weight ecosystem — DeepSeek V4 Flash/Pro, Qwen 3, and jackrong's Claude-distilled QwOpus models — shipped faster than expected. The local-GPU path went from "coming soon" to "here now." Meanwhile, enterprises locked into proprietary API stacks are paying token bills that make CFOs choke. The fleet's architecture of decoupling editor from model, and model from provider, was the correct call.
 
-## Keeping 126+ repos coherent
+## Keeping 180+ repos coherent
 
 A fleet this size doesn't stay healthy by accident. Every repo follows the same
 playbook: same tooling (FastMCP 3.4, uv, Ruff, justfile), same response patterns
@@ -70,7 +70,7 @@ failures, iterates. What replaces it are subtler issues:
 
 ## What this means for this fleet
 
-126+ repos. One person. Working software, not prototypes.
+180+ repos. One person. Working software, not prototypes.
 
 That ratio wasn't possible before. The bottleneck used to be implementation bandwidth —
 the gap between what you could design and what you could type. That gap is now closed.
@@ -80,7 +80,7 @@ well enough to direct the build, and knowing when the result is good.
 The fleet is real infrastructure I use daily. The calibre RAG, the transit monitor, the
 robotics bridges, the memory system — these run. They are not demos.
 
-## The mesh: what 126+ MCP servers can do when they talk to each other
+## The mesh: what 180+ MCP servers can do when they talk to each other
 
 The fleet isn't a collection of isolated tools. Each server exposes its domain via FastMCP
 3.4, and the MCP bridge layer lets them call each other. The result is a **composable
