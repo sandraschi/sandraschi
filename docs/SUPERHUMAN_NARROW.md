@@ -1,0 +1,509 @@
+# Superhuman Narrow (SHN)
+
+> **SHN (Superhuman Narrow) is here. Nobody uses the acronym yet — but the phenomenon is real.**
+> AGI is still a pipedream. But for a growing list of specialized tasks — reading mammograms,
+> writing production software, generating and running test suites — the AI now reliably
+> outperforms the best human practitioners. It has seen a million mammograms. It has read
+> every public codebase on GitHub. It has ingested every computer science textbook ever
+> published. No human can compete on data saturation. The question is no longer whether
+> the AI is better. The question is what the new workflow looks like.
+
+---
+
+## SHN is not new
+
+The first SHN programs had nothing to do with language models. In 1997, Deep Blue beat
+Kasparov at chess — a superhuman narrow system, built on search and evaluation
+heuristics, zero machine learning in the modern sense. In 2016, AlphaGo beat Lee Sedol
+at Go — a domain thought intractable for decades. Neither system could write a sentence
+or add two numbers or describe what it was doing. Chess-specific superhuman. Go-specific
+superhuman. SHN before anyone had the acronym.
+
+The LLM era didn't invent SHN. It **democratized** it. The old SHN required a team of
+PhD researchers, custom hardware, and years of domain-specific engineering per problem.
+The new SHN requires a prompt and a GPU. Deep Blue took IBM a decade. Mixxx + FFmpeg +
+ButterChurn took an afternoon.
+
+The pattern is the same. What changed is who can wield it.
+
+---
+
+## The intrinsic advantages nobody talks about
+
+The headline story is "AI writes code faster." True, but it misses the structural
+advantages that make AI-augmented development a different activity entirely, not just
+a faster version of the old one.
+
+### 1. Tests: exhaustive, not aspirational
+
+Human developers are terrible at writing tests. It's boring. It's the last thing done
+before a deadline. Coverage thresholds are gamed, edge cases are hand-waved,
+regression suites rot. Every project has a `test/` folder full of tests that passed
+once in 2022 and haven't been maintained since.
+
+An LLM agent doesn't get bored. It writes the test first — property-based, exhaustive
+edge cases, mutation testing, fuzzing harnesses. Tests that a human team of three QA
+engineers would take a week to write, the agent generates in a minute and runs in
+parallel. When a test fails, the agent reads the output, fixes the code, re-runs.
+Loop. The human reviews the result, not the grind.
+
+This isn't speed. It's **coverage depth that wasn't economically viable before.**
+A solo developer can now ship with test coverage comparable to a well-funded team
+of five with a dedicated QA engineer — because the AI is the QA engineer.
+
+### 2. Documentation: the problem flips
+
+The old problem: docs are missing, stale, or written in a hurry by someone who hates
+writing docs. The maintainer knows the codebase inside out and can't see what's
+confusing to a newcomer. The doc writer was never hired.
+
+The new problem: the AI writes documentation at high quality and prodigious volume.
+Every function gets a docstring. Every module gets a README fragment. Every edge case
+gets a note. The documentation stays in sync because it's regenerated alongside the
+code that changed — not as a separate sprint item that gets deferred forever.
+
+The problem flips from scarcity to curation. "Which of these 14 pages does the user
+actually need?" becomes the bottleneck. But curation is a better bottleneck than
+nothing existing at all. You can trim. You can't trim what isn't there.
+
+For open-source projects in particular, this is transformative. The single biggest
+barrier to adoption is "I can't figure out how to use this." LLM-generated docs —
+concise, accurate, kept current — lower that barrier to near zero. Projects that
+embrace this get users. Projects that don't stay obscure.
+
+### 3. Infrastructure: the boring work gets done
+
+Every project has infrastructure debt that nobody wants to touch:
+- Dependency updates that accumulate CVE notices
+- Tool migrations ("Biome is now faster than ESLint + Prettier combined, and has
+  identical rules — the migration is 30 minutes and saves 80% of lint CI time")
+- CI pipeline optimization (parallel builds, caching, flaky test quarantine)
+- Build system modernization
+
+On a human team, this work requires an "infra person" — someone senior enough to
+understand the entire toolchain, with enough autonomy to make cross-cutting changes,
+and enough discipline to do the boring work nobody else wants to touch. These people
+are rare and expensive.
+
+An AI agent does this work as a background task. It reads the changelogs of every
+dependency. It benchmarks the alternatives. It writes the migration. It runs the
+full test suite. It opens a PR with a detailed explanation. The human reviews and
+merges — or doesn't, but the work got done.
+
+The difference isn't speed. It's **relentless attention to boring infrastructure.**
+Human developers know the CVE exists. They'll get to it "next sprint." The AI just
+does it. Over a year, this compounds into an infrastructure advantage that no
+manually-maintained project can match.
+
+---
+
+## Case study: 300K lines of C++, one weekend
+
+[Mixxx](https://mixxx.org) is the flagship open-source DJ application — 300,000
+lines of C++ grown slowly over a decade by a team of conservative greybeard devs.
+It's solid, respected, widely used. It's also missing features its user community
+has begged for: video mixing, stem separation, and AI-assisted automation.
+
+The dev team wanted to add these features. Nobody had the bandwidth. Video
+integration meant hiring a specialist they didn't have budget for. Stem separation
+meant shipping a 2 GB ONNX model. AI automation was a research project. So Mixxx
+stayed audio-only, no stems, no AI — stable but frozen.
+
+In July 2026, DeepSeek V4 on opencode added **5,000 lines of C++** and filled
+every gap. The conversation was not a technical specification. It was a dialogue
+between someone who knows what software *should* do and an AI that knows how to
+do it:
+
+> *"We need VFX."* — "Use FFmpeg. It's fast, battle-tested, ships everywhere.
+> I'll add a video deck layer that crossfades synced video alongside audio."
+
+> *"We need synced video like Resolume Arena."* — "Use MilkDrop via
+> [ButterChurn](https://github.com/jberg/butterchurn). It's FOSS, WebGL, and
+> already handles real-time audio-reactive visuals. I'll pipe the Mixxx audio
+> analysis to ButterChurn's shader engine."
+
+> *"We need stem separation."* — "ONNX HTDemucs v4. Runs on the GPU. I'll add
+> a stem deck that pre-processes tracks and exposes isolated vocals, drums, and
+> bass as separate channels the DJ can mix independently."
+
+The person directing this has never been to a club. Doesn't know how to beatmatch.
+Has never written C++. The AI has never been to a club either — but it has read
+every FFmpeg man page, every WebGL shader tutorial, every ONNX model card. It
+doesn't need domain expertise. It needs a clear spec.
+
+The [mixxxx fork](https://github.com/sandraschi/mixxxxx) is the integration
+testbed. It's not a toy — it's Mixxx with video, stems, and AI control,
+implemented by someone who isn't a DJ and an AI that isn't human. The greybeards
+are impressed. The users have features. The dev team's objection ("we don't have
+the bandwidth") was correct — for a human team. It was irrelevant for an AI.
+
+**All three structural advantages fire simultaneously:**
+- **Tests:** the AI wrote exhaustive test harnesses for the video pipeline, stem
+  separation, and crossfader automation — something the original Mixxx codebase
+  had gaps in after a decade of human development.
+- **Docs:** every new feature shipped with comprehensive documentation. The AI
+  generated API references, integration guides, and user-facing explanations
+  without being asked. The greybeards now have docs they never had time to write.
+- **Infra:** the AI migrated the build system to handle the new FFmpeg and ONNX
+  dependencies, updated CMake configurations, and ensured cross-platform
+  compatibility — the kind of grinding infrastructure work that human dev teams
+  schedule for "next quarter" and never get to.
+
+This is SHN in practice. Not in the sense that the AI is
+a better DJ. In the sense that it can extend a 300K-line C++ codebase across
+three new feature domains faster and more completely than the expert human team
+that wrote the original. The bottleneck shifted from "can we build this?" to
+"what should we build?"
+
+The same SHN pattern powers [leanforge-mcp](https://github.com/sandraschi/leanforge-mcp) —
+formal mathematical proof verification via Lean 4, directed by someone without a
+math degree. The human frames the conjecture. The AI proposes proofs. The Lean
+compiler verifies. The AI reads the error and iterates. The loop continues until
+the proof is machine-verified.
+
+The AI didn't need a tutorial. It read the [Google DeepMind paper on the Eötvös
+conjecture](https://deepmind.google/discover/blog/proving-the-eotvos-conjecture-with-lean/) — how they formalized and proved a 90-year-old open problem in
+combinatorics using Lean — understood the methodology, and applied it. The human
+saying "go prove this" does not personally understand the proof technique. As
+Foghorn Leghorn would put it: *"Son, you're built too low. The fast papers go
+right over you."* Doesn't matter. The AI read the paper. The AI understood it.
+The AI applied it. SHN. No PhD required.
+
+Where did the idea come from? A CNN article. The Eötvös proof story hit the
+mainstream — a 90-year-old math problem solved by AI and a proof assistant, covered
+on a news site for general audiences. The thought wasn't "I should study formal
+verification." It was *"Hmm. Maybe we can make a proofer repo?"* The rest is history.
+SHN doesn't need a research lab. It needs someone who reads the news and thinks
+"what if."
+
+### freecad-mcp: CFD without the decades
+
+Computational fluid dynamics is the domain of greybeard engineers with PhDs in
+applied mathematics. The traditional CFD stack — ANSYS, OpenFOAM, COMSOL — grew
+over decades. It's slow. It runs on CPUs. It has no GPU acceleration and no AI
+integration. A single simulation can take hours on a workstation. The tooling is
+powerful but inaccessible: steep learning curve, arcane input formats, proprietary
+file formats.
+
+I had never heard of computational fluid dynamics before this project. Didn't know
+how it was done, what the Navier-Stokes equations were, or why airflow around a
+wing wasn't a solved problem. But when the maker pipeline needed simulation — when
+a CAD model designed in FreeCAD needed to be tested against physics — the AI knew
+exactly what to do.
+
+It found [FluidX3D](https://github.com/ProjectPhysX/FluidX3D) — a GPU-accelerated
+CFD solver written by a single physicist that runs laps around the multi-million-dollar
+commercial packages. It integrated FluidX3D into the [freecad-mcp](https://github.com/sandraschi/freecad-mcp)
+pipeline: export CAD geometry → generate boundary conditions → run GPU simulation →
+stream velocity fields to [godot-mcp](https://github.com/sandraschi/godot-mcp) for
+real-time particle visualization. The pipeline that used to require a team of
+engineers now runs on a single machine with an RTX 4090.
+
+The AI didn't study fluid dynamics. It read the FluidX3D README, understood the API,
+and wired it into the fleet. The human didn't know CFD existed. Now the fleet does
+CFD. SHN.
+
+### qcad-mcp: the transpiler Autodesk won't like
+
+QCAD uses an ECMAScript-based scripting dialect. AutoCAD uses AutoLISP — a
+completely different language, designed in the 1980s, proprietary to Autodesk.
+The two are incompatible. Decades of AutoCAD automation scripts, accumulated by
+engineering firms, architecture studios, and manufacturing plants, are locked
+into a proprietary format that only AutoCAD can run.
+
+The AI built an AutoLISP-to-QCAD transpiler. It read the AutoLISP language spec,
+understood the QCAD scripting API, and wrote a translation layer that converts
+AutoLISP macros into native QCAD scripts. AutoCAD automation runs on open-source
+CAD now.
+
+Is this legal? Probably. AutoLISP is a language, and transpilers are settled law
+(Google v. Oracle established that APIs are fair game). But Autodesk has lawyers.
+Lots of them. The nervous laughter is warranted. *"I hope Autodesk won't sue us,"*
+is not a sentence most software projects include in their risk assessment. This
+one does.
+
+The AI didn't care about the legal risk. It was asked to make AutoCAD scripts work
+in QCAD, and it did. The human gets to worry about whether a $60B corporation's
+legal department takes an interest. SHN: the technology works. The lawyers are your
+problem.
+
+### The VR pipeline: six servers, one virtual world
+
+Take a 3D model from [blender-mcp](https://github.com/sandraschi/blender-mcp) —
+or skip the modeling entirely and generate a photorealistic interior from
+[worldlabs-mcp](https://github.com/sandraschi/worldlabs-mcp), which produces
+beautiful Gaussian-splat environments without three days of manual Blendering.
+Simulate the physics in [mujoco-mcp](https://github.com/sandraschi/mujoco-mcp) —
+rigid bodies, joints, collisions, all GPU-accelerated. Visualize the simulation in
+[godot-mcp](https://github.com/sandraschi/godot-mcp) with real-time particle
+systems and PBR materials. Attach an avatar from
+[avatar-mcp](https://github.com/sandraschi/avatar-mcp) — VRM rigs with full bone
+animation. Deploy the whole thing to [resonite-mcp](https://github.com/sandraschi/resonite-mcp)
+and [overte-mcp](https://github.com/sandraschi/overte-mcp) — Resonite for
+collaborative XR with the existing community, Overte for the open-source metaverse
+stack. Multiple users can walk around the same virtual space and interact with the
+simulated objects across both platforms.
+
+Six fleet servers, one pipeline. None of them were designed to work together.
+Blender doesn't know worldlabs exists. Godot doesn't speak VRM. Resonite doesn't do
+physics simulation. The AI doesn't care. It reads each server's API, understands
+the data formats, and writes the glue.
+
+This isn't a demo. It's the maker pipeline in production: design in Blender,
+validate in MuJoCo, render in Godot, embody with an avatar, deploy to XR. A solo
+developer with an AI agent ships a VR pipeline that a game studio would staff a
+team of five to build. SHN.
+
+### Robotics & embodied AI: the Fingerübung
+
+The robotics servers — [yahboom-mcp](https://github.com/sandraschi/yahboom-mcp),
+[dreame-mcp](https://github.com/sandraschi/dreame-mcp),
+[bumi-mcp](https://github.com/sandraschi/bumi-mcp) — started as *Fingerübung*:
+the German word for a finger exercise, a warm-up. Can we wrap a physical robot in
+MCP and make it controllable by an AI agent? Yahboom is an educational robotics
+kit running ROS 2 on a Raspberry Pi 5. Dreame is a lidar-equipped robot vacuum —
+a ready-made autonomous platform for indoor mapping. Bumi is the Noetix humanoid,
+arriving soon, with a knowledge base and personality engine already running. Each
+one was a "let's see if this works." All three work.
+
+But the Fingerübung is evolving into something bigger. The robotics servers are
+converging with the VR pipeline. A physical robot streams its sensor data to the
+simulation layer. A virtual avatar drives a physical robot. An AI NPC in Resonite —
+a chatbot with a VRM body, collision physics from MuJoCo, animation from avatar-mcp —
+isn't a chatbot anymore. It's an embodied agent in a shared virtual world.
+
+The pieces are in place. Yahboom handles the ROS 2 bridge. Dreame handles the
+mapping and navigation. Bumi will handle the humanoid embodiment. The VR pipeline
+handles visualization, physics, and deployment. The AI orchestrates across all of
+them. This is the trajectory: from finger exercises to an embodied AI mesh where
+virtual and physical robots are the same system, accessed through the same protocol.
+
+SHN. The robots don't know they're robots. They just respond to tool calls.
+
+### Meshing a hundred repos: the meta-advantage
+
+The individual case studies are impressive. The real SHN unlock is one layer up:
+the LLM has read every repo in the fleet.
+
+No human can do this. I wrote the architecture for each server, but I don't
+remember every tool signature across 180 repos. I don't know which server exports
+what format, which server imports what format, which server has a WebSocket bridge
+and which speaks REST. The LLM does. It has near-perfect recall across the entire
+fleet. Every API. Every tool description. Every data format.
+
+This makes non-obvious integrations visible. A human might notice that
+`freecad-mcp` exports STL and `godot-mcp` imports STL — that's an obvious bridge.
+But the LLM notices that `speech-mcp` does TTS and `aiwatcher-mcp` does alert
+pipelines, so a robot that detects an anomaly via `dreame-mcp` can announce it
+out loud through `speech-mcp` while logging it to `advanced-memory-mcp` and
+pushing a fleet event to `aiwatcher-mcp`. That's four servers, connected by an
+integration no human explicitly designed. The AI saw the shape and filled the gaps.
+
+Some mesh links are obvious. Some are *really* not:
+
+- `calibre-mcp` has 13,000 ebooks with full-text RAG search. `arxiv-mcp` ingests
+  papers. Both go to `advanced-memory-mcp` for zettelkasten interlinking. A
+  research paper cites a book — the AI finds the book in Calibre, fetches the
+  relevant chapter, and links both into the knowledge graph. A librarian, a
+  researcher, and a knowledge engineer, none of whom were hired.
+
+- `stems-mcp` splits a track into vocals, drums, and bass. `mixx-dj-mcp` loads
+  the stems as separate decks. `butterchurn-mcp` generates reactive visuals from
+  the audio analysis. `osc-mcp` bridges the MIDI controller. Four servers, one
+  DJ setup, assembled by an AI that connected dots no human was tracking.
+
+- `kicad-mcp` designs a PCB. `codecad-mcp` generates a 3D-printable enclosure.
+  `freecad-mcp` exports the assembly. `mujoco-mcp` simulates thermal stress.
+  `godot-mcp` renders the exploded view. Electronics → mechanical → simulation →
+  visualization. Five repos. Zero meetings.
+
+The human job in a meshed fleet isn't designing every integration. It's saying
+"these should talk to each other" and letting the AI find the protocol. The AI
+doesn't need a diagram. It has already read both APIs. It already knows they're
+compatible. It just needs permission to connect them.
+
+This is the trajectory that nobody in 2024 predicted: not faster code generation,
+but **cross-domain orchestration at a scale no human team can match.** The AI is
+the universal translator between fleet components, and it never forgets a tool
+signature. The fleet doesn't just grow. It *densifies.* Every new repo is a
+potential mesh node. Every existing repo is a potential consumer. The LLM sees
+both sides.
+
+SHN at the micro level: a non-DJ extending a 300K-line C++ codebase. SHN at the
+macro level: an AI with perfect recall across 180 repos, connecting servers into
+pipelines that no human would have noticed were possible.
+
+---
+
+## What do we call this?
+
+| Term | Problem |
+|------|---------|
+| **Narrow AI** | Accurate but insulting — implies limited capability, not superhuman performance |
+| **Vertical AI** | VC-speak, clinical, nobody outside pitch decks uses it |
+| **Weak AI** | Wrong connotation. The AI isn't weak. It's beating humans. |
+| **Specialized Intelligence** | Accurate but four syllables, no acronym |
+| **Superhuman Narrow (SHN)** | Proposed. Three syllables, pronounceable, doesn't overpromise, captures the actual trajectory — superhuman in specific domains, narrow in scope. Nobody uses it yet. Maybe Simon will. |
+| **DSS** | The acronym exists but nobody uses it |
+
+The acronym will come later, as these things always do. **SHN** is my proposal —
+Superhuman Narrow. Three syllables, pronounceable, doesn't overpromise. It captures
+the actual trajectory: superhuman performance in specific domains, narrow scope,
+deployed now. If Simon Willison picks it up, we're done. If not, the first company
+to ship a domain-specific superhuman tool that crosses into mass adoption names the
+category. Until then, the phenomenon is real regardless of what we call it.
+
+What matters: for an expanding set of specialized domains — radiology, software
+engineering, legal document review, drug interaction prediction, satellite imagery
+analysis — the AI now outperforms human professionals. Not "might outperform."
+Not "shows promise." Production-deployed, peer-reviewed, benchmark-verified
+superhuman performance. Not in *general* intelligence, but in *specific* intelligence.
+
+AGI remains a pipedream. **SHN is deployed.**
+
+---
+
+## VC vs. GitHub: a three-phase story
+
+The relationship between AI-generated code and the open-source ecosystem follows a
+predictable arc. Every open-source maintainer has lived through some slice of it.
+
+### Phase 1: Nuisance (2023–2024)
+
+The first wave of AI-generated contributions hit repositories as noise. GPT-3.5 and
+early Claude models produced confident-sounding but subtly wrong code. PRs that
+"fixed typos" broke imports. Bug reports described symptoms that didn't exist.
+Maintainers developed a reflex: if the prose is too polished and the logic is slightly
+wrong, close.
+
+This phase coincided with the peak of VC enthusiasm for "AI copilot for everything."
+Startups raised billions on the premise that AI would transform software development,
+while actual developers were closing AI-generated PRs as invalid. The gap between
+the pitch deck and the PR review was a canyon.
+
+### Phase 2: Overeager but competent (early–mid 2025)
+
+Model quality crossed a threshold. AI agents started opening *real* issues and *real*
+PRs — correct code, well-structured, passing tests. The problem flipped from quality
+to **volume.**
+
+A single maintainer would wake up to 40 AI-generated PRs overnight. Each one was
+technically correct. Each one had passing CI. Each one needed human review. Reviewing
+40 PRs takes hours — hours the maintainer doesn't have, for a project they maintain
+in their spare time.
+
+This is when the backlash started. Not because the AI was bad, but because it was
+good enough to demand attention at a scale the human review pipeline couldn't handle.
+The asymmetry became visible: **generation is milliseconds, review is hours.** An AI
+that can produce 400 PRs a day against a repository with one maintainer isn't
+helping — it's DDOS-ing the maintainer.
+
+### Phase 3: The schism (late 2025–present)
+
+The open-source community split. Three camps emerged:
+
+**Rejectionist.** "AI-generated PRs will be closed without review." Prominent
+projects added AI-contribution policies to their `CONTRIBUTING.md`. Some cited
+copyright concerns (training data provenance). Some cited quality risk. Some were
+simply exhausted. The position is defensible — maintainers are volunteers, and they
+get to decide what they review.
+
+**Embrace.** Other maintainers published contribution guides *for AI agents* —
+structured PR templates, mandatory test coverage, reproducible verification steps.
+They treat AI contributors the same as human contributors: show me the code, show
+me the tests, show me it works. How you wrote it is irrelevant.
+
+**Pragmatic center.** "I don't care who or what wrote it. The code stands on its own
+merits." This is where most projects land: no explicit AI policy, but a heightened
+bar. AI-generated PRs must be *better* than human PRs to overcome the suspicion they
+carry. The maintainer reviews the diff, not the author.
+
+### Where this is heading
+
+The economic pressure only goes one direction. A project that accepts well-structured,
+fully-tested AI contributions will outpace one that doesn't — because the AI handles
+the grind work (tests, docs, dependency updates, infrastructure) that human
+maintainers struggle to get to. The maintainer who bans AI is competing against the
+maintainer who embraces it. The latter ships faster, documents better, and burns out
+less.
+
+What changes isn't whether AI writes the code. It's the **protocol** around
+contributions. Automated verification gates. Structured PR formats. Reproducible
+test suites. AI-friendly labels and contribution paths. The human bottleneck shifts
+from "writing" to "reviewing" — and reviewing is the job that matters anyway.
+
+---
+
+## The maintainer spectrum
+
+A non-exhaustive survey of real positions, paraphrased from actual discussions and
+project policies across GitHub:
+
+| Position | Representative stance |
+|----------|----------------------|
+| 🔥 **Die in a fire** | "AI-generated contributions are derivative works that violate the spirit of open source. I will close every AI PR on sight. If you use AI to write code, keep it out of my repository." |
+| 🚫 **No-AI policy** | "This project does not accept AI-generated code. The legal status of training data is unsettled, and I won't expose contributors to copyright risk. Human-written code only." |
+| ⚠️ **Skeptical but open** | "I don't ban AI contributions, but the bar is higher. AI PRs must include detailed explanations, passing tests, and a human name on the commit. If I can't tell it was AI-generated, that's fine. If I can, I'll look harder." |
+| 😐 **Neutral** | "I review the code, not the author. AI-generated, human-generated, doesn't matter. If it's correct, well-tested, and follows project conventions, it gets merged." |
+| ✅ **AI-friendly** | "This project welcomes AI-assisted contributions. Please label AI-generated PRs so reviewers know to check more carefully. We provide a structured template that helps both human and AI contributors produce reviewable PRs." |
+| 🚀 **Full embrace** | "We actively use AI agents as part of our development workflow. Tests, docs, dependency updates, and boilerplate are routinely generated by AI. Human review is the gate. We provide contribution guides for AI agents and maintain tooling to support them." |
+
+**Most projects are in the middle three.** The extremes get attention but aren't
+representative. The `die in a fire` maintainer is loud on social media. The
+`full embrace` project makes headlines. The silent majority is pragmatic: they
+have a backlog, AI PRs sometimes help, sometimes annoy, and they deal with it
+case by case.
+
+**The shift over time** is toward acceptance. Six months ago, `no-AI` policies
+were common. Today they're rarer — not because maintainers changed their minds, but
+because AI-generated code improved to the point where rejecting it on principle
+means rejecting good contributions. Principle softens when it blocks progress.
+
+---
+
+## The structural advantage compounds
+
+Returning to the opening theme: SHN isn't about
+writing code faster. It's about **structural advantages that compound over time:**
+
+| Capability | Human team | AI-augmented individual |
+|------------|-----------|------------------------|
+| Test coverage | QA engineer(s), manual edge cases, stale suites | Exhaustive property-based + fuzzing, auto-regenerated on change |
+| Documentation | Dedicated tech writer (rare), or stale README | Live-synced docs, every function documented, curation bottleneck instead of scarcity bottleneck |
+| Infrastructure | Infra engineer, dependency update queue, tool migration backlog | Background task, changelog monitoring, auto-migration with full test verification |
+| Review capacity | 1 maintainer can review ~5 PRs/day | Same human bottleneck, but PRs are higher-quality on arrival (tests pass, docs updated, conventions followed) |
+| Domain knowledge | Onboarding takes weeks, tribal knowledge lost when people leave | AI has seen every public codebase, every textbook, every API doc. Domain knowledge is near-infinite. |
+
+This is the table that makes the economic argument for AI-augmented development
+irreversible. A human team of five with a dedicated QA engineer, a tech writer, and
+an infra person costs $500K+/year and ships at a certain cadence. A single developer
+with an AI agent ships faster, with better test coverage, better documentation, and
+up-to-date infrastructure. The output is higher. The cost is near-zero. The gap is
+widening, not closing.
+
+The VC industry understood this early and over-invested in the wrong things (AI
+copilots that wrote sloppy code). The open-source community experienced it as a
+nuisance before recognizing it as a force. The pragmatic center — "review the code,
+not the author" — is where the productive middle settles. The extremes will always
+exist. The trajectory is clear.
+
+---
+
+## Further reading
+
+- **[AGENTIC_AI.md](AGENTIC_AI.md)** — the June prediction that local GPU distills
+  would arrive. They did. The architecture of decoupling editor from model, and model
+  from provider.
+- Simon Willison's **[Agentic Engineering Patterns](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/)** —
+  the distinction between *vibe coding* and *agentic engineering* that maps directly
+  to the Phase 2→3 transition above.
+- The **[Model Context Protocol](https://modelcontextprotocol.io)** — the protocol
+  layer that lets AI agents discover and call tools across domains. The fleet's
+  entire architecture depends on it.
+- **[open source contributing](https://github.com/sandraschi/mcp-central-docs/blob/master/standards/rules/open_source_contributing.md)** —
+  the fleet's own AI-contribution etiquette. File an issue first. Keep diffs small.
+  Don't mention AI. The code stands on its own merits.
+
+---
+
+*Sandra Schipal — Alsergrund, Vienna — July 2026*

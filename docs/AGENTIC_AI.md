@@ -1,15 +1,15 @@
 # The Agentic Revolution
 
 > **TL;DR** — I design the architecture and judge the output. AI generates the code.
-> This fleet of 130+ MCP servers is built by one person because agentic coding collapsed
+> This fleet of 180+ MCP servers is built by one person because agentic coding collapsed
 > the gap between what I can design and what I can implement. Everything here runs daily.
 > It's not demos.
 
 - [What changed](#what-changed)
-- [Current tool stack](#current-tool-stack-june-2026)
-- [Keeping 130+ repos coherent](#keeping-130-repos-coherent)
+- [Current tool stack](#current-tool-stack-july-2026)
+- [Keeping 180+ repos coherent](#keeping-180-repos-coherent)
 - [The remaining challenges](#the-remaining-challenges)
-- [The mesh: what 150+ MCP servers can do](#the-mesh-what-150-mcp-servers-can-do-when-they-talk-to-each-other)
+- [The mesh: what 180+ MCP servers can do](#the-mesh-what-180-mcp-servers-can-do-when-they-talk-to-each-other)
 - [Further reading](#further-reading)
 
 ## What changed
@@ -22,35 +22,26 @@ The human job shifted from typing to thinking. Architecture, taste, judgment, kn
 the output is wrong. The agent handles syntax, plumbing, tests, formatting, and the grind
 work that used to be 80% of the job.
 
-## Current Tool Stack (June 2026)
+## Current Tool Stack (July 2026)
 
 The stack has three layers: editor, model, and the bridge between them.
 
 | Layer | Tool | Role |
 |-------|------|------|
-| **Editor** | [Cursor Ultra](https://cursor.com) or [opencode](https://github.com/anomalyco/opencode) | Cursor when the deal is good (currently 50% off). opencode as the permanent free fallback. Both are MCP-aware[^mcp]; the IDE choice matters less than the model behind it. |
+| **Editor** | [opencode](https://github.com/anomalyco/opencode) | Primary daily driver. Free, MCP-native, skill system, subagents. The terminal-first workflow that evolved from Claude Code but stayed free. |
 | **Primary model** | [DeepSeek v4](https://openrouter.ai/deepseek/deepseek-v4) via OpenRouter | Daily driver. Fractions of a cent per million tokens. 1M+ context window[^contextwindow]. Code quality at parity with Claude Opus 4 on architecture/refactoring, better at bulk generation. Text-only. |
-| **Premium model** | [Anthropic Fable 5](https://anthropic.com) | Temporary freebie (free until June 22, 2026). Outstanding quality — used for planning and complex architectural reasoning. Gets replaced when the deal ends. |
-| **Deal-driven** | Claude (Fable 5 freebie) | Temporary free tier — used while it lasts, dropped when it ends. The stack is fluid by design. |
-| **Local fallback** | RTX 4090, 24 GB VRAM | DeepSeek v4 INT4 quant fits. Distilled models expected soon — then the entire stack runs **zero-cloud**[^zerocloud] (no token costs, no subscriptions). |
+| **Chinese open-weight** | [DeepSeek V4 Flash](https://huggingface.co/deepseek-ai), [Qwen 3](https://huggingface.co/Qwen), [jackrong QwOpus distills](https://huggingface.co/jackrong) | The 2026 open-weight story. DeepSeek V4 Flash rivals premium labs at zero cost. Qwen 3 variants cover every VRAM tier. jackrong's QwOpus distills — Qwen base models fine-tuned on Claude Opus 4 outputs — run on a single RTX 4090 at usable quality. This is the stack the fleet predicted in June. |
+| **Local GPU** | RTX 4090, 24 GB VRAM | DeepSeek V4 INT4 quant + jackrong QwOpus distills. The **zero-cloud**[^zerocloud] stack is here: no API calls, no token costs, no subscriptions. The June prediction ("distilled models expected soon") landed. |
+| **Premium fallback** | [Gemini 3.1 Pro](https://deepmind.google/technologies/gemini/) | For complex architectural reasoning that local models can't yet handle. The Fable 5 freebie ended June 22 as predicted — the deal-driven strategy was correct. |
 
-**Strategy: ride the deals.** Use what's best at the best price, switch when the deal
-changes. Cursor Ultra + Fable 5 today. opencode + DeepSeek v4 when deals lapse. Local
-RTX 4090 when distilled models land. Decouple editor from model — that's the durable
-setup. The stack is fluid by design; only the separation of concerns is permanent.
+**Strategy: ride the deals, own the floor.** The base-cost floor is local GPU — DeepSeek V4 INT4 and QwOpus distills cover 90% of daily tasks at zero cost. Premium models are opportunistic: use them when they're cheap/free, drop them when they're not. The opencode editor is free and permanent. The only recurring cost is OpenRouter API calls for DeepSeek V4 when the local GPU is busy — fractions of a cent per session.
 
-**Why this matters:** 2026 is the year of the cloud token cost explosion. Enterprises
-that bet everything on GPT-4/Claude Opus API calls are seeing bills that make CFOs
-choke — tokenmaxxing[^tokenmax] every prompt, chasing leaderboard[^leaderboard] scores, CTOs publicly pumping
-the brakes. The fleet sidestepped this entirely by design: DeepSeek v4 at fractional-cent
-pricing, deal-driven premium access, and a local GPU path that will eventually eliminate
-cloud costs altogether. The trap was obvious from the start: don't build your stack on
-a meter that runs $0.15 every time you tab-complete.
+**Why this matters:** The June prediction was right. The Fable 5 freebie ended on schedule. The Chinese open-weight ecosystem — DeepSeek V4 Flash/Pro, Qwen 3, and jackrong's Claude-distilled QwOpus models — shipped faster than expected. The local-GPU path went from "coming soon" to "here now." Meanwhile, enterprises locked into proprietary API stacks are paying token bills that make CFOs choke. The fleet's architecture of decoupling editor from model, and model from provider, was the correct call.
 
-## Keeping 130+ repos coherent
+## Keeping 180+ repos coherent
 
 A fleet this size doesn't stay healthy by accident. Every repo follows the same
-playbook: same tooling (FastMCP 3.2, uv, Ruff, justfile), same response patterns
+playbook: same tooling (FastMCP 3.4, uv, Ruff, justfile), same response patterns
 (dialogic returns with message + next_steps), same startup scripts (start.ps1),
 same CI (ruff + pytest), same Tauri NSIS installer template. The fleet standard
 lives in `mcp-central-docs/standards/` and is enforced by linting and code review —
@@ -77,7 +68,7 @@ failures, iterates. What replaces it are subtler issues:
 
 ## What this means for this fleet
 
-130+ repos. One person. Working software, not prototypes.
+180+ repos. One person. Working software, not prototypes.
 
 That ratio wasn't possible before. The bottleneck used to be implementation bandwidth —
 the gap between what you could design and what you could type. That gap is now closed.
@@ -87,10 +78,10 @@ well enough to direct the build, and knowing when the result is good.
 The fleet is real infrastructure I use daily. The calibre RAG, the transit monitor, the
 robotics bridges, the memory system — these run. They are not demos.
 
-## The mesh: what 150+ MCP servers can do when they talk to each other
+## The mesh: what 180+ MCP servers can do when they talk to each other
 
 The fleet isn't a collection of isolated tools. Each server exposes its domain via FastMCP
-3.2, and the MCP bridge layer lets them call each other. The result is a **composable
+3.4, and the MCP bridge layer lets them call each other. The result is a **composable
 maker pipeline** that didn't exist before — and wouldn't exist without agentic coding.
 
 ### Maker input → CAD → Simulation → Viz + Robotics → Export
@@ -179,6 +170,7 @@ impossible for an individual.
 
 ## Further reading
 
+- **[SUPERHUMAN_NARROW.md](SUPERHUMAN_NARROW.md)** — domain-specific superhuman AI: why LLM-augmented development isn't just faster, it's structurally different. The intrinsic advantages (tests, docs, infra), the VC vs. FOSS three-phase story, and the maintainer spectrum.
 - **[Fleet standards](https://github.com/sandraschi/mcp-central-docs/tree/master/standards)** — the playbook every repo follows. Tool design, response patterns, Tauri NSIS, PowerShell rules.
 - **[leanforge-mcp](https://github.com/sandraschi/leanforge-mcp)** — Lean 4 formal proof search via LLM + compiler feedback loop. The most ambitious current project.
 - **[arxiv-mcp](https://github.com/sandraschi/arxiv-mcp)** — pipe into arXiv for the empirical literature on agentic coding.
@@ -216,4 +208,4 @@ impossible for an individual.
 
 ---
 
-*Sandra Schipal — Alsergrund, Vienna — June 2026*
+*Sandra Schipal — Alsergrund, Vienna — July 2026*
