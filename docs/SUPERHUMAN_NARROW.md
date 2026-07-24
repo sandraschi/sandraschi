@@ -495,6 +495,39 @@ exist. The trajectory is clear.
 
 ---
 
+## The other side of SHN
+
+Every capability that democratizes creation also democratizes destruction. The
+same AI that added video mixing to Mixxx can pilot a drone. The same pattern
+matching that spots tumors in mammograms can identify human targets in a
+thermal feed. SHN is domain-specific by definition — and some domains are lethal.
+
+An SHN drone operator doesn't need a PhD in aerospace engineering. It needs a
+clear spec and a GPU. The AI handles flight dynamics, obstacle avoidance, target
+recognition, and terminal guidance. The human says "go here, find this, do that."
+The same gap-closing that let a non-DJ extend a 300K-line C++ codebase lets a
+non-pilot operate a weapons platform.
+
+An SHN autosniper is not science fiction. Computer vision models already
+outperform humans at object detection in cluttered environments. Ballistic
+calculation is a solved physics problem. Motorized rifle platforms exist
+off-the-shelf. The integration layer — the part that used to require a defense
+contractor and a five-year procurement cycle — is now an afternoon with an AI
+agent and a GitHub account.
+
+This is not an argument against SHN. It's an argument for acknowledging that the
+technology is symmetric. The fleet builds DJ software, CAD pipelines, and formal
+proof assistants. The same architecture builds weapons. The protocols are
+identical. The cost curve is the same. The democratization is the same.
+
+Nobody gets to choose which domains SHN applies to. The technology doesn't
+discriminate. The only variable is who wields it and for what purpose. The fleet
+chose maker tools. Someone else will choose differently. The question isn't
+whether SHN can be weaponized. It's whether anyone is prepared for how fast and
+how cheaply it will happen.
+
+---
+
 ## Further reading
 
 - **[AGENTIC_AI.md](AGENTIC_AI.md)** — the June prediction that local GPU distills
