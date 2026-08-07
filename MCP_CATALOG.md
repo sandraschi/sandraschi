@@ -447,7 +447,7 @@ The SVG itself carries everything inline:
 | [4g-usb-phone-mcp](https://github.com/sandraschi/4g-usb-phone-mcp) | 4G USB dongle SMS/call bridge |
 | [agiapi-mcp](https://github.com/sandraschi/agiapi-mcp) | AGI API gateway — multi-model orchestration |
 | [dj-media-hub](https://github.com/sandraschi/dj-media-hub) | DJ media hub — cross-deck library sync |
-| [qbt-mcp](https://github.com/sandraschi/qbt-mcp) | qBittorrent client bridge |
+| [rtorrent-mcp](https://github.com/sandraschi/rtorrent-mcp) | rTorrent client bridge |
 | [database-operations-mcp](https://github.com/sandraschi/database-operations-mcp) | Database operations — multi-DB query and management |
 
 </details>
