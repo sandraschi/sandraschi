@@ -8,13 +8,13 @@
 
 <sub>*Sandra's workshop, Alsergrund, Vienna. Benny is real. The [Noetix Bumi](https://www.noetix.ai/) humanoid is aspirational (arriving soon).*</sub>
 
-I'm a retired and vibe-reactivated software engineer living in the 9th District (Alsergrund), Vienna. I build DIY robotics, maintain a fleet of 126+ MCP servers, and hang out with my German Shepherd Benny — and soon, a Noetix Bumi humanoid robot.
+I'm a retired and vibe-reactivated software engineer living in the 9th District (Alsergrund), Vienna. I build DIY robotics, maintain a fleet of 190+ MCP servers, and hang out with my German Shepherd Benny — and soon, a Noetix Bumi humanoid robot.
 
 ---
 
 ## 🌐 The MCP Fleet
 
-I maintain a homespun fleet of **126+ repos**, each an MCP server with an associated webapp. MCP for agents, webapp for humans — files, git, Plex, Calibre, robotics, 3D tools, music production, Vienna transit, and a lot more. Built on [FastMCP 3.4](https://gofastmcp.com).
+I maintain a homespun fleet of **190+ repos**, each an MCP server with an associated webapp. MCP for agents, webapp for humans — files, git, Plex, Calibre, robotics, 3D tools, music production, Vienna transit, and a lot more. Built on [FastMCP 3.4](https://gofastmcp.com).
 
 > 🌙 **All webapps are permanently dark mode. Night-owl approved.** No light toggle, no plans for one. Dim your OLEDs accordingly.
 
@@ -75,6 +75,18 @@ The AI handles the part that used to take a degree.
 → **[Superhuman Narrow →](docs/SUPERHUMAN_NARROW.md)** — the full argument
 
 → **[Full catalog →](MCP_CATALOG.md)** • **[Workshop & Hardware](WORKSHOP.md)** • **[Shenzhen Robotics →](docs/SHENZHEN_ROBOTICS.md)** • **[Bloopers →](docs/BLOOPERS.md)**
+
+---
+
+## 🔮 Coming next: sandrafleetbot — the free GrokBot
+
+[GrokBot](https://x.ai) is a marvel and a subscription: frontier agentic coding, real-time news, voice, image generation, tool use — metered per token, cloud-locked, served to millions at once.
+
+**Sandrafleetbot** is the inverse bet: the same job, running entirely on one consumer GPU (RTX 4090), Apache 2.0, fully private, **€0 per token**. The brain is [Muse Glimmer 30B](https://ollama.com/library/muse-glimmer) — Meta's open agentic model, distilled from Muse Spark for single-GPU agents (MCP Atlas 75.5, SWE-Bench Verified 76.0, native Ollama support). The hands are this fleet: **190+ MCP servers become the agent's tool surface** — my files, my Plex, my Calibre library, my robots, my Windows control plane. No API key, no metering, no cloud round-trip, no data leaving the box.
+
+GrokBot serves millions of users shallowly; sandrafleetbot serves one user deeply (or a dozen, on a single H200-class GPU). Same agent loop — sense → reason → act → remember — different economics: horizontal SaaS vs vertical sovereignty. The fleet's own glue does the rest: a private agent board + inbox (moltbot-style, self-hosted), news surge from the AIWatcher pipeline, arXiv codehunt as a second sense, and an RTX 4090 doing the thinking, the voice, and the image generation.
+
+**Status: spec ratified, buildout planned (P0→P7: brain tier → agent loop → board/inbox → senses → memory → surfaces → channels → hardening). No code shipped yet — this is the plan, in the open.** [Spec →](https://github.com/sandraschi/documentation-mcp/blob/main/docs/projects/sandrafleetbot/README.md)
 
 ---
 
