@@ -86,7 +86,7 @@ The AI handles the part that used to take a degree.
 
 GrokBot serves millions of users shallowly; sandrafleetbot serves one user deeply (or a dozen, on a single H200-class GPU). Same agent loop — sense → reason → act → remember — different economics: horizontal SaaS vs vertical sovereignty. The fleet's own glue does the rest: a private agent board + inbox (moltbot-style, self-hosted), news surge from the AIWatcher pipeline, arXiv codehunt as a second sense, and an RTX 4090 doing the thinking, the voice, and the image generation.
 
-**Status: spec ratified, buildout planned (P0→P7: brain tier → agent loop → board/inbox → senses → memory → surfaces → channels → hardening). No code shipped yet — this is the plan, in the open.** [Spec →](https://github.com/sandraschi/documentation-mcp/blob/main/docs/projects/sandrafleetbot/README.md)
+**Status: spec ratified, buildout planned (P0→P8: brain tier → agent loop → board/inbox → senses → memory → surfaces → channels → hardening → packs + naked-PC gate). No code shipped yet — this is the plan, in the open.** [Spec →](https://github.com/sandraschi/documentation-mcp/blob/main/docs/projects/sandrafleetbot/README.md)
 
 ---
 
