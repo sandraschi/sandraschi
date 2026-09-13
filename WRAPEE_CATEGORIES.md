@@ -66,6 +66,10 @@ Examples: [leanforge-mcp](https://github.com/sandraschi/leanforge-mcp) (the Lean
 
 These are the hardest to grasp and the most powerful in chains: OSC carries BPM clocks and robot telemetry on the same bus.
 
+## 6. -phile guides (emerging)
+
+One repo per culture you love: language learning as your longrunner game, culture/econ/history knowledge box, travel planning, diary of your own journey. Europe first (not too tiny), Japan jumps the queue on existing corpus, Botswana and friends later with solicited contributors. Full concept: [The -phile Fleet](PHILE_FLEET.md).
+
 ---
 
 ## Next
