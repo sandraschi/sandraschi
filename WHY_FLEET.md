@@ -16,6 +16,8 @@ Each fleet repo wraps **one** such tool and adds three faces:
 
 One wrapped thing, one repo, same triple pattern everywhere. That is the whole fleet.
 
+"Wrapped thing" (fleet slang: **wrapee**) is deliberately broad: a single tool like Blender, but also infrastructure like arXiv, a VR world like Resonite, a robot plus its whole software stack, or an abstract concept like the Lean 4 language. The five kinds, easiest first: [Wrapee Categories](WRAPEE_CATEGORIES.md).
+
 ## 2. Why not one giant repo?
 
 - **Install only what you own.** Got no robot vacuum? Skip dreame-mcp. Got Blender? Take blender-mcp. A monorepo forces everyone to download everything.
