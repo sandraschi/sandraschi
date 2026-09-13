@@ -25,6 +25,8 @@ So in Claude you say "gimme alexa weather report", Claude calls speech to loudly
 
 With great sneakiness comes a shopping guard: a default-on heuristic refuses to speak order/buy/cart-shaped phrasing, and the README documents the prompt-injection risk honestly (never pipe unreviewed model output into `speak` while voice purchasing exists - restrict it, PIN it, or use a low-privilege account). The hack is fun; the guardrails are real.
 
+One of four entries in the gallery: [Sneaky Feats](SNEAKY_FEATS.md).
+
 ## Why FunASR (the PRC connection)
 
 Chinese open-weight industrial speech (FunASR, SenseVoice, CosyVoice) ships as deployable tooling with published benchmarks and ONNX edge builds - ahead of "just run Whisper" for agent pipelines (segments + speakers + punctuation in one pass). Same story as the LLM champions ([Local LLM Stack](LOCAL_LLM_STACK.md)): track both camps, run whatever leads.
