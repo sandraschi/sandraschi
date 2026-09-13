@@ -1,7 +1,6 @@
 # Sandra Schipal
 
-> [!NOTE]
-> **Human-architected, AI-implemented.** Architecture and integration decisions are mine. Code iteration is done by AI agents under my direction. [What that means](docs/AGENTIC_AI.md)
+> Human-architected, AI-implemented: I design, agents code. [What that means](docs/AGENTIC_AI.md)
 
 Retired software engineer, 9th District Vienna. I give everyday tools three faces - a robot-handle for AI agents, a web dashboard, and a Windows desktop app - then snap them together into pipelines. 190+ small repos, one idea.
 

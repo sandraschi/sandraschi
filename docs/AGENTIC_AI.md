@@ -3,15 +3,15 @@
 *Prompted by: "opencode and chinese open weight models, especially deepseek v4 and the jackrong qwopus distills you can run on local gpu. what do you think?"*
 
 > **TL;DR** — I design the architecture and judge the output. AI generates the code.
-> This fleet of 126+ MCP servers is built by one person because agentic coding collapsed
+> This fleet of 190+ MCP servers is built by one person because agentic coding collapsed
 > the gap between what I can design and what I can implement. Everything here runs daily.
 > It's not demos.
 
 - [What changed](#what-changed)
-- [Current tool stack](#current-tool-stack-july-2026)
-- [Keeping 126+ repos coherent](#keeping-126-repos-coherent)
+- [Current tool stack](#current-tool-stack-september-2026)
+- [Keeping 190+ repos coherent](#keeping-190-repos-coherent)
 - [The remaining challenges](#the-remaining-challenges)
-- [The mesh: what 126+ MCP servers can do](#the-mesh-what-126-mcp-servers-can-do-when-they-talk-to-each-other)
+- [The mesh: what 190+ MCP servers can do](#the-mesh-what-190-mcp-servers-can-do-when-they-talk-to-each-other)
 - [Further reading](#further-reading)
 
 ## What changed
@@ -24,23 +24,23 @@ The human job shifted from typing to thinking. Architecture, taste, judgment, kn
 the output is wrong. The agent handles syntax, plumbing, tests, formatting, and the grind
 work that used to be 80% of the job.
 
-## Current Tool Stack (July 2026)
+## Current Tool Stack (September 2026)
 
-The stack has three layers: editor, model, and the bridge between them.
+Rewritten: the July version below described a cloud-metered stack (DeepSeek v4 via OpenRouter, Gemini fallback). That is history now. The stack has three layers: editor, model, and the bridge between them.
 
 | Layer | Tool | Role |
 |-------|------|------|
-| **Editor** | [opencode](https://github.com/anomalyco/opencode) | Primary daily driver. Free, MCP-native, skill system, subagents. The terminal-first workflow that evolved from Claude Code but stayed free. |
-| **Primary model** | [DeepSeek v4](https://openrouter.ai/deepseek/deepseek-v4) via OpenRouter | Daily driver. Fractions of a cent per million tokens. 1M+ context window[^contextwindow]. Code quality at parity with Claude Opus 4 on architecture/refactoring, better at bulk generation. Text-only. |
-| **Chinese open-weight** | [DeepSeek V4 Flash](https://huggingface.co/deepseek-ai), [Qwen 3](https://huggingface.co/Qwen), [jackrong QwOpus distills](https://huggingface.co/jackrong) | The 2026 open-weight story. DeepSeek V4 Flash rivals premium labs at zero cost. Qwen 3 variants cover every VRAM tier. jackrong's QwOpus distills — Qwen base models fine-tuned on Claude Opus 4 outputs — run on a single RTX 4090 at usable quality. This is the stack the fleet predicted in June. |
-| **Local GPU** | RTX 4090, 24 GB VRAM | DeepSeek V4 INT4 quant + jackrong QwOpus distills. The **zero-cloud**[^zerocloud] stack is here: no API calls, no token costs, no subscriptions. The June prediction ("distilled models expected soon") landed. |
-| **Premium fallback** | [Gemini 3.1 Pro](https://deepmind.google/technologies/gemini/) | For complex architectural reasoning that local models can't yet handle. The Fable 5 freebie ended June 22 as predicted — the deal-driven strategy was correct. |
+| **Editor** | [opencode](https://github.com/anomalyco/opencode) | Primary daily driver. Free, MCP-native, skill system, subagents. Launches against the local model (`ollama launch opencode --model muse-glimmer`). |
+| **Primary model** | [Muse Glimmer 30B](https://ollama.com/library/muse-glimmer), local | Daily driver. Meta's agentic distil of Muse Spark, Apache 2.0, 131K context, text+image, tool-calling verified. Runs on the RTX 4090 via llama.cpp native (Ollama's kquant GGUF is too old for it) at ~40 tok/s. EUR 0 per token. |
+| **Fast tier** | Qwen 9B-class distil, local | Triage and routine steps. Small, quick, wakes the 30B brain only for real reasoning. |
+| **Local GPU** | RTX 4090, 24 GB VRAM | Glimmer holds ~21 GB. Whisper STT and ComfyUI image gen time-share the card, shut down when idle. Full local stack: [Local LLM Stack](../LOCAL_LLM_STACK.md). |
+| **Cloud fallback** | 28 providers via local-llm-mcp gateway | Documented fallback only, budget under $20/month with spend watch, never default. Heavy single-shot reasoning is the only legitimate use. |
 
-**Strategy: ride the deals, own the floor.** The base-cost floor is local GPU — DeepSeek V4 INT4 and QwOpus distills cover 90% of daily tasks at zero cost. Premium models are opportunistic: use them when they're cheap/free, drop them when they're not. The opencode editor is free and permanent. The only recurring cost is OpenRouter API calls for DeepSeek V4 when the local GPU is busy — fractions of a cent per session.
+**Strategy: own the floor, rent the ceiling.** The base-cost floor is the local GPU - Glimmer plus the Qwen fast tier cover daily work at zero cost. Cloud models are rented per exception, not per session. The July stack (DeepSeek v4 metered, Gemini fallback, Fable freebies) validated the decoupling of editor from model and model from provider - then the floor rose to meet it and the meter stopped running.
 
-**Why this matters:** The June prediction was right. The Fable 5 freebie ended on schedule. The Chinese open-weight ecosystem — DeepSeek V4 Flash/Pro, Qwen 3, and jackrong's Claude-distilled QwOpus models — shipped faster than expected. The local-GPU path went from "coming soon" to "here now." Meanwhile, enterprises locked into proprietary API stacks are paying token bills that make CFOs choke. The fleet's architecture of decoupling editor from model, and model from provider, was the correct call.
+**Why this matters:** the June prediction (distilled open-weight models on a single 4090) landed twice over: first DeepSeek V4 quants and Qwen distils, then Glimmer as the agentic brain. Enterprises locked into proprietary API stacks are paying token bills that make CFOs choke. The fleet pays electricity.
 
-## Keeping 126+ repos coherent
+## Keeping 190+ repos coherent
 
 A fleet this size doesn't stay healthy by accident. Every repo follows the same
 playbook: same tooling (FastMCP 3.4, uv, Ruff, justfile), same response patterns
@@ -70,7 +70,7 @@ failures, iterates. What replaces it are subtler issues:
 
 ## What this means for this fleet
 
-126+ repos. One person. Working software, not prototypes.
+190+ repos. One person. Working software, not prototypes.
 
 That ratio wasn't possible before. The bottleneck used to be implementation bandwidth —
 the gap between what you could design and what you could type. That gap is now closed.
@@ -80,7 +80,7 @@ well enough to direct the build, and knowing when the result is good.
 The fleet is real infrastructure I use daily. The calibre RAG, the transit monitor, the
 robotics bridges, the memory system — these run. They are not demos.
 
-## The mesh: what 126+ MCP servers can do when they talk to each other
+## The mesh: what 190+ MCP servers can do when they talk to each other
 
 The fleet isn't a collection of isolated tools. Each server exposes its domain via FastMCP
 3.4, and the MCP bridge layer lets them call each other. The result is a **composable
@@ -210,4 +210,4 @@ impossible for an individual.
 
 ---
 
-*Sandra Schipal — Alsergrund, Vienna — July 2026*
+*Sandra Schipal — Alsergrund, Vienna — September 2026 (rewritten; July version kept in git history)*
