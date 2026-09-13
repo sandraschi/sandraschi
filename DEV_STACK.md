@@ -23,7 +23,7 @@
 
 ## Docs hub and standards library
 
-Two repos carry the accumulated knowledge:
+Two repos carry the accumulated knowledge. The library is big enough to be its own fleet: **[The Standards Fleet](STANDARDS_FLEET.md)** - districts, lifecycle, reading order.
 
 - **[documentation-mcp](https://github.com/sandraschi/documentation-mcp)** - the docs server: project specs (including the [sandrafleetbot buildout plan](https://github.com/sandraschi/documentation-mcp/blob/main/docs/projects/sandrafleetbot/README.md)), audits, reports, per-repo docs served over MCP and the dashboard.
 - **mcp-central-docs** - the standards library. 130+ files under `standards/`, and agents must read before coding. The load-bearing ones:
@@ -58,6 +58,8 @@ Every webapp, same stack (verified in-tree, e.g. yahboom dashboard):
 
 ## Desktop: Tauri and NSIS
 
+Full treatment: **[Tauri and NSIS Pitfalls](TAURI_NSIS_PITFALLS.md)** - the A-J checklist, NSIS hooks, postmortems that paid for it. Short version:
+
 - **Tauri 2.x** (`@tauri-apps/api` in every webapp), embedded backend, NSIS `.exe` via `just build-native`. Same UI as the webapp, double-click install, no browser.
 - **Mandatory pre-build audit** against TAURI_PRODUCTION_PITFALLS.md sections A-J. Post-build, the repo's BUILD_LOG.md records failures and fixes.
 - **Naked-PC bar**: installer must work on a clean Windows box (no Python/Node/uv/winget required), WebView2 bootstrapper path, clean uninstall with no orphan backends.
@@ -85,7 +87,7 @@ Full treatment lives in its own sub-sub readme: **[E2E Testing a Fleet Webapp](E
 
 ## Bug and pitfall depots
 
-Bugs are fleet assets. Protocol on every find-and-fix:
+Bugs are fleet assets. Full protocol: **[Bug Depot Protocol](BUG_DEPOT_PROTOCOL.md)** - the four steps, the depots, the skill loop, the 204/205 cautionary tale. Short version:
 
 1. **Document** it in the relevant pitfalls doc (TAURI_PRODUCTION_PITFALLS.md, TRAPS_AND_PITFALLS.md, or troubleshooting/BUGS_DEPOT.md).
 2. **Audit** all other repos for the same antipattern (fleet-wide grep).
@@ -112,6 +114,8 @@ The field moves monthly; the fleet reads instead of guessing:
 - **Six-month rule** ([About](ABOUT.md)): any opinion older than six months has probably been overtaken by events. Dated snapshots, re-check before buying hardware or copying patterns.
 
 ## Packaging and distribution
+
+Full treatment: **[Packaging](PACKAGING.md)** - the two tracks, .mcpbignore discipline, prompts 3-4-100. Short version:
 
 - **Two tracks**: `.mcpb` bundles (manifest, `.mcpbignore`, prompts 3-4-100 rule: system prompt >= 3000 words, user prompt >= 4000, >= 100 tool-call examples) and Tauri NSIS installers.
 - **Glama.ai** presence per repo (`glama.json`), llms.txt + llms-full.txt, README/INSTALL/ONBOARDING docs stack with screenshots and Preview sections.
