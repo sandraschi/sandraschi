@@ -1,4 +1,4 @@
-# Sandra Schipal
+# Sandra's Repo Fleet
 
 > Human-architected, AI-implemented: I design, agents code. [What that means](docs/AGENTIC_AI.md)
 
