@@ -48,6 +48,10 @@ Dated context the knowledge box carries. Facts from Wikipedia's 2026-in-Japan re
 
 **The rightward drift.** LDP under Sanae Takaichi (first female PM) took a postwar-record two-thirds majority in the February snap election; Article 9 revision is openly debated with large counter-protests; arms-export ban lifted April 2026; first postwar intelligence bureau approved; flag-desecration law in force. Real drift, still recognizably within democratic rails - and far less bad than the European and American variants. State it plainly, source every claim, revisit each snapshot: this paragraph rots fastest.
 
+## Editorial line: no extremism, any direction
+
+Love of a culture is not endorsement of its worst corners. All -phile repos keep every kind of extremism out: no propaganda, no revisionism, no glorification, from any side. History pages document with sources; travel and diary faces stay clear of political agitation entirely. Contributors agree to this with their first commit; violations get reverted, repeat violations lose commit access. Document, don't amplify.
+
 ## Proof it is a pattern: sinophile-mcp
 
 Second instance, same four faces: hanzi suite, history box, travel planner, diary. If two cultures work, N work - new cultures clone the template and swap the corpus. vienna-life-assistant already rhymes with it (functionally viennaphile-mcp); the kanji DB is a -phile data layer waiting for extraction.
