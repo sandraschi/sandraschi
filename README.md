@@ -31,32 +31,4 @@ Details: **[Why the fleet looks like this](WHY_FLEET.md)** - why one repo per to
 | How repos link (clickable graph + rules) | **[Fleet Crossconnects](FLEET_CROSSCONNECTS.md)** - pipelines, 1-hop contract, soft degradation |
 | Two deep dives, kept separate on purpose | **[Fleet Highlights](HIGHLIGHTS.md)** (mobile-DJ video fork, Lean proof loop) - **[Coming Next](COMING_NEXT.md)** (local sovereign agent, 0 EUR per token) |
 | The machine and the hardware behind it | **[Workshop](WORKSHOP.md)** - Goliath, RTX 4090, Boomy, Bumi |
-
----
-
-## The workshop, after the explanation
-
-Value first, hardware second. This is where it runs.
-
-![Workshop](assets/sandraschi_header.png)
-
-<sub>*Alsergrund, Vienna. Benny is real. The [Noetix Bumi](BUMI.md) humanoid is incoming. Full spec: [Workshop](WORKSHOP.md).*</sub>
-
----
-
-## Benny
-
-Benny, 2-year-old German Shepherd. Security consultant and tennis ball lifecycle manager.
-
-<details>
-<summary><strong>People and sites worth following (no slop)</strong></summary>
-
-- Simon Willison ([simonwillison.net](https://simonwillison.net)) - agentic patterns. The pelican test is his.
-- FastMCP ([gofastmcp.com](https://gofastmcp.com)) - the framework the fleet is built on.
-- Lean 4 ([lean-lang.org](https://lean-lang.org)) - proof verification behind leanforge-mcp.
-- arXiv ([arxiv.org](https://arxiv.org)) - papers before blog posts.
-- Karpathy, AI Explained, ThePrimeTime, Mollick, Interconnects - see [Highlights](HIGHLIGHTS.md) for why each matters here.
-
-</details>
-
-<p align="center"><a href="PELICAN.md"><sub>about the pelican</sub></a> - <a href="CHANGELOG.md">Changelog</a> - Thanks to my brother <strong>Stephan</strong> for ideas and war stories.</p>
+| Who runs this (workshop photo, Benny, follows, thanks) | **[About Sandra](ABOUT.md)** - the personal tail, kept off this page on purpose |
