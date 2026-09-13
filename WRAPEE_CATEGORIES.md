@@ -20,11 +20,13 @@ If every wrapee were like this, no explainer would be needed. They are not.
 
 No installer. An account, an API, or a public feed.
 
-Examples: [arxiv-mcp](https://github.com/sandraschi/arxiv-mcp) (arXiv papers), [email-mcp](https://github.com/sandraschi/email-mcp), [discord-mcp](https://github.com/sandraschi/discord-mcp), [mywienerlinien](https://github.com/sandraschi/mywienerlinien) (Vienna transit departures).
+Examples: [arxiv-mcp](https://github.com/sandraschi/arxiv-mcp) (arXiv papers), [email-mcp](https://github.com/sandraschi/email-mcp), [discord-mcp](https://github.com/sandraschi/discord-mcp), [mywienerlinien](https://github.com/sandraschi/mywienerlinien) (Vienna transit departures), [gitee-mcp](https://github.com/sandraschi/gitee-mcp) (Gitee, the PRC equiv of GitHub: 12M+ users, humming radar, momentum tracking, zh->en translation via local Ollama).
 
-- **You need:** credentials or nothing at all (arXiv and transit are public).
+- **You need:** credentials or nothing at all (arXiv and transit are public; Gitee works anonymously, free token unlocks search).
 - **The agent gets:** search, fetch, send, listen.
 - **You get:** onboarding docs for the account setup (money, API keys, pitfalls) plus the same dashboard pattern.
+
+Same concept extends to any country's sites: the wrapper pattern does not care what language the forge speaks. Order from Taobao, why not - one friction point in the daily life of a dev and robot tinkerer gone (parts from Shenzhen without the browser-tab dance). Hungarian sites very much included (haha, but also serious: small-language ecosystems are as invisible to Western tooling as Gitee was - same wrapper, new wrapee).
 
 Onboarding matters most here: [docs/ONBOARDING.md](docs/ONBOARDING.md) per repo.
 
