@@ -1,131 +1,62 @@
-# ⚡ Sandra Schipal
+# Sandra Schipal
 
 > [!NOTE]
-> **These repositories are human-architected, AI-implemented.**
-> Architecture, design decisions, and system integration are mine. Code generation and iteration are done by AI agents under my direction. [More on what that means and why →](docs/AGENTIC_AI.md)
+> **Human-architected, AI-implemented.** Architecture and integration decisions are mine. Code iteration is done by AI agents under my direction. [What that means](docs/AGENTIC_AI.md)
+
+Retired software engineer, 9th District Vienna. I give everyday tools three faces - a robot-handle for AI agents, a web dashboard, and a Windows desktop app - then snap them together into pipelines. 190+ small repos, one idea.
+
+Start here: **[Why so many repos?](WHY_FLEET.md)** - plain-language value prop, 3 minutes.
+
+![One repo, three faces](assets/hero.svg)
+
+---
+
+## The idea in 30 seconds
+
+- **One remote per tool, three faces each.** Each repo wraps one app or device you already use (Blender, QCAD, Plex, a Yahboom robot car, Vienna transit). It adds three things: an MCP server AI agents can call (Claude Desktop, Cursor, agentic IDEs, local or cloud model), a dark web dashboard, and a Tauri Windows desktop app (NSIS .exe, same UI, no browser needed).
+- **Human faces are not decoration.** Agents act, humans approve. Watch telemetry, sign off on posts and destructive ops, hit the big red stop button.
+- **They snap together, optionally.** Any repo runs alone. When two repos know each other they offer a 1-hop link (CAD file to 3D print to robot mount to VR twin to spoken "done"). No forced installs, friendly error if the peer is missing.
+
+Details: **[Why the fleet looks like this](WHY_FLEET.md)** - why one repo per tool, why a webapp each, what crossconnects do, and an honest note on stars.
+
+---
+
+## Where to go next
+
+| If you want... | Go to |
+|---|---|
+| Design things, move robots, meet in VR (the interlock chain) | **[Make / Move / Meet](FLEET_MAKE_MOVE_MEET.md)** - Blender, QCAD, FreeCAD, Resonite VR, Yahboom, Dreame, Nori, Unitree |
+| Sound, video, DJ sets, knowledge, everyday Vienna life | **[Play / Know / Home](FLEET_PLAY_KNOW_HOME.md)** - Mixxx, stems, Resolume, memory, Calibre, arXiv, Plex, transit |
+| Every server in one registry | **[Full MCP Catalog](MCP_CATALOG.md)** - 126+ repos by category |
+| How repos link (clickable graph + rules) | **[Fleet Crossconnects](FLEET_CROSSCONNECTS.md)** - pipelines, 1-hop contract, soft degradation |
+| Two deep dives, kept separate on purpose | **[Fleet Highlights](HIGHLIGHTS.md)** (mobile-DJ video fork, Lean proof loop) - **[Coming Next](COMING_NEXT.md)** (local sovereign agent, 0 EUR per token) |
+| The machine and the hardware behind it | **[Workshop](WORKSHOP.md)** - Goliath, RTX 4090, Boomy, Bumi |
+
+---
+
+## The workshop, after the explanation
+
+Value first, hardware second. This is where it runs.
 
 ![Workshop](assets/sandraschi_header.png)
 
-<sub>*Sandra's workshop, Alsergrund, Vienna. Benny is real. The [Noetix Bumi](https://www.noetix.ai/) humanoid is aspirational (arriving soon).*</sub>
-
-I'm a retired and vibe-reactivated software engineer living in the 9th District (Alsergrund), Vienna. I build DIY robotics, maintain a fleet of 190+ MCP servers, and hang out with my German Shepherd Benny — and soon, a Noetix Bumi humanoid robot.
+<sub>*Alsergrund, Vienna. Benny is real. The [Noetix Bumi](BUMI.md) humanoid is incoming. Full spec: [Workshop](WORKSHOP.md).*</sub>
 
 ---
 
-## 🌐 The MCP Fleet
+## Benny
 
-I maintain a homespun fleet of **190+ repos**, each an MCP server with an associated webapp. MCP for agents, webapp for humans — files, git, Plex, Calibre, robotics, 3D tools, music production, Vienna transit, and a lot more. Built on [FastMCP 3.4](https://gofastmcp.com).
+Benny, 2-year-old German Shepherd. Security consultant and tennis ball lifecycle manager.
 
-> 🌙 **All webapps are permanently dark mode. Night-owl approved.** No light toggle, no plans for one. Dim your OLEDs accordingly.
+<details>
+<summary><strong>People and sites worth following (no slop)</strong></summary>
 
-![Fleet Topology](assets/hero.svg)
+- Simon Willison ([simonwillison.net](https://simonwillison.net)) - agentic patterns. The pelican test is his.
+- FastMCP ([gofastmcp.com](https://gofastmcp.com)) - the framework the fleet is built on.
+- Lean 4 ([lean-lang.org](https://lean-lang.org)) - proof verification behind leanforge-mcp.
+- arXiv ([arxiv.org](https://arxiv.org)) - papers before blog posts.
+- Karpathy, AI Explained, ThePrimeTime, Mollick, Interconnects - see [Highlights](HIGHLIGHTS.md) for why each matters here.
 
-→ **[Full MCP Project Catalog](MCP_CATALOG.md)** — visual cards for every server in the fleet
+</details>
 
----
-
-## 🔥 Current highlight
-
-### mixx-dj-mcp: an MCP server, a webapp, and a fork that changed everything
-
-[mixx-dj-mcp](https://github.com/sandraschi/mixx-dj-mcp) is a new MCP server and
-webapp for Mixxx — OSC bridge, deck control, BPM sync, full remote DJ dashboard.
-But the bigger story is what it unlocked.
-
-[Mixxx](https://mixxx.org) is a 300,000-line C++ DJ application, grown slowly over
-years by conservative greybeard devs. Solid, respected, missing crucial features
-its users begged for: video mixing, stem separation, AI-assisted automation. The
-dev team wanted to add them. Nobody had the bandwidth.
-
-DeepSeek V4 on opencode added **5,000 lines of C++** to the [mixxxx fork](https://github.com/sandraschi/mixxxxx)
-and filled every gap:
-
-- *"We need VFX."* — "Use FFmpeg. It's fast, battle-tested, ships everywhere."
-- *"We need synced video like Resolume."* — "Use MilkDrop / [ButterChurn](https://github.com/jberg/butterchurn). It's WebGL, FOSS, and already handles audio-reactive visuals."
-- *"We need stem separation."* — "ONNX HTDemucs v4. Runs on the GPU. Zero cloud."
-
-The [mixxxx fork](https://github.com/sandraschi/mixxxxx) is the integration testbed.
-It's not a toy — it's Mixxx with video, stems, and AI control, implemented by an AI
-that has never been to a club. The greybeards are impressed. The users have features.
-The AI doesn't need domain expertise. It needs a clear spec.
-
-**I am not a DJ.** I don't know how to beatmatch. But I know what the software should
-do, and that was enough. This is SHN in practice: a
-non-expert directing an AI to extend a 300K-line C++ codebase, and the AI delivering
-production-quality features that the expert dev team couldn't prioritize.
-
-<!-- -->
-
-### leanforge-mcp: formal proofs, no math degree
-
-[Lean 4](https://lean-lang.org) is a proof assistant — a programming language where
-the compiler verifies that your code is mathematically correct. Using it traditionally
-requires a PhD in logic or months of study. [leanforge-mcp](https://github.com/sandraschi/leanforge-mcp) automates the hard part:
-an LLM proposes a proof, the Lean compiler checks it, the LLM reads the error and
-tries again. Loop until verified.
-
-**I am not a math wiz.** I can't write a Lean proof by hand. But I can frame the
-conjecture, and the AI + compiler feedback loop handles the rest. This is the same
-pattern as AlphaProof but running on a consumer GPU with open-weight models.
-
-Two repos, same story: domain-specific superhuman performance, directed by someone who
-isn't an expert in either domain. Architecture and taste are the human contribution.
-The AI handles the part that used to take a degree.
-
-→ **[Superhuman Narrow →](docs/SUPERHUMAN_NARROW.md)** — the full argument
-
-→ **[Full catalog →](MCP_CATALOG.md)** • **[Workshop & Hardware](WORKSHOP.md)** • **[Shenzhen Robotics →](docs/SHENZHEN_ROBOTICS.md)** • **[Bloopers →](docs/BLOOPERS.md)**
-
----
-
-## 🔮 Coming next: sandrafleetbot — the free GrokBot
-
-[GrokBot](https://x.ai) is a marvel and a subscription: frontier agentic coding, real-time news, voice, image generation, tool use — metered per token, cloud-locked, served to millions at once.
-
-**Sandrafleetbot** is the inverse bet: the same job, running entirely on one consumer GPU (RTX 4090), Apache 2.0, fully private, **€0 per token**. The brain is [Muse Glimmer 30B](https://ollama.com/library/muse-glimmer) — Meta's open agentic model, distilled from Muse Spark for single-GPU agents (MCP Atlas 75.5, SWE-Bench Verified 76.0, native Ollama support). The hands are this fleet: **190+ MCP servers become the agent's tool surface** — my files, my Plex, my Calibre library, my robots, my Windows control plane. No API key, no metering, no cloud round-trip, no data leaving the box.
-
-GrokBot serves millions of users shallowly; sandrafleetbot serves one user deeply (or a dozen, on a single H200-class GPU). Same agent loop — sense → reason → act → remember — different economics: horizontal SaaS vs vertical sovereignty. The fleet's own glue does the rest: a private agent board + inbox (moltbot-style, self-hosted), news surge from the AIWatcher pipeline, arXiv codehunt as a second sense, and an RTX 4090 doing the thinking, the voice, and the image generation.
-
-**Status: spec ratified, buildout in progress — P0 (brain tier) shipped 2026-08-14, P1 (Fritz reasoning loop) shipped 2026-08-15, P2 (comm bus + bulletin board), P3 (surge + fritz_surveil triage), P4 (memory hooks + skills + cron suggestions) and P5 (Board page + Fritz console + FLEET_TOKEN + voice loop) shipped 2026-08-15.** Muse Glimmer 30B runs on the RTX 4090 (chat, tool-calling, vision verified — zero cloud cost), and the fleet's agent runners default to it. Fritz now runs reasoning workflows end-to-end: flowforge `agent` steps spawn cline-mcp `agent_run` on muse-glimmer, results persist, hub discovery refreshes 69 servers. Plan: P0→P8 (agent loop → board/inbox → senses → memory → surfaces → channels → hardening → packs + naked-PC gate). [Spec →](https://github.com/sandraschi/documentation-mcp/blob/main/docs/projects/sandrafleetbot/README.md)
-
----
-
-## 🐾 Benny
-
-**Benny** is a 2-year-old German Shepherd. Primary security consultant and tennis ball lifecycle manager at the Alsergrund node.
-
----
-
-## 📚 External references
-
-People and sites worth following (no slop):
-
-| | |
-|---|---|
-| 🐦 **Simon Willison** | [simonwillison.net](https://simonwillison.net) — agentic engineering patterns, AI benchmarks. The pelican test is his. |
-| ⚡ **FastMCP** | [gofastmcp.com](https://gofastmcp.com) — the framework every server in this fleet is built on. |
-| 🧮 **Lean 4** | [lean-lang.org](https://lean-lang.org) — formal proof verification. leanforge-mcp runs on this. |
-| 📄 **arXiv** | [arxiv.org](https://arxiv.org) — where the useful papers live before the blog posts. |
-| 🎥 **Andrej Karpathy** | [YouTube](https://youtube.com/@andrejkarpathy) — zero-hype technical AI. The "Intro to LLMs" talk is still the best single explanation. |
-| 🎥 **AI Explained** | [YouTube](https://youtube.com/@aiexplained-official) — covers actual research, not product launches. Best depth-to-accessibility ratio. |
-| 🎥 **ThePrimeTime** | [YouTube](https://youtube.com/@ThePrimeTimeagen) — dev perspective on AI tooling. Skeptical, calls out bullshit, aligns with the vibe coding vs agentic engineering framing. |
-| 📝 **Ethan Mollick** | [One Useful Thing](https://oneusefulthing.substack.com) — AI in practice, short dense posts about what actually works. |
-| 📝 **Interconnects** (Nathan Lambert) | [Substack](https://interconnects.substack.com) — ML research without fluff. Open-weight models, alignment, actual paper analysis. |
-
-<p align="center">
-  <img src="assets/pelican.svg" alt="" width="160"/>
-  <br/>
-  <a href="PELICAN.md"><sub>🐦 about the pelican</sub></a>
-</p>
-
----
-
-## 🙏 Thanks
-
-Thanks to my brother **Stephan** for the ideas and war stories.
-
----
-
-<p align="center">
-  <a href="CHANGELOG.md">Changelog</a>
-</p>
+<p align="center"><a href="PELICAN.md"><sub>about the pelican</sub></a> - <a href="CHANGELOG.md">Changelog</a> - Thanks to my brother <strong>Stephan</strong> for ideas and war stories.</p>

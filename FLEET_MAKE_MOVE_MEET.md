@@ -1,0 +1,81 @@
+# Make / Move / Meet
+
+The interlock chain: **design it, drive it, meet it in VR.** Three categories that behave like one pipeline.
+
+Start with [Why so many repos?](WHY_FLEET.md) if you have not read it. Full index: [MCP Catalog](MCP_CATALOG.md). How linking works: [Fleet Crossconnects](FLEET_CROSSCONNECTS.md).
+
+---
+
+## Contents
+
+- [Make: design and build](#make-design-and-build)
+- [Move: robots and simulation](#move-robots-and-simulation)
+- [Meet: virtual worlds and avatars](#meet-virtual-worlds-and-avatars)
+- [The chain, end to end](#the-chain-end-to-end)
+
+---
+
+## Make: design and build
+
+Draw, model, lay out boards, generate worlds.
+
+| Repo | What it wraps | When you want it |
+|---|---|---|
+| [blender-mcp](https://github.com/sandraschi/blender-mcp) | Blender 3D | Meshes, scenes, product renders, GLTF/VRM export to VR |
+| [qcad-mcp](https://github.com/sandraschi/qcad-mcp) | QCAD 2D drafting | DXF floorplans, laser-cut plates, AutoLISP transpiler |
+| [freecad-mcp](https://github.com/sandraschi/freecad-mcp) | FreeCAD parametric CAD | STEP enclosures with real tolerances, CFD via FluidX3D |
+| [kicad-mcp](https://github.com/sandraschi/kicad-mcp) | KiCad PCB | Board + enclosure fit check against FreeCAD |
+| [codecad-mcp](https://github.com/sandraschi/codecad-mcp) | build123d code-CAD | Enclosures as code, printable the same day |
+| [godot-mcp](https://github.com/sandraschi/godot-mcp) | Godot 4 engine | Viz endpoint: STL import, particles, PBR, HTML5 export |
+| [worldlabs-mcp](https://github.com/sandraschi/worldlabs-mcp) | WorldLabs AI worlds | Photoreal interiors without three days of Blendering |
+| [gimp-mcp](https://github.com/sandraschi/gimp-mcp) / [inkscape-mcp](https://github.com/sandraschi/inkscape-mcp) | GIMP / Inkscape | Textures and SVG assets feeding the 3D scene |
+
+Honesty note: standalone Blender/QCAD drivers with 10k stars beat us on single-app depth. Pick ours when the file must travel (DXF to Blender to print to robot to VR).
+
+## Move: robots and simulation
+
+Physical kits, vacuums-as-platforms, humanoids, and the simulators that keep them safe.
+
+| Repo | What it wraps | When you want it |
+|---|---|---|
+| [yahboom-mcp](https://github.com/sandraschi/yahboom-mcp) | Yahboom Raspbot V2 ("Boomy") | ROS 2 car on Pi 5, camera + ultrasonic, local Gemma brain |
+| [dreame-mcp](https://github.com/sandraschi/dreame-mcp) | Dreame vacuum | Lidar mapping and navigation as a ready indoor platform |
+| [norirobotics-mcp](https://github.com/sandraschi/norirobotics-mcp) | Nori robotics kit | DIY actuators and chassis in the Shenzhen price band |
+| [unitree-mcp](https://github.com/sandraschi/unitree-mcp) | Unitree quadrupeds/humanoids | MuJoCo + ROS 2 bridge for legged locomotion |
+| [limx-robotics-mcp](https://github.com/sandraschi/limx-robotics-mcp) | LIMX robots | Sim lifecycle + VLA bridge |
+| [teleoperator-mcp](https://github.com/sandraschi/teleoperator-mcp) | WebXR teleop client | Steer the physical robot from a Pico headset, two-way audio |
+| [ros-mcp](https://github.com/sandraschi/ros-mcp) / [robotics-mcp](https://github.com/sandraschi/robotics-mcp) | Generic ROS 2 | Topics, services, bags, launch when no kit-specific repo fits |
+| [mujoco-mcp](https://github.com/sandraschi/mujoco-mcp) / [gazebo-mcp](https://github.com/sandraschi/gazebo-mcp) / [isaac-mcp](https://github.com/sandraschi/isaac-mcp) | MuJoCo / Gazebo / Isaac | Crash in simulation first, then touch hardware |
+| [vla-mcp](https://github.com/sandraschi/vla-mcp) | Vision-Language-Action models | "Pick up the red bracket" as a tool call |
+
+Background: [Shenzhen robotics](docs/SHENZHEN_ROBOTICS.md) - why actuators dropped from 3000 to 200 dollars, and why humanoids are now DIY-grade.
+
+## Meet: virtual worlds and avatars
+
+Where the model and the robot show up as someone you can talk to.
+
+| Repo | What it wraps | When you want it |
+|---|---|---|
+| [resonite-mcp](https://github.com/sandraschi/resonite-mcp) | Resonite VR | Collaborative XR endpoint, ProtoFlux/WebSocket link, digital twin mirror |
+| [vrchat-mcp](https://github.com/sandraschi/vrchat-mcp) | VRChat | Same avatar, different crowd |
+| [overte-mcp](https://github.com/sandraschi/overte-mcp) | Overte open metaverse | Open-source stack when you want self-hosted worlds |
+| [unity3d-mcp](https://github.com/sandraschi/unity3d-mcp) | Unity | Physics lab for training before deploying to XR |
+| [avatar-mcp](https://github.com/sandraschi/avatar-mcp) | VRM identity + animation | One rig driving Resonite, VRChat, and Godot |
+| [vroidstudio-mcp](https://github.com/sandraschi/vroidstudio-mcp) | VRoid Studio | Character pipeline: bones, blend shapes, VRM out |
+| [osc-mcp](https://github.com/sandraschi/osc-mcp) | OSC protocol | The shared bus: BPM clocks, telemetry, controller streams |
+
+## The chain, end to end
+
+**Bracket to buddy in one afternoon:**
+
+1. Draft the sensor bracket in QCAD (DXF), extrude and render it in Blender.
+2. Fit the PCB from KiCad against the FreeCAD enclosure (STEP), print it.
+3. Bolt it onto Boomy (Yahboom) or a Nori chassis; validate collisions in MuJoCo first.
+4. Mirror telemetry into Resonite over OSC: the in-world avatar leans when the car turns.
+5. Drive it back from VR with teleoperator-mcp while speech-mcp narrates. Log the run to memory.
+
+Each step runs alone. Together they are the argument for the fleet: files travel, robots mirror, humans watch from inside.
+
+---
+
+Next: [Play / Know / Home](FLEET_PLAY_KNOW_HOME.md) - [Why the fleet](WHY_FLEET.md) - [Catalog](MCP_CATALOG.md) - [Workshop](WORKSHOP.md)
