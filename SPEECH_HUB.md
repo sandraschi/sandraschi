@@ -17,6 +17,14 @@ Extras that grew over 2026: voice memory (episodic diary), voice macros (spoken 
 
 Same pattern drives robots ("boomy go on patrol", Yahboom voice integration doc in-repo), narrates renders ("render done"), and reads alerts. Any fleet repo becomes voice-operated the moment its status is queryable - which is all of them.
 
+## The sneaky feat: talking to Alexa through the air
+
+[alexa-mcp](https://github.com/sandraschi/alexa-mcp) is an acoustic bridge, on purpose: no Alexa API, no skill certification, no Amazon developer account. The agent synthesizes speech through the PC speakers, the Echo hears it like a human, faster-whisper transcribes the answer from the mic. Tools: `speak_command` (say anything) and `interact` (say "Alexa, {command}", listen, return the transcript).
+
+So in Claude you say "gimme alexa weather report", Claude calls speech to loudly say "Alexa, weather report", the Echo answers, the mic catches it, you get the transcript. Air-gap integration: no API exists, none is needed. Same trick works on anything that listens - Siri, any voice assistant, any tool with speech input like Whisper-based pipelines. Sound is the universal API.
+
+With great sneakiness comes a shopping guard: a default-on heuristic refuses to speak order/buy/cart-shaped phrasing, and the README documents the prompt-injection risk honestly (never pipe unreviewed model output into `speak` while voice purchasing exists - restrict it, PIN it, or use a low-privilege account). The hack is fun; the guardrails are real.
+
 ## Why FunASR (the PRC connection)
 
 Chinese open-weight industrial speech (FunASR, SenseVoice, CosyVoice) ships as deployable tooling with published benchmarks and ONNX edge builds - ahead of "just run Whisper" for agent pipelines (segments + speakers + punctuation in one pass). Same story as the LLM champions ([Local LLM Stack](LOCAL_LLM_STACK.md)): track both camps, run whatever leads.
