@@ -1,6 +1,6 @@
 # The -phile Fleet: AI Travel and Learning Guides per Culture
 
-The concept: one repo per culture you love (or want to). Language learning framed as your longrunner game, a culture/econ/history knowledge box, travel planning, and a diary of your own journey through it. Linked from [Wrapee Categories](WRAPEE_CATEGORIES.md) as the emerging sixth kind. Status: concept + first inheritance candidate. No code yet.
+The concept: one repo per culture you love (or want to). Language learning framed as your longrunner game, a culture/econ/history knowledge box, travel planning, and a diary of your own journey through it. Linked from [Wrapee Categories](WRAPEE_CATEGORIES.md) as the emerging sixth kind. Status: concept + first repo scaffolded ([japanophile-mcp](https://github.com/sandraschi/japanophile-mcp), Stage 1).
 
 ---
 
@@ -23,6 +23,19 @@ Skip microstates initially: a Liechtenstein-phile has no corpus and no contribut
 
 Repo: [japanophile-mcp](https://github.com/sandraschi/japanophile-mcp) (Stage 1: MCP tools). It inherits the Japanese cluster formerly living only inside ai-games-collection: the Japanese Language games category, kanji/JLPT data (13k-kanji DB), README_JAPANESE, kanji-learning-suite docs, Knowledge Tree, Manga Guide. Games repo keeps playable hanafuda/cho-han via crossconnect. Travel planning (JR-pattern transit, bookings) and the diary are new builds. Working title weeaboo-mcp, polite alias japanophile-mcp for listings.
 
+## Why no travel site does this
+
+There are fucktons of Japan travel sites. None that we can find ships the 2026 SOTA concept: content that is **agent-operable and local-first**, not just readable.
+
+- **MCP handle.** Agents don't browse the guide, they call it: quiz me, plan the leg, check my streak, read the history page and summarize. Claude Desktop, Cursor, opencode, Fritz - same tools.
+- **Chat with skills, not a search box.** The chat page ingests japanophile-expert: method, JLPT routing, culture answers with page citations. "Am I ready for N4?" gets an answer from your progress store, not generic advice.
+- **Memory.** Quiz scores, streaks, diary: the companion knows where you are in the journey. A travel site forgets you at the tab close.
+- **Voice.** "Speechy japan, quiz me on N4 food words while I cook" - speech-mcp bus, local STT, spoken answers. No travel site does dishes with you.
+- **Local and EUR 0.** Seeds + local model. No account, no subscription, no per-query meter.
+- **Crossconnected.** Manga via komga/kavita, video via bilibili-mcp, goods via prc-shopping-mcp, transit via the mywienerlinien pattern pointed at JR. The guide is a node, not a silo.
+
+That stack - MCP + skills chat + progress memory + voice + local LLM + fleet links - is the moat. Content can be copied; an operable companion cannot be screenshotted.
+
 ## Proof it is a pattern: sinophile-mcp
 
 Second instance, same four faces: hanzi suite, history box, travel planner, diary. If two cultures work, N work - new cultures clone the template and swap the corpus. vienna-life-assistant already rhymes with it (functionally viennaphile-mcp); the kanji DB is a -phile data layer waiting for extraction.
@@ -35,5 +48,5 @@ Template proven -> per-culture human contributors solicited for the long tail: n
 
 ## Next
 
-- Pattern home: [Wrapee Categories](WRAPEE_CATEGORIES.md) - First inheritance: ai-games-collection Japanese cluster (spec TBD)
+- Pattern home: [Wrapee Categories](WRAPEE_CATEGORIES.md) - First repo: [japanophile-mcp](https://github.com/sandraschi/japanophile-mcp)
 - Siblings: [vienna-life-assistant](https://github.com/sandraschi/vienna-life-assistant) (the accidental prototype), [gitee-mcp](https://github.com/sandraschi/gitee-mcp) (small-language-ecosystem precedent)
