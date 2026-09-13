@@ -51,3 +51,14 @@ Local-first is a rule, not a preference: ALL inference routes to Ollama / llama.
 ## Segue: Fritz grows into sandrafleetbot
 
 Fritz is the agent; sandrafleetbot is the product around it (operator shell, install packs, channels, naked-PC installer). Same loop - sense -> reason -> act -> remember - same zero-token economics, packaged for one user deeply instead of millions shallowly. Roadmap: [Coming Next](COMING_NEXT.md). The brain it runs on: [Local LLM Stack](LOCAL_LLM_STACK.md).
+
+## Backlog: the filcher (star-velocity scout)
+
+Motivation: had this run last January, OpenClaw's hundreds-of-stars-a-day takeoff would have hit the morning report months before the MSM noticed. Never again. Filchy filch filch.
+
+- **Sources.** GitHub's own trending lists (daily/weekly, scraped) plus Search API queries (`created:>` recent + `stars:>` threshold, sorted by stars). Trending catches velocity, search catches accumulation. Authenticated search budget: 30 req/min - schedule accordingly, cache aggressively.
+- **Velocity store.** Daily star snapshots per watched repo in SQLite (same pattern as the digest state). Velocity = delta, not total. A 200-star repo gaining 150/day outranks a 10k-star repo gaining 5. Transition-aware alerting, same as fritz_surveil: fire on change in velocity tier, dedupe 60 min.
+- **Triage (local model).** For each hit: what it does, fleet overlap (which of our repos it threatens or teaches), filch-worthy features (concrete capabilities, not vibes), license check (MIT = fair game with attribution; anything else = hands off, note why).
+- **MSM cross-check.** aiwatcher companion query: has mainstream coverage hit yet? Covered = follow fast. Not covered = early window, read deeper.
+- **Output.** Morning filch report on the board + Discord #sfb-thoughts: repo, velocity graph, overlap map, top-3 filch candidates with file pointers. Approval-gated clone for gap analysis (git-github-mcp connected for search + clone + read). Human picks what gets filched; Fritz never auto-ports.
+- **Where it lives.** Sibling to fritz_surveil (external-news domain extended to repo velocity), git-github-mcp for search/clone primitives, aiwatcher for the MSM check. Gallery entry: [Sneaky Feats](SNEAKY_FEATS.md).

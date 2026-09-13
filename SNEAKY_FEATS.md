@@ -20,6 +20,8 @@ The sneaky part is the competitive loop, and honestly it is mostly chat-driven, 
 
 And "filch" sounds greyer than it is: MIT-licensed repos are fair game. License permitting, reading the best implementation and writing a better one is how open source works - attribution included, obviously.
 
+Automation coming: the **filcher** backlog item ([Fritz](FRITZ.md), star-velocity scout) turns this loop into a morning report - trending + search velocity, MSM cross-check, approval-gated gap analysis. Had it run last January, OpenClaw would have surfaced months before the MSM.
+
 ## 4. Demo videos where the agent really does it
 
 [demo-vid-mcp](https://github.com/sandraschi/demo-vid-mcp) does not screencast staged demos. In desktop-capture mode, `mcp_call` steps invoke the target app's own MCP server mid-recording while OBS rolls: the video shows the agent doing the work because the agent is doing the work. A demo that cannot fail differently than the product fails. Full page: [Demo Vid](DEMO_VID.md).
