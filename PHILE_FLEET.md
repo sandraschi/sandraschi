@@ -19,9 +19,9 @@ Start where corpora and contributors exist: **France, Italy, Spain, Germany** - 
 
 Skip microstates initially: a Liechtenstein-phile has no corpus and no contributors. The long tail - **Botswana and friends** - comes later, with human contributors solicited per culture once the template is proven. Weird countries are the point of the long tail, not the launch.
 
-## First mover: weeaboo-mcp
+## First mover: japanophile-mcp (scaffolded)
 
-Inherits the Japanese cluster currently living inside ai-games-collection: the Japanese Language games category, kanji/JLPT data (13k-kanji DB), README_JAPANESE, kanji-learning-suite docs, Knowledge Tree, Manga Guide. Games repo keeps playable hanafuda/cho-han via crossconnect. Travel planning (JR-pattern transit, bookings) and the diary are new builds. Working title weeaboo-mcp, polite alias japanophile-mcp for listings.
+Repo: [japanophile-mcp](https://github.com/sandraschi/japanophile-mcp) (Stage 1: MCP tools). It inherits the Japanese cluster formerly living only inside ai-games-collection: the Japanese Language games category, kanji/JLPT data (13k-kanji DB), README_JAPANESE, kanji-learning-suite docs, Knowledge Tree, Manga Guide. Games repo keeps playable hanafuda/cho-han via crossconnect. Travel planning (JR-pattern transit, bookings) and the diary are new builds. Working title weeaboo-mcp, polite alias japanophile-mcp for listings.
 
 ## Proof it is a pattern: sinophile-mcp
 
