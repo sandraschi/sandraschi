@@ -72,6 +72,8 @@ Every webapp, same stack (verified in-tree, e.g. yahboom dashboard):
 
 Standard layout per repo: `tests/{unit,integration,e2e,hardware}` + conftest. No undeclared mocks - fixtures, dry-runs, and fakes must be named and documented (TESTING_GUIDE.md).
 
+Full treatment lives in its own sub-sub readme: **[E2E Testing a Fleet Webapp](E2E_WEBAPP_TESTING.md)** - how the tester bot derives click targets from source and routing, the connected-badge wrinkle, visual regression, and the three gates. Short version:
+
 - **e2e CUA workflows**: `cua_webapp_testing` (pre-Tauri browser verification) and `cua_nsis_smoke_testing` (installed-exe smoke test) are standard paths, not exotic extras.
 - **Sandbox matrix**: virtualization-mcp consumer sandboxes run the naked-PC install probe - fresh Windows VM, silent NSIS install, health checks, reboot survival, clean uninstall, reinstall-after-fix loop.
 - **Verification standards**: browser verification, coverage expectations, anti-loop guards. Fakefind audits hunt hardcoded mock data and dead buttons in webapps (report-only, then fix).
