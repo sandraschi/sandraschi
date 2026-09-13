@@ -32,3 +32,4 @@ Details: **[Why the fleet looks like this](WHY_FLEET.md)** - why one repo per to
 | Two deep dives, kept separate on purpose | **[Fleet Highlights](HIGHLIGHTS.md)** (mobile-DJ video fork, Lean proof loop) - **[Coming Next](COMING_NEXT.md)** (local sovereign agent, 0 EUR per token) |
 | The machine and the hardware behind it | **[Workshop](WORKSHOP.md)** - Goliath, RTX 4090, Boomy, Bumi |
 | Who runs this (workshop photo, Benny, follows, thanks) | **[About Sandra](ABOUT.md)** - the personal tail, kept off this page on purpose |
+| How it is built (developers: tools, tests, standards, CI) | **[Dev Stack](DEV_STACK.md)** - very technical, everyone else stop here |
