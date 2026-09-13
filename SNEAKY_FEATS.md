@@ -16,7 +16,9 @@ Same trick, generalized: sound is the universal API. Anything with a microphone 
 
 [fleet-public-relations-mcp](https://github.com/sandraschi/fleet-public-relations-mcp) monitors forum and Reddit threads (Cloudflare-resistant scraper, hourly) and triages every comment with a local model for competency and need. Approval-gated drafts, hype-word tone lint, escalation to admiral-mcp on high-competency hits.
 
-The sneaky part is the competitive loop: the same surveillance watches competitor repos' threads for what users beg for - missing features, ignored issues, unanswered how-tos. Then the fleet builds exactly that. No scraping war, no ToS grey zone, just public threads read carefully: feature filch by listening. The listening postures as humble discovery ("genuinely helpful pointers"), and it is - the help is real, the roadmap intel is the bonus.
+The sneaky part is the competitive loop, and honestly it is mostly chat-driven, not a tool: "claude, what does the most popular qcad mcp have that we don't?" Git discovery (search, clone, read), the quality-check skill's competition pass, and landscape docs like robofang's [4-way matrix](https://github.com/sandraschi/robofang/blob/main/docs/COMPETITIVE_LANDSCAPE.md) (vs OpenClaw, OpenFang, OpenManus - stale since Mar 2026, see the six-month rule). Same for threads: watch competitor repos for what users beg for - missing features, ignored issues - then build exactly that. No scraping war, no ToS grey zone, just public threads read carefully.
+
+And "filch" sounds greyer than it is: MIT-licensed repos are fair game. License permitting, reading the best implementation and writing a better one is how open source works - attribution included, obviously.
 
 ## 4. Demo videos where the agent really does it
 
