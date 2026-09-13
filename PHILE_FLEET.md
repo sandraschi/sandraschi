@@ -36,6 +36,18 @@ There are fucktons of Japan travel sites. None that we can find ships the 2026 S
 
 That stack - MCP + skills chat + progress memory + voice + local LLM + fleet links - is the moat. Content can be copied; an operable companion cannot be screenshotted.
 
+## Japan now: September 2026 snapshot (re-check quarterly)
+
+Dated context the knowledge box carries. Facts from Wikipedia's 2026-in-Japan record; analysis is ours. Six-month rule applies.
+
+**Travel to and in Japan.** Rural lines keep dying (JR Hokkaido's Rumoi Main Line closed April 2026 after 115 years - rent the car, check buses). Residential speed limit dropped to 30 km/h nationwide Sept 1, 2026. Coming up: Asian Games in Aichi Sept 19-Oct 4 (book around it, not through it), Shuri Castle restoration completes this autumn, Asuka-Fujiwara just made UNESCO (July 2026). Panda diplomacy ended: Japan's last giant pandas left Ueno Zoo January 2026.
+
+**Info sources.** The Japan Times for English dailies, NHK World for broadcast, Asahi/Yomiuri via machine translation for depth, aiwatcher-mcp with a Japan surge profile for the ongoing feed. The knowledge box links sources per page; unsourced trivia gets cut.
+
+**The cheap-yen miracle.** Yen near historic lows: tourists get a discount Japan, exporters report record quarters, Nikkei printed all-time highs twice this year (54k January, 60k April). Nihonjin pay for it in import prices - energy, food, the weekly shop. Both halves belong in the econ pages; a guide that only cheers the cheap sushi is lying.
+
+**The rightward drift.** LDP under Sanae Takaichi (first female PM) took a postwar-record two-thirds majority in the February snap election; Article 9 revision is openly debated with large counter-protests; arms-export ban lifted April 2026; first postwar intelligence bureau approved; flag-desecration law in force. Real drift, still recognizably within democratic rails - and far less bad than the European and American variants. State it plainly, source every claim, revisit each snapshot: this paragraph rots fastest.
+
 ## Proof it is a pattern: sinophile-mcp
 
 Second instance, same four faces: hanzi suite, history box, travel planner, diary. If two cultures work, N work - new cultures clone the template and swap the corpus. vienna-life-assistant already rhymes with it (functionally viennaphile-mcp); the kanji DB is a -phile data layer waiting for extraction.
