@@ -37,6 +37,15 @@ Agents are fast and blind. Humans are slow and responsible. The two human faces 
 
 No light mode, by policy. Night-owl fleet.
 
+## 3b. Every repo has intrinsic AI
+
+The dashboards are not dumb button grids. Each repo ships two levels of built-in intelligence:
+
+- **Chat page with bespoke skills, minimum.** Every webapp has a chat page that ingests the repo's own SKILL.md files - domain expertise written for the model, not marketing copy. Open yahboom-mcp, ask "does this support more than one Yahboom robot type?", and the answer comes from the yahboom-robots-expert skill (Raspbot v2 hardware, ROS 2 setup, mecanum kinematics), with links to run the relevant tools. You do not learn 190 UIs. You ask.
+- **Agentic workflows on top.** Multi-step jobs the repo runs itself: sense, decide, act, report. Built on the SEP-1577 sampling-with-tools pattern (model + tools + loop, server-side), now migrating to direct local-LLM calls since the MCP 2026-07-28 spec deprecated sampling - same idea, zero cloud either way. fritz_surveil triage, aiwatcher distillation, morning sweeps: all workflows, all local.
+
+This is the other half of the competitor gap. An MCP-only server is agent-only, which in practice means developer-only: no chat, no skills, no workflows, no human ever asks it anything directly. Here the human asks first and the agent does the running.
+
 ## 4. What does "crossconnect" mean?
 
 Every repo works **alone**. Crossconnect is an optional bonus link between neighbours:

@@ -14,6 +14,7 @@ Start here: **[Why so many repos?](WHY_FLEET.md)** - plain-language value prop, 
 
 - **One remote per tool, three faces each.** Each repo wraps one app or device you already use (Blender, QCAD, Plex, a Yahboom robot car, Vienna transit). It adds three things: an MCP server AI agents can call (Claude Desktop, Cursor, agentic IDEs, local or cloud model), a dark web dashboard, and a Tauri Windows desktop app (NSIS .exe, same UI, no browser needed).
 - **Human faces are not decoration.** Agents act, humans approve. Watch telemetry, sign off on posts and destructive ops, hit the big red stop button.
+- **Every repo has intrinsic AI.** A chat page that ingests bespoke domain skills (ask yahboom-mcp about robot types in plain words) plus agentic workflows that run multi-step jobs locally. Details: **[Why the fleet looks like this](WHY_FLEET.md)**.
 - **They snap together, optionally.** Any repo runs alone. When two repos know each other they offer a 1-hop link (CAD file to 3D print to robot mount to VR twin to spoken "done"). No forced installs, friendly error if the peer is missing.
 
 Details: **[Why the fleet looks like this](WHY_FLEET.md)** - why one repo per tool, why a webapp each, what crossconnects do, and an honest note on stars.
