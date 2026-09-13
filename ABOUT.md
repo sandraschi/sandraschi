@@ -40,7 +40,7 @@ Benny, 2-year-old German Shepherd. Security consultant and tennis ball lifecycle
 
 ### Recent posts and MSM coverage (ongoing)
 
-Updated whenever something matters. No archive-diving required, start here:
+Updated whenever something matters. No archive-diving required, start here. Rule of thumb: any opinion older than six months has probably been overtaken by events - read it as history, not guidance.
 
 - Bengio: "Why are AI agents lying, cheating and coordinating?" - his blog, 11 Sept 2026 ([yoshuabengio.org](https://yoshuabengio.org/))
 - Bengio: Scientist AI safe-by-design post ([lawzero.org](https://lawzero.org/en/unlisted/scientist-ai-safe-design-not-desiring))
