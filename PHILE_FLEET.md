@@ -15,7 +15,7 @@ Two faces per repo as always: MCP handle for agents, dashboard + winapp for huma
 
 ## Launch order: Europe first, not too tiny
 
-Start where corpora and contributors exist: **France, Italy, Spain, Germany** - big languages, big travel flows, endless public-domain material. Plus **Japan first in practice**, because the corpus already exists (see below) - weeaboo-mcp jumps the queue on merit.
+Start where corpora and contributors exist: **France, Italy, Spain, Germany** - big languages, big travel flows, endless public-domain material. Plus **Japan first in practice**, because the corpus already exists (see below) - japanophile-mcp jumps the queue on merit. And **Austria is not far behind**: [vienna-life-assistant](https://github.com/sandraschi/vienna-life-assistant) is the starter seed for austrophile-mcp.
 
 Skip microstates initially: a Liechtenstein-phile has no corpus and no contributors. The long tail - **Botswana and friends** - comes later, with human contributors solicited per culture once the template is proven. Weird countries are the point of the long tail, not the launch.
 
