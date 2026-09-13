@@ -1,95 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 360" width="860" height="360">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 200" width="920" height="200" role="img" aria-label="Fleet stack diagram">
   <defs>
-    <style>
-      .bg    { fill: #0d1117; }
-      .title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 22px; font-weight: 800; fill: #e6edf3; letter-spacing: 0px; }
-      .sub   { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #7F77DD; letter-spacing: 2px; }
-      .box   { fill: #161b22; stroke-width: 1.5; }
-      .b-wrap { stroke: #6b7280; }
-      .b-mcp  { stroke: #7F77DD; }
-      .b-web  { stroke: #5DCAA5; }
-      .b-win  { stroke: #EF9F27; }
-      .h      { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-weight: 800; text-anchor: middle; }
-      .b      { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 11px; font-weight: 400; text-anchor: middle; fill: #9aa4b2; }
-      .t-wrap { fill: #9aa4b2; }
-      .t-mcp  { fill: #AFA9EC; }
-      .t-web  { fill: #5DCAA5; }
-      .t-win  { fill: #EF9F27; }
-      .arrow { stroke: #3a4150; stroke-width: 2; }
-      .note  { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; font-weight: 600; fill: #e6edf3; }
-      .ex    { font-family: Consolas, monospace; font-size: 11px; fill: #9aa4b2; }
-      .dot-pu { fill: #7F77DD; }
-      .dot-tl { fill: #5DCAA5; }
-      .dot-am { fill: #EF9F27; }
-    </style>
-    <marker id="ah" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <polygon points="0,0 8,4 0,8" fill="#3a4150"/>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <polygon points="0,0 8,4 0,8" fill="#484f58"/>
     </marker>
   </defs>
 
-  <rect width="860" height="360" rx="16" class="bg"/>
+  <rect width="920" height="200" rx="14" fill="#0d1117"/>
 
-  <text x="30" y="38" class="title">ONE REPO = THREE FACES</text>
-  <text x="30" y="58" class="sub">MCP FOR AGENTS &#183; WEBAPP + WINAPP FOR HUMANS</text>
-
-  <!-- Box 1: wrapped tool -->
-  <g>
-    <rect x="30" y="80" width="175" height="120" rx="8" class="box b-wrap"/>
-    <text x="117" y="104" class="h t-wrap">WRAPPED TOOL</text>
-    <text x="117" y="124" class="b">docker &#183; git &#183; blender</text>
-    <text x="117" y="140" class="b">plex &#183; yahboom &#183; arxiv</text>
-    <text x="117" y="164" class="b">the app or device</text>
-    <text x="117" y="180" class="b">you already use</text>
+  <!-- 1 Wrapee -->
+  <g transform="translate(24,48)">
+    <rect width="128" height="104" rx="10" fill="#161b22" stroke="#6b7280" stroke-width="2"/>
+    <rect x="28" y="22" width="72" height="48" rx="6" fill="none" stroke="#9aa4b2" stroke-width="2"/>
+    <path d="M44 38h40M44 50h28M44 62h36" stroke="#6b7280" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="64" cy="82" r="6" fill="#6b7280"/>
   </g>
 
-  <!-- Box 2: MCP server -->
-  <g>
-    <rect x="225" y="80" width="185" height="120" rx="8" class="box b-mcp"/>
-    <text x="317" y="104" class="h t-mcp">MCP SERVER</text>
-    <text x="317" y="124" class="b">tools for AI agents</text>
-    <text x="317" y="140" class="b">Claude &#183; Cursor &#183; IDEs</text>
-    <text x="317" y="164" class="b">local or cloud model</text>
-    <text x="317" y="180" class="b">runs the tasks</text>
+  <line x1="156" y1="100" x2="178" y2="100" stroke="#484f58" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- 2 MCP server -->
+  <g transform="translate(182,48)">
+    <rect width="128" height="104" rx="10" fill="#161b22" stroke="#7F77DD" stroke-width="2"/>
+    <circle cx="64" cy="52" r="22" fill="none" stroke="#AFA9EC" stroke-width="2"/>
+    <circle cx="52" cy="48" r="4" fill="#7F77DD"/>
+    <circle cx="76" cy="48" r="4" fill="#7F77DD"/>
+    <circle cx="64" cy="62" r="4" fill="#7F77DD"/>
+    <path d="M52 48 L64 62 L76 48" fill="none" stroke="#7F77DD" stroke-width="1.5"/>
   </g>
 
-  <!-- Box 3: webapp -->
-  <g>
-    <rect x="430" y="80" width="195" height="120" rx="8" class="box b-web"/>
-    <text x="527" y="104" class="h t-web">WEBAPP (browser)</text>
-    <text x="527" y="124" class="b">dark dashboard</text>
-    <text x="527" y="140" class="b">buttons &#183; logs &#183; telemetry</text>
-    <text x="527" y="164" class="b">watch &#183; approve &#183; stop</text>
+  <line x1="314" y1="100" x2="336" y2="100" stroke="#484f58" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- 3 Webapp -->
+  <g transform="translate(340,48)">
+    <rect width="128" height="104" rx="10" fill="#161b22" stroke="#5DCAA5" stroke-width="2"/>
+    <rect x="20" y="18" width="88" height="56" rx="4" fill="#0d1117" stroke="#5DCAA5" stroke-width="1.5"/>
+    <rect x="20" y="18" width="88" height="12" rx="4" fill="#5DCAA5" opacity="0.35"/>
+    <circle cx="28" cy="24" r="2" fill="#5DCAA5"/>
+    <circle cx="36" cy="24" r="2" fill="#5DCAA5"/>
+    <rect x="28" y="38" width="48" height="4" rx="2" fill="#5DCAA5" opacity="0.6"/>
+    <rect x="28" y="48" width="64" height="4" rx="2" fill="#5DCAA5" opacity="0.4"/>
   </g>
 
-  <!-- Box 4: winapp -->
-  <g>
-    <rect x="645" y="80" width="185" height="120" rx="8" class="box b-win"/>
-    <text x="737" y="104" class="h t-win">WINAPP (desktop)</text>
-    <text x="737" y="124" class="b">Tauri + NSIS .exe</text>
-    <text x="737" y="140" class="b">same UI, no browser</text>
-    <text x="737" y="164" class="b">double-click install</text>
+  <line x1="472" y1="100" x2="494" y2="100" stroke="#484f58" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- 4 Winapp -->
+  <g transform="translate(498,48)">
+    <rect width="128" height="104" rx="10" fill="#161b22" stroke="#EF9F27" stroke-width="2"/>
+    <rect x="18" y="16" width="92" height="58" rx="3" fill="#0d1117" stroke="#EF9F27" stroke-width="1.5"/>
+    <rect x="18" y="16" width="92" height="10" fill="#EF9F27" opacity="0.4"/>
+    <rect x="24" y="78" width="80" height="6" rx="2" fill="#EF9F27" opacity="0.5"/>
+    <rect x="30" y="32" width="40" height="32" rx="2" fill="none" stroke="#EF9F27" stroke-width="1.5" opacity="0.7"/>
   </g>
 
-  <!-- Arrows: tool -> mcp -> humans -->
-  <line x1="205" y1="140" x2="222" y2="140" class="arrow" marker-end="url(#ah)"/>
-  <line x1="410" y1="125" x2="427" y2="125" class="arrow" marker-end="url(#ah)"/>
-  <line x1="410" y1="160" x2="427" y2="160" class="arrow" marker-end="url(#ah)"/>
-  <line x1="625" y1="125" x2="642" y2="125" class="arrow" marker-end="url(#ah)"/>
-  <line x1="625" y1="160" x2="642" y2="160" class="arrow" marker-end="url(#ah)"/>
+  <line x1="630" y1="100" x2="652" y2="100" stroke="#484f58" stroke-width="2" marker-end="url(#arr)"/>
 
-  <!-- Competitor note -->
-  <text x="30" y="232" class="note">The 10k-star single-tool alternative: MCP only. No webapp. No winapp.</text>
-
-  <!-- Example flows -->
-  <g>
-    <circle cx="38" cy="258" r="4" class="dot-pu"/>
-    <text x="50" y="262" class="ex">docker-mcp: see containers + images + networks, agent lists stale images, trawls crash logs</text>
-    <circle cx="38" cy="284" r="4" class="dot-tl"/>
-    <text x="50" y="288" class="ex">git-github-mcp: morning sweep for open PRs and CI failures, stale flags in dashboard</text>
-    <circle cx="38" cy="310" r="4" class="dot-am"/>
-    <text x="50" y="314" class="ex">aiwatcher-mcp: trawls news sources, writes digest, posts it to your Discord guild</text>
+  <!-- 5 AI specialist chat + workflows -->
+  <g transform="translate(656,48)">
+    <rect width="128" height="104" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+    <path d="M28 36h44a8 8 0 0 1 8 8v16a8 8 0 0 1-8 8H40l-12 10v-10H28a8 8 0 0 1-8-8V44a8 8 0 0 1 8-8z" fill="none" stroke="#58a6ff" stroke-width="2"/>
+    <circle cx="88" cy="34" r="6" fill="none" stroke="#58a6ff" stroke-width="1.5"/>
+    <circle cx="104" cy="50" r="6" fill="none" stroke="#58a6ff" stroke-width="1.5"/>
+    <circle cx="88" cy="66" r="6" fill="none" stroke="#58a6ff" stroke-width="1.5"/>
+    <path d="M88 40v8M94 50h-4M88 58v8" stroke="#58a6ff" stroke-width="1.5" fill="none"/>
+    <path d="M94 50 L88 58" stroke="#58a6ff" stroke-width="1.5"/>
   </g>
 
-  <text x="30" y="342" class="b" text-anchor="start">Full flows live in the category pages, not here. This diagram is the whole pitch.</text>
+  <!-- MCP fans to web + win (same backend) -->
+  <path d="M246 152 Q246 168 340 168 L466 168" fill="none" stroke="#3a4150" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <path d="M246 152 Q246 176 498 176" fill="none" stroke="#3a4150" stroke-width="1.5" stroke-dasharray="4 3"/>
 </svg>
