@@ -2,13 +2,24 @@
 
 > Human-architected, AI-implemented: I design, agents code. [What that means](docs/AGENTIC_AI.md)
 
-Retired software engineer, 9th District Vienna. I give everyday tools three faces - a robot-handle for AI agents, a web dashboard, and a Windows desktop app - then snap them together into pipelines. 190+ small repos, one idea.
+Retired software engineer, 9th District Vienna. I wrap everyday tools in a five-layer fleet pattern, then snap repos together into pipelines. 190+ small repos, one idea.
 
 Start here: **[Why so many repos?](WHY_FLEET.md)** - plain-language value prop, 3 minutes.
 
-![Fleet repo stack diagram](assets/hero.svg)
+```mermaid
+flowchart LR
+  W[Wrapee<br/>tool or device]
+  M[MCP server<br/>agents]
+  B[Webapp<br/>human dashboard]
+  D[Winapp<br/>Tauri NSIS .exe]
+  A[AI chat and workflows<br/>skills plus agentic jobs]
+  W --> M
+  M --> B
+  M --> D
+  B --> A
+```
 
-Each repo, left to right: **wrapee** (the tool or device) → **MCP server** (agents) → **webapp** and **winapp** (humans) → **AI specialist chat and workflows** (skills + multi-step jobs in the web stack).
+Each repo ships all five: the **wrapee** you already use, an **MCP server** for Claude or Cursor, **webapp** and **winapp** for humans, and **AI specialist chat and workflows** in the web stack.
 
 ---
 
