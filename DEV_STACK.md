@@ -55,6 +55,7 @@ Every webapp, same stack (verified in-tree, e.g. yahboom dashboard):
 - **Zustand** stores (`store/llm.ts` + provider lib), **Framer Motion**, **Lucide** icons, **three.js** where 3D is needed.
 - **Catch-them-all pages** (gate, not suggestion): Dashboard hero + KPIs, Inbox, Tools, Skills, Chat, Settings (LLM), Help, Logs, plus domain pages. Thin outbox-plus-stub-Settings webapps fail the gate. Tool lists are discovered from the MCP server, never hardcoded.
 - Adjacent port pairs (backend N, frontend N+1), all registered in `operations/WEBAPP_PORTS.md` before allocating. Forbidden: 3000, 5000, 5173, 8000, 8080.
+- Scaffolding new apps from prose (beta, neglected but interesting): **[Dark App Factory](DARK_APP_FACTORY.md)** - foreman plus 19 specialists plus empirical judge, local-only.
 
 ## Desktop: Tauri and NSIS
 
@@ -115,7 +116,7 @@ The field moves monthly; the fleet reads instead of guessing:
 
 ## Packaging and distribution
 
-Full treatment: **[Packaging](PACKAGING.md)** - the two tracks, .mcpbignore discipline, prompts 3-4-100. Short version:
+Full treatment: **[Packaging](PACKAGING.md)** - the two tracks, .mcpbignore discipline, prompts 3-4-100. Explanation videos per repo: **[Demo Vid](DEMO_VID.md)** (generated narrated walkthroughs, live-driving capture). Short version:
 
 - **Two tracks**: `.mcpb` bundles (manifest, `.mcpbignore`, prompts 3-4-100 rule: system prompt >= 3000 words, user prompt >= 4000, >= 100 tool-call examples) and Tauri NSIS installers.
 - **Glama.ai** presence per repo (`glama.json`), llms.txt + llms-full.txt, README/INSTALL/ONBOARDING docs stack with screenshots and Preview sections.

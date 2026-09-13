@@ -1,5 +1,7 @@
 # 🗺️ Fleet Crossconnects & Companion Graph
 
+> New here? Walk the chains first: **[Crossconnect Tour](CROSSCONNECT_TOUR.md)** (five worked examples in prose). This page is the technical map underneath.
+
 **Interactive Architecture Map**: Click any node in the diagram below to open its GitHub repository.
 
 ---

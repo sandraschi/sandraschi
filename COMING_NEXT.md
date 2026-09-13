@@ -15,8 +15,9 @@ GrokBot serves millions of users shallowly; sandrafleetbot serves one user deepl
 **Status: spec ratified, buildout in progress -- P0 (brain tier) shipped 2026-08-14, P1 (Fritz reasoning loop) shipped 2026-08-15, P2 (comm bus + bulletin board), P3 (surge + fritz_surveil triage), P4 (memory hooks + skills + cron suggestions) and P5 (Board page + Fritz console + FLEET_TOKEN + voice loop) shipped 2026-08-15.** Muse Glimmer 30B runs on the RTX 4090 (chat, tool-calling, vision verified -- zero cloud cost), and the fleet's agent runners default to it. Fritz now runs reasoning workflows end-to-end: flowforge `agent` steps spawn cline-mcp `agent_run` on muse-glimmer, results persist, hub discovery refreshes 69 servers. Plan: P0→P8 (agent loop → board/inbox → senses → memory → surfaces → channels → hardening → packs + naked-PC gate). [Spec →](https://github.com/sandraschi/documentation-mcp/blob/main/docs/projects/sandrafleetbot/README.md)
 
 Two sub-pages carry the detail so this page stays a roadmap:
-
 - **[Fritz](FRITZ.md)** - the inhouse universal agent: configurable YAML tasks, hub connectors, five-layer safety cage, cloud-token minimisation, WIP status.
 - **[Local LLM Stack](LOCAL_LLM_STACK.md)** - hardware (16 GB NVIDIA minimum, MacBook caveat), engines (Ollama / LM Studio / llama.cpp / vLLM), and the current US vs PRC open-weight champions.
+
+Predecessor worth knowing: **[RoboFang](ROBOFANG.md)** tried the command-center idea first (Beta, neglected). Its safety thinking and federation patterns feed this roadmap - read it before designing v2 of anything.
 
 ---

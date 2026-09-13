@@ -54,13 +54,14 @@ Every repo works **alone**. Crossconnect is an optional bonus link between neigh
 - **Soft fail.** Peer missing? You get a friendly install link, not a crash.
 - **Concrete example.** Draw a bracket in QCAD, extrude it in Blender, export STEP from FreeCAD, print it, bolt a sensor onto the Yahboom car, watch its twin move inside Resonite VR, hear speech-mcp say "mount check done". Five repos, one afternoon, zero meetings. Each step also works solo.
 
-Technical map: [Fleet Crossconnects](FLEET_CROSSCONNECTS.md). Category walkthrough: [Make / Move / Meet](FLEET_MAKE_MOVE_MEET.md).
+Technical map: [Fleet Crossconnects](FLEET_CROSSCONNECTS.md). Prose walkthrough: [Crossconnect Tour](CROSSCONNECT_TOUR.md) (five chains end to end). Category walkthrough: [Make / Move / Meet](FLEET_MAKE_MOVE_MEET.md).
 
 Three taste-tests of the full power (short versions - the leporello lives in the sub-pages):
 
 - **docker-mcp.** You see containers, images, volumes, networks in the dashboard. The agent lists stale images for pruning or trawls crash logs to explain why a container keeps restarting. Full flow: [Play / Know / Home, advanced flows](FLEET_PLAY_KNOW_HOME.md#advanced-flows-three-repos-at-full-power).
 - **git-github-mcp.** Morning sweep: open PRs, stale flags, CI failures with log tails and rerun plus AI diagnose, all in the dashboard. Full flow: [Play / Know / Home, advanced flows](FLEET_PLAY_KNOW_HOME.md#advanced-flows-three-repos-at-full-power).
 - **aiwatcher-mcp.** Trawls 10+ news sources, scores with your persona, writes the HTML digest, delivers via email and archives to Calibre - and can post the summary to your Discord guild (opt-in via discord-mcp). Full flow: [Play / Know / Home, advanced flows](FLEET_PLAY_KNOW_HOME.md#advanced-flows-three-repos-at-full-power).
+- **speech-mcp, the universal one.** Wake word offline, local transcription, intent bus to Fritz or the house or the robots: "speechy fritz gimme overnight arxiv humdingers", "speechy home all devices working check". Every repo with a status becomes voice-operated. Full page: [Speech Hub](SPEECH_HUB.md).
 
 ## 5. Honest note on stars: 40 vs 10,000
 
