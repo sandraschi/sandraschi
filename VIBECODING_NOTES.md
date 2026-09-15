@@ -1,4 +1,4 @@
-# So You Want to Be a ~~Vibecoder~~ "Agentic Architect"
+# So You Want to Be a V̶i̶b̶e̶c̶o̶d̶e̶r̶ "Agentic Architect"
 
 > Practical, dated notes on getting more out of AI coding tools. Longer-form, more vendored, snarkier version lives at **[vibecoding-notes](https://github.com/sandraschi/vibecoding-notes)** - this page is the fleet-house-style duplicate.
 
