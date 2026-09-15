@@ -28,6 +28,12 @@ The `just build-native` → `just cua-nsis-test` pipeline (PyInstaller → Rust 
 
 ---
 
+### 2026-09-15 — The macro/SOP chain (assfix, fakefind, ghaudit) turned out to be tool-portable, not opencode-only
+
+`assfix`, `fakefind`, and `ghaudit` were built as named macros for opencode — a short utterance expanding into a written multi-phase SOP (see [named-macros-as-ops-for-agents.md](https://github.com/sandraschi/vibecoding-notes/blob/main/named-macros-as-ops-for-agents.md) for the pattern writeup). The genuinely hard problem this quietly solved: **the SOPs themselves are plain markdown, not opencode-specific plugin code**, so any other IDE or agent that can read a file and follow instructions can execute the same procedure when pointed at the SOP directly and prompted suitably — no opencode-specific integration required. The named-macro trigger is a opencode-native convenience; the actual capability lives in the SOP text, which is tool-agnostic by construction. That's the difference between "we built a feature for one IDE" and "we wrote a procedure any agent can run," and it wasn't originally the explicit design goal — it fell out of keeping the SOPs as plain files instead of baking them into tool-specific code.
+
+---
+
 ## Watching for (not yet achieved — listed so we notice when they land)
 
 - **An Eötvös competition problem formally solved via [leanforge-mcp](https://github.com/sandraschi/leanforge-mcp)** — the proof-loop pattern (LLM proposes, Lean compiler checks, LLM reads the error and retries) actually closing out a real, recognized competition-difficulty problem, not a toy lemma.
