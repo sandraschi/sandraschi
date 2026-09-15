@@ -47,3 +47,4 @@ Details: **[Why the fleet looks like this](WHY_FLEET.md)** - why one repo per to
 | Who runs this (workshop photo, Benny, follows, thanks) | **[About Sandra](ABOUT.md)** - the personal tail, kept off this page on purpose |
 | How it is built (developers: tools, tests, standards, CI) | **[Dev Stack](DEV_STACK.md)** - very technical, everyone else stop here |
 | The rogues' gallery (Alexa air-gap, listening ops, live demos) | **[Sneaky Feats](SNEAKY_FEATS.md)** - mischief with guardrails |
+| So you want to be a ~~vibecoder~~ "agentic architect" | **[Vibecoding Notes](VIBECODING_NOTES.md)** - subscription round-robin, DeepSeek peak-hour gotchas |
