@@ -22,6 +22,12 @@ Vanity metrics, self-congratulatory milestones, and "we shipped a thing" don't q
 
 ---
 
+### 2026-09-15 — Automated NSIS/Tauri build + CUA smoke test proving a winapp works end to end
+
+The `just build-native` → `just cua-nsis-test` pipeline (PyInstaller → Rust → NSIS build, then a pywinauto-driven CUA test that installs the real installer, launches the app, verifies it, and uninstalls it) now reliably proves a packaged Tauri desktop app actually works — not "compiles," works. This catches the specific failure classes that unit tests and Playwright E2E structurally can't: backend unreachable after install, WebView2 racing ahead of a not-yet-ready backend, CSP/CORS misconfiguration blocking API calls, silent install failures, and registry left behind after uninstall. Full install-through-teardown, automated, no manual click-through required to trust a release. This is the CUA-smoke-test layer from [vibecoding-notes' testing note](https://github.com/sandraschi/vibecoding-notes/blob/main/testing-coverage-e2e-cua-smoke.md) actually running in production against real fleet installers, not just described as a good idea.
+
+---
+
 ## Watching for (not yet achieved — listed so we notice when they land)
 
 - **An Eötvös competition problem formally solved via [leanforge-mcp](https://github.com/sandraschi/leanforge-mcp)** — the proof-loop pattern (LLM proposes, Lean compiler checks, LLM reads the error and retries) actually closing out a real, recognized competition-difficulty problem, not a toy lemma.
