@@ -38,6 +38,8 @@ Physical kits, vacuums-as-platforms, wheeled household robots, humanoids, and th
 
 A new category worth naming on its own: cheap **wheeled household robots** — not legged, not industrial, priced for a home rather than a lab. **[Nori Robotics A3](https://www.norirobotics.com/)** is the vanguard here: a $1,688, 19-DOF wheeled bimanual home robot (XLeRobot/Hugging Face LeRobot lineage), ships Fall 2026. That's the same democratization story as [Shenzhen actuators](docs/SHENZHEN_ROBOTICS.md) making legged humanoids DIY-grade, one category over: wheeled home robots going from lab-only to hobbyist-priced.
 
+Where Unitree fits alongside that: genuinely great hardware, but the versions with the DOF and payload to actually be useful for real manipulation work are priced for a lab, not a household — G1 EDU runs **$43,900-$73,900**, versus $13,500 for the base G1 that lacks the same capability. R1 EDU is the more approachable middle ground at **$10,500**. Either way, Unitree is a "when you have a grant, not when you have a hobby budget" tier next to Nori's $1,688. And if $650,000 and 2.8 meters tall sounds appealing: Unitree also shipped the **GD01** — a rideable, human-piloted mecha the Chinese press immediately and correctly nicknamed a real-life Gundam. Great watch, not going in anyone's living room: [Real Life Gundam? The $650,000 Unitree GD01 Mass Production Begins! (YouTube)](https://www.youtube.com/watch?v=a2EfO_bND8U).
+
 | Repo | What it wraps | When you want it |
 |---|---|---|
 | [yahboom-mcp](https://github.com/sandraschi/yahboom-mcp) | Yahboom Raspbot V2 ("Boomy") | ROS 2 car on Pi 5, camera + ultrasonic, local Gemma brain |
