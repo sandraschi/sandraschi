@@ -10,7 +10,7 @@ A running log of wins worth remembering — not routine commits, not vanity metr
 - **A genuinely hard, objectively checkable problem solved** — a compiler/proof checker said yes, not "looks right."
 - **A real public threshold crossed** — not "we're proud of this," an actual number that meant something before we hit it.
 
-Vanity metrics, self-congratulatory milestones, and "we shipped a thing" don't qualify — those live in CHANGELOG.md, where they belong.
+Vanity metrics, self-congratulatory milestones, and "we shipped a thing" don't qualify — those live in CHANGELOG.md, where they belong. Something that's a genuinely ambitious, well-built concept but hasn't yet cleared the bar goes in **Success candidates** below the log, not into the log itself.
 
 ---
 
@@ -31,6 +31,15 @@ The `just build-native` → `just cua-nsis-test` pipeline (PyInstaller → Rust 
 ### 2026-09-15 — The macro/SOP chain (assfix, fakefind, ghaudit) turned out to be tool-portable, not opencode-only
 
 `assfix`, `fakefind`, and `ghaudit` were built as named macros for opencode — a short utterance expanding into a written multi-phase SOP (see [named-macros-as-ops-for-agents.md](https://github.com/sandraschi/vibecoding-notes/blob/main/named-macros-as-ops-for-agents.md) for the pattern writeup). The genuinely hard problem this quietly solved: **the SOPs themselves are plain markdown, not opencode-specific plugin code**, so any other IDE or agent that can read a file and follow instructions can execute the same procedure when pointed at the SOP directly and prompted suitably — no opencode-specific integration required. The named-macro trigger is a opencode-native convenience; the actual capability lives in the SOP text, which is tool-agnostic by construction. That's the difference between "we built a feature for one IDE" and "we wrote a procedure any agent can run," and it wasn't originally the explicit design goal — it fell out of keeping the SOPs as plain files instead of baking them into tool-specific code.
+
+---
+
+## Success candidates (self-assessed, not yet externally validated)
+
+Things that feel like real wins — ambitious, well-executed, worth being proud of — but honestly haven't cleared the log's actual bar above: no outside validation, no objectively-checkable pass/fail, no public threshold. Listed here instead of the log so pride doesn't quietly become the self-congratulation the log exists to exclude. A candidate graduates to the log above only when something external or objectively checkable actually happens to it — not when it's been sitting here long enough to feel earned.
+
+- **[arxiv-mcp](https://github.com/sandraschi/arxiv-mcp)** — the whole concept: a high-density research pipe (hybrid RAG depot, citation graphs, DOI resolution across 50,000+ publishers, code-hunt tracking) that's genuinely comprehensive. No external user or reviewer on record yet. Graduates when one shows up, or when a specific capability inside it (e.g. the epistemics/codehunt pipeline) catches something real and checkable.
+- **[aiwatcher-mcp](https://github.com/sandraschi/aiwatcher-mcp)** — same story: multi-source ingestion, Claude-scored urgency triage, cross-fleet alerting, all genuinely well-built. Graduates the day its urgency scoring demonstrably catches a real breaking event before you'd have known otherwise, in a way you can point to afterward — not on general vibes of "this is a good system."
 
 ---
 
