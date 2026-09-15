@@ -34,13 +34,15 @@ Honesty note: standalone Blender/QCAD drivers with 10k stars beat us on single-a
 
 ## Move: robots and simulation
 
-Physical kits, vacuums-as-platforms, humanoids, and the simulators that keep them safe.
+Physical kits, vacuums-as-platforms, wheeled household robots, humanoids, and the simulators that keep them safe.
+
+A new category worth naming on its own: cheap **wheeled household robots** — not legged, not industrial, priced for a home rather than a lab. **[Nori Robotics A3](https://www.norirobotics.com/)** is the vanguard here: a $1,688, 19-DOF wheeled bimanual home robot (XLeRobot/Hugging Face LeRobot lineage), ships Fall 2026. That's the same democratization story as [Shenzhen actuators](docs/SHENZHEN_ROBOTICS.md) making legged humanoids DIY-grade, one category over: wheeled home robots going from lab-only to hobbyist-priced.
 
 | Repo | What it wraps | When you want it |
 |---|---|---|
 | [yahboom-mcp](https://github.com/sandraschi/yahboom-mcp) | Yahboom Raspbot V2 ("Boomy") | ROS 2 car on Pi 5, camera + ultrasonic, local Gemma brain |
 | [dreame-mcp](https://github.com/sandraschi/dreame-mcp) | Dreame vacuum | Lidar mapping and navigation as a ready indoor platform |
-| [norirobotics-mcp](https://github.com/sandraschi/norirobotics-mcp) | Nori robotics kit | DIY actuators and chassis in the Shenzhen price band |
+| [norirobotics-mcp](https://github.com/sandraschi/norirobotics-mcp) | Nori Robotics A3 | $1,688 wheeled bimanual home robot, WebRTC control, mock session until ships Fall 2026 |
 | [unitree-mcp](https://github.com/sandraschi/unitree-mcp) | Unitree quadrupeds/humanoids | MuJoCo + ROS 2 bridge for legged locomotion |
 | [limx-robotics-mcp](https://github.com/sandraschi/limx-robotics-mcp) | LIMX robots | Sim lifecycle + VLA bridge |
 | [teleoperator-mcp](https://github.com/sandraschi/teleoperator-mcp) | WebXR teleop client | Steer the physical robot from a Pico headset, two-way audio |

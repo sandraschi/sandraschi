@@ -22,6 +22,7 @@ RTX 4090 sweet spot: **Qwen3.5 27B @ Q4 quant** (~40 tok/s). For MoE efficiency:
 
 - **Yahboom Raspbot V2** ("Boomy") — Raspberry Pi 5, ROS 2, camera, ultrasonic, running Gemma 4 locally
 - **[Noetix Bumi](BUMI.md)** (incoming) — 94cm, 12kg, 16-DOF humanoid, FOSS-friendly, JD.com
+- **Nori Robotics A3** (incoming, ships Fall 2026) — $1,688, 19-DOF wheeled bimanual home robot, vanguard of the new cheap wheeled-household-robot wave; wrapped by [norirobotics-mcp](https://github.com/sandraschi/norirobotics-mcp)
 
 ## Fleet Architecture
 
