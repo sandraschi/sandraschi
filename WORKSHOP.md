@@ -9,7 +9,7 @@ The Alsergrund node runs on a single beefy Windows machine nicknamed **Goliath**
 | **CPU** | AMD Ryzen 9 5900X (24 cores) |
 | **GPU** | RTX 4090 24GB VRAM |
 | **Memory** | 64GB DDR4 |
-| **Storage** | 30TB HDD Array |
+| **Storage** | 30TB HDD Array + 8TB NVMe SSD (on-mainboard, bought pre price-explosion) |
 | **OS** | Windows 11 Pro |
 | **IDEs** | Cursor · Windsurf · Google Antigravity |
 | **Inference** | Ollama · LM Studio · Claude Desktop Pro |
