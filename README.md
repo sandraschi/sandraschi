@@ -48,3 +48,4 @@ Details: **[Why the fleet looks like this](WHY_FLEET.md)** - why one repo per to
 | How it is built (developers: tools, tests, standards, CI) | **[Dev Stack](DEV_STACK.md)** - very technical, everyone else stop here |
 | The rogues' gallery (Alexa air-gap, listening ops, live demos) | **[Sneaky Feats](SNEAKY_FEATS.md)** - mischief with guardrails |
 | So you want to be a v̶i̶b̶e̶c̶o̶d̶e̶r̶ "agentic architect" | **[Vibecoding Notes](VIBECODING_NOTES.md)** - subscription round-robin, DeepSeek peak-hour gotchas |
+| The wins that actually cleared a real bar | **[Our (Nontrivial) Successes](SUCCESSES.md)** - external validation, hard problems solved, real thresholds crossed |
