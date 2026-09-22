@@ -46,6 +46,10 @@ The dashboards are not dumb button grids. Each repo ships two levels of built-in
 
 This is the other half of the competitor gap. An MCP-only server is agent-only, which in practice means developer-only: no chat, no skills, no workflows, no human ever asks it anything directly. Here the human asks first and the agent does the running.
 
+## 3c. Watching it all without 190 dashboards
+
+Each repo exposes its health the same way - a `/metrics` endpoint and structured logs - and one fleet-wide stack (Prometheus, Loki, Grafana on the workshop box) collects it. You get a single AIWatcher dashboard and a single devices dashboard instead of 190 Grafanas. Repos *emit*; the fleet *watches*. Dashboards are contributed where watching matters (cameras, feeds, robots) and skipped where it doesn't. It is a contract, not a sixth thing to install per repo - the five layers stay five.
+
 ## 4. What does "crossconnect" mean?
 
 Every repo works **alone**. Crossconnect is an optional bonus link between neighbours:
