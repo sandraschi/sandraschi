@@ -2,6 +2,8 @@
 
 > Human-architected, AI-implemented: I design, agents code. [What that means](docs/AGENTIC_AI.md)
 
+**Fleet-wide questions, AI trajectory takes, roadmap ideas?** [Discussions](https://github.com/sandraschi/sandraschi/discussions) - not tied to one repo's tools, that's what this one is for.
+
 Retired software engineer, 9th District Vienna. I wrap everyday tools in a five-layer fleet pattern, then snap repos together into pipelines. 190+ small repos, one idea.
 
 Start here: **[Why so many repos?](WHY_FLEET.md)** - plain-language value prop, 3 minutes.
@@ -19,7 +21,7 @@ flowchart LR
   B --> A
 ```
 
-Each repo ships all five: the **wrapee** you already use, an **MCP server** for Claude or Cursor, **webapp** and **winapp** for humans, and **AI specialist chat and workflows** in the web stack.
+Each repo ships four layers wired to one **wrapee**: an **MCP server** for Claude or Cursor, **webapp** and **winapp** for humans, and **AI specialist chat and workflows** in the web stack. The wrapee itself isn't shipped - you already have it, or the repo helps you find, install, and wire it in (sometimes pointing you at a great but obscure one, like Inkscape, Lean, or a robot car).
 
 ---
 
