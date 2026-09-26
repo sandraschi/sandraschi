@@ -42,11 +42,12 @@ An agent with hands in your files, robots, and accounts must be caged. Fritz is 
 
 ## Cloud tokens: minimised and capped
 
-Local-first is a rule, not a preference: ALL inference routes to Ollama / llama.cpp / LM Studio. Cloud is a documented fallback only.
+Local-first is a rule, not a preference: ALL inference routes to Ollama / llama.cpp / LM Studio. Cloud is a documented fallback only - even though midlevel cloud got 10-50x cheaper (Spark 1.3 contributor, GPT-6 Luna).
 
-- **Fast tier**: a small local distil (9B class) handles triage and routine steps; the 30B brain wakes for real reasoning.
-- **Truncating proxy**: oversized requests are trimmed and tools whitelisted before they reach the model.
-- **Spend watch**: cloud fallback budget under $20/month with threshold alerts. Monthly cloud spend target: EUR 0, or a documented exception.
+- **Default brain**: Bonsai 2 27B PQ2_0 via :11436 (32k lean in opencode `bonsai-lean`, 65k+ where KV allows). Second slot holds a 9B Q4 specialist / coder / VL resident in parallel.
+- **Escalation**: Glimmer 27B Q4 via :11439 for hard reasoning where 3-bit wobbles; cloud midlevel only for 1M-ctx or marathon coding, never for RAG/files/credentials.
+- **Truncating proxy**: oversized requests are trimmed and tools whitelisted before they reach the model (still mandatory - 32k lean cannot take fleet tool defs).
+- **Spend watch**: cloud fallback budget under $20/month with threshold alerts. That budget now buys real escalation volume. Monthly cloud spend target: EUR 0, or a documented exception.
 
 ## Segue: Fritz grows into sandrafleetbot
 
