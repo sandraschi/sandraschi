@@ -83,9 +83,9 @@ Physical and simulated robots, plus avatar identity for virtual embodiment.
 
 ## 🎮 Fun & Games
 
-| [![Games](assets/card_games.svg)](https://github.com/sandraschi/games-app#readme) | [![xkcd](assets/card_xkcd.svg)](https://github.com/sandraschi/xkcd-mcp#readme) |
+| [![Games](assets/card_games.svg)](https://github.com/sandraschi/ai-games-collection#readme) | [![xkcd](assets/card_xkcd.svg)](https://github.com/sandraschi/xkcd-mcp#readme) |
 | :--- | :--- |
-| **[games-app](https://github.com/sandraschi/games-app)** | **[xkcd-mcp](https://github.com/sandraschi/xkcd-mcp)** |
+| **[ai-games-collection](https://github.com/sandraschi/ai-games-collection)** | **[xkcd-mcp](https://github.com/sandraschi/xkcd-mcp)** |
 | Local entertainment grid management and emulation orchestration. | Comic retrieval and semantic search over the xkcd humor corpus. |
 
 ---
@@ -110,9 +110,9 @@ Physical and simulated robots, plus avatar identity for virtual embodiment.
 
 ## 🛠️ Dev & Platform
 
-| [![MetaMCP](assets/card_metamcp.svg)](https://github.com/sandraschi/meta_mcp#readme) | [![GitOps](assets/card_gitops.svg)](https://github.com/sandraschi/git-github-mcp#readme) |
+| [![MetaMCP](assets/card_metamcp.svg)](https://github.com/sandraschi/meta-hypertools#readme) | [![GitOps](assets/card_gitops.svg)](https://github.com/sandraschi/git-github-mcp#readme) |
 | :--- | :--- |
-| **[meta_mcp](https://github.com/sandraschi/meta_mcp)** | **[git-github-mcp](https://github.com/sandraschi/git-github-mcp)** |
+| **[meta-hypertools](https://github.com/sandraschi/meta-hypertools)** | **[git-github-mcp](https://github.com/sandraschi/git-github-mcp)** |
 | Self-aware MCP server management and tool diagnostics. | Autonomous repository lifecycle and version control orchestration. |
 
 | [![DarkFactory](assets/card_darkfactory.svg)](https://github.com/sandraschi/dark-app-factory#readme) | [![FileOps](assets/card_fileops.svg)](https://github.com/sandraschi/filesystem-mcp#readme) |
@@ -208,7 +208,6 @@ The SVG itself carries everything inline:
 | [vla-mcp](https://github.com/sandraschi/vla-mcp) | VLA (Vision-Language-Action) / wall-x bridge for embodied AI |
 | [teleoperator-mcp](https://github.com/sandraschi/teleoperator-mcp) | WebXR teleoperation client for Pico headsets |
 | [chip-design-mcp](https://github.com/sandraschi/chip-design-mcp) | EDA orchestration for chip/VLSI design |
-| [simbench-mcp](https://github.com/sandraschi/simbench-mcp) | Cross-simulator benchmark layer |
 | [norirobotics-mcp](https://github.com/sandraschi/norirobotics-mcp) | Nori Robotics A3 home robot — teleop, LeRobot (real and virtual) |
 | [bl-halo-mcp](https://github.com/sandraschi/bl-halo-mcp) | Brilliant Labs Halo / Frame AI glasses — BLE, Lua VM, display |
 
@@ -253,7 +252,7 @@ The SVG itself carries everything inline:
 
 | Repo | Description |
 | :--- | :--- |
-| [meta_mcp](https://github.com/sandraschi/meta_mcp) | Self-aware MCP server management and tool diagnostics |
+| [meta-hypertools](https://github.com/sandraschi/meta-hypertools) | Self-aware MCP server management and tool diagnostics |
 | [git-github-mcp](https://github.com/sandraschi/git-github-mcp) | Autonomous repository lifecycle and version control orchestration |
 | [dark-app-factory](https://github.com/sandraschi/dark-app-factory) | Unattended fleet automation plane for industrial operations |
 | [filesystem-mcp](https://github.com/sandraschi/filesystem-mcp) | Hardened distributed file management and storage substrate |
@@ -269,7 +268,6 @@ The SVG itself carries everything inline:
 | [toolbench-mcp](https://github.com/sandraschi/toolbench-mcp) | ToolBench agentic tool quality scoring and audit |
 | [repomix-mcp](https://github.com/sandraschi/repomix-mcp) | Repository mix/remix — codebase analysis and restructuring |
 | [forgejo-mcp](https://github.com/sandraschi/forgejo-mcp) | Forgejo self-hosted git platform bridge |
-| [ocaml-mcp](https://github.com/sandraschi/ocaml-mcp) | OCaml toolchain and build system bridge |
 | [rustdesk-mcp](https://github.com/sandraschi/rustdesk-mcp) | RustDesk remote desktop management |
 | [disk-usage-mcp](https://github.com/sandraschi/disk-usage-mcp) | Disk usage analysis and visualization |
 | [agy-fleet-mcp](https://github.com/sandraschi/agy-fleet-mcp) | Sync MCP configs for Antigravity CLI and Gemini |
@@ -318,7 +316,7 @@ The SVG itself carries everything inline:
 | [sfx-mcp](https://github.com/sandraschi/sfx-mcp) | Sound effects — FreeSound API wrapper + local library |
 | [stems-mcp](https://github.com/sandraschi/stems-mcp) | ONNX HTDemucs v4 stem separation — isolate vocals/drums/bass |
 | [vfx-mcp](https://github.com/sandraschi/vfx-mcp) | FFmpeg video effects — compositing and post-processing |
-| [videogen-mcp](https://github.com/sandraschi/videogen-mcp) | Topic-to-narrated-video pipeline (ittybitty) |
+| [ittybittyvideos](https://github.com/sandraschi/ittybittyvideos) | Topic-to-narrated-video pipeline (ittybitty) |
 | [mixx-dj-mcp](https://github.com/sandraschi/mixx-dj-mcp) | Mixxx DJ software — OSC bridge, deck control, BPM sync |
 | [resolume-mcp](https://github.com/sandraschi/resolume-mcp) | Resolume Arena VJ software bridge |
 | [butterchurn-mcp](https://github.com/sandraschi/butterchurn-mcp) | MilkDrop WebGL visualizer — real-time audio-reactive visuals |
@@ -340,7 +338,7 @@ The SVG itself carries everything inline:
 
 | Repo | Description |
 | :--- | :--- |
-| [games-app](https://github.com/sandraschi/games-app) | Local entertainment grid — Stockfish, KataGo, Hex, Backgammon, Othello engines |
+| [ai-games-collection](https://github.com/sandraschi/ai-games-collection) | Local entertainment grid — Stockfish, KataGo, Hex, Backgammon, Othello engines |
 | [xkcd-mcp](https://github.com/sandraschi/xkcd-mcp) | xkcd comic retrieval and semantic search |
 | [tvtropes-mcp](https://github.com/sandraschi/tvtropes-mcp) | TV Tropes scraper and trope search |
 | [steam-mcp](https://github.com/sandraschi/steam-mcp) | Steam Web API bridge — library, achievements, friends |
@@ -438,7 +436,6 @@ The SVG itself carries everything inline:
 | [veogen](https://github.com/sandraschi/veogen) | Vector embedding generator — Ollama/LanceDB pipeline |
 | [ednaficator](https://github.com/sandraschi/ednaficator) | DNA sequence analysis and visualization |
 | [comfyops-mcp](https://github.com/sandraschi/comfyops-mcp) | ComfyUI sidecar — workflow-JSON generation for image gen |
-| [wall-flower](https://github.com/sandraschi/wall-flower) | Wallpaper engine — generative/curated desktop art |
 | [streamfog-mcp](https://github.com/sandraschi/streamfog-mcp) | StreamFog streaming overlay and scene management |
 | [iflow-mcp-catalog](https://github.com/sandraschi/iflow-mcp-catalog) | iFlow MCP catalog — workflow templates and discovery |
 
@@ -456,15 +453,12 @@ The SVG itself carries everything inline:
 | [openclaw-molt-mcp](https://github.com/sandraschi/openclaw-molt-mcp) | OpenClaw robotic claw bridge |
 | [pinokio-mcp](https://github.com/sandraschi/pinokio-mcp) | Pinokio 1-click launcher platform bridge |
 | [myai](https://github.com/sandraschi/myai) | Multi-container AI hub — Traefik, Weaviate, dashboards |
-| [alsergrund-bridge](https://github.com/sandraschi/alsergrund-bridge) | Alsergrund district local service bridge |
 | [gtfs-mcp](https://github.com/sandraschi/gtfs-mcp) | GTFS transit feed — schedule parsing and querying |
 | [sketchboard-excalidraw-mcp](https://github.com/sandraschi/sketchboard-excalidraw-mcp) | Excalidraw canvas bridge — headless render, diagram gen |
 | [classroom-mcp](https://github.com/sandraschi/classroom-mcp) | Classroom management — students, courses, assignments |
 | [uitars-mcp](https://github.com/sandraschi/uitars-mcp) | UI-TARS vision agent bridge |
-| [loot-mcp](https://github.com/sandraschi/loot-mcp) | Software license and entitlement tracking |
 | [loona-mcp](https://github.com/sandraschi/loona-mcp) | Loona pet robot bridge |
 | [status-mcp](https://github.com/sandraschi/status-mcp) | Service status page generator and monitor |
-| [pihole-mcp](https://github.com/sandraschi/pihole-mcp) | Pi-hole DNS ad-blocking management bridge |
 | [wasm-mcp](https://github.com/sandraschi/wasm-mcp) | WebAssembly toolchain and runtime bridge |
 | [kubernetes-mcp](https://github.com/sandraschi/kubernetes-mcp) | Kubernetes cluster management bridge |
 | [openrouter-mcp](https://github.com/sandraschi/openrouter-mcp) | OpenRouter API — multi-provider LLM routing |
@@ -475,7 +469,6 @@ The SVG itself carries everything inline:
 | [packetsniffer-mcp](https://github.com/sandraschi/packetsniffer-mcp) | Packet capture and analysis — Wireshark/tshark bridge |
 | [obscura-mcp](https://github.com/sandraschi/obscura-mcp) | Privacy and obfuscation toolkit |
 | [4g-usb-phone-mcp](https://github.com/sandraschi/4g-usb-phone-mcp) | 4G USB dongle SMS/call bridge |
-| [agiapi-mcp](https://github.com/sandraschi/agiapi-mcp) | AGI API gateway — multi-model orchestration |
 | [dj-media-hub](https://github.com/sandraschi/dj-media-hub) | DJ media hub — cross-deck library sync |
 | [rtorrent-mcp](https://github.com/sandraschi/rtorrent-mcp) | rTorrent client bridge |
 | [database-operations-mcp](https://github.com/sandraschi/database-operations-mcp) | Database operations — multi-DB query and management |
