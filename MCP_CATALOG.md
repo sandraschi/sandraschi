@@ -74,9 +74,9 @@ Physical and simulated robots, plus avatar identity for virtual embodiment.
 | **[arxiv-mcp](https://github.com/sandraschi/arxiv-mcp)** | **[advanced-memory-mcp](https://github.com/sandraschi/advanced-memory-mcp)** |
 | Scientific paper search, full-text extraction, citation tracing. Clean pipe into arXiv. | Zettelkasten knowledge base with 200+ curated semantic skills and memory. |
 
-| [![Calibre](assets/card_calibre.svg)](https://github.com/sandraschi/calibre-mcp#readme) | [![AI Watcher](assets/card_aiwatcher.svg)](https://github.com/sandraschi/aiwatcher-mcp#readme) |
+| [![Calibre](assets/card_calibre.svg)](https://github.com/sandraschi/calibremcp#readme) | [![AI Watcher](assets/card_aiwatcher.svg)](https://github.com/sandraschi/aiwatcher-mcp#readme) |
 | :--- | :--- |
-| **[calibre-mcp](https://github.com/sandraschi/calibre-mcp)** | **[aiwatcher-mcp](https://github.com/sandraschi/aiwatcher-mcp)** |
+| **[calibremcp](https://github.com/sandraschi/calibremcp)** | **[aiwatcher-mcp](https://github.com/sandraschi/aiwatcher-mcp)** |
 | 13,000 ebook library with semantic RAG search and full-text indexing. | AI activity monitoring, audit logging, and fleet observability. |
 
 ---
@@ -101,9 +101,9 @@ Physical and simulated robots, plus avatar identity for virtual embodiment.
 
 ## 🎬 Media & Streaming
 
-| [![Plex](assets/card_plex.svg)](https://github.com/sandraschi/plex-mcp#readme) | |
+| [![Plex](assets/card_plex.svg)](https://github.com/sandraschi/plexmcp#readme) | |
 | :--- | :--- |
-| **[plex-mcp](https://github.com/sandraschi/plex-mcp)** | |
+| **[plexmcp](https://github.com/sandraschi/plexmcp)** | |
 | Automated Plex media server management and library curation. | |
 
 ---
@@ -173,7 +173,7 @@ The SVG itself carries everything inline:
 ## 📋 Full Fleet Registry
 
 <details>
-<summary><strong>Expand: all 126+ repos by category</strong> (click to open)</summary>
+<summary><strong>Expand: all 170+ repos by category</strong> (click to open)</summary>
 
 ### 🧱 CAD / 3D / Maker
 
@@ -209,6 +209,8 @@ The SVG itself carries everything inline:
 | [teleoperator-mcp](https://github.com/sandraschi/teleoperator-mcp) | WebXR teleoperation client for Pico headsets |
 | [chip-design-mcp](https://github.com/sandraschi/chip-design-mcp) | EDA orchestration for chip/VLSI design |
 | [simbench-mcp](https://github.com/sandraschi/simbench-mcp) | Cross-simulator benchmark layer |
+| [norirobotics-mcp](https://github.com/sandraschi/norirobotics-mcp) | Nori Robotics A3 home robot — teleop, LeRobot (real and virtual) |
+| [bl-halo-mcp](https://github.com/sandraschi/bl-halo-mcp) | Brilliant Labs Halo / Frame AI glasses — BLE, Lua VM, display |
 
 ### 🌐 Virtual Worlds & XR
 
@@ -229,7 +231,7 @@ The SVG itself carries everything inline:
 | :--- | :--- |
 | [arxiv-mcp](https://github.com/sandraschi/arxiv-mcp) | Scientific paper search, full-text extraction, citation tracing |
 | [advanced-memory-mcp](https://github.com/sandraschi/advanced-memory-mcp) | Zettelkasten knowledge base — 200+ semantic skills, RAG, LanceDB |
-| [calibre-mcp](https://github.com/sandraschi/calibre-mcp) | 13K ebook library with semantic RAG search and full-text indexing |
+| [calibremcp](https://github.com/sandraschi/calibremcp) | 13K ebook library with semantic RAG search and full-text indexing |
 | [aiwatcher-mcp](https://github.com/sandraschi/aiwatcher-mcp) | AI news ingestion, distillation, and alert pipeline |
 | [depot-mcp](https://github.com/sandraschi/depot-mcp) | Artifact depot — cross-repo lookups, caching, LanceDB index |
 | [documentation-mcp](https://github.com/sandraschi/documentation-mcp) | Public docs hub — fleet-wide documentation server |
@@ -238,6 +240,14 @@ The SVG itself carries everything inline:
 | [quicknotes-mcp](https://github.com/sandraschi/quicknotes-mcp) | Quick capture notes — CRUD, import/export, converter |
 | [leanforge-mcp](https://github.com/sandraschi/leanforge-mcp) | Lean 4 formal proof search — LLM + compiler feedback loop |
 | [bumi-mcp](https://github.com/sandraschi/bumi-mcp) | Noetix Bumi humanoid knowledge base and personality engine |
+| [notion-mcp](https://github.com/sandraschi/notion-mcp) | Notion workspace management with LanceDB RAG |
+| [onenote-mcp](https://github.com/sandraschi/onenote-mcp) | Microsoft OneNote via Graph API — notebooks, sections, pages, search |
+| [pdf-mcp](https://github.com/sandraschi/pdf-mcp) | PDF intelligence — extract, annotate, convert, validate, LanceDB RAG |
+| [rss-mcp](https://github.com/sandraschi/rss-mcp) | Local-first RSS reader with readability extraction |
+| [glance-mcp](https://github.com/sandraschi/glance-mcp) | At-a-glance holdall for RSS, weather, fleet health and OPML |
+| [japanophile-mcp](https://github.com/sandraschi/japanophile-mcp) | Kanji/JLPT learning tools and Japanese culture knowledge box |
+| [bilibili-mcp](https://github.com/sandraschi/bilibili-mcp) | Bilibili content intelligence — search, trending, transcripts |
+| [gitee-mcp](https://github.com/sandraschi/gitee-mcp) | Gitee bridge — repo intel, momentum radar |
 
 ### 🛠️ Developer Tools
 
@@ -262,6 +272,13 @@ The SVG itself carries everything inline:
 | [ocaml-mcp](https://github.com/sandraschi/ocaml-mcp) | OCaml toolchain and build system bridge |
 | [rustdesk-mcp](https://github.com/sandraschi/rustdesk-mcp) | RustDesk remote desktop management |
 | [disk-usage-mcp](https://github.com/sandraschi/disk-usage-mcp) | Disk usage analysis and visualization |
+| [agy-fleet-mcp](https://github.com/sandraschi/agy-fleet-mcp) | Sync MCP configs for Antigravity CLI and Gemini |
+| [mcp-federation-hub](https://github.com/sandraschi/mcp-federation-hub) | Orchestration layer for MCP server ecosystems |
+| [universal-actuator-mcp](https://github.com/sandraschi/universal-actuator-mcp) | Federated consumption router and live dashboard for RoboFang |
+| [virtualization-mcp](https://github.com/sandraschi/virtualization-mcp) | VirtualBox, Hyper-V and Windows Sandbox VM operations |
+| [stripe-mcp](https://github.com/sandraschi/stripe-mcp) | Stripe payments and SaaS billing operations |
+| [mcp-links-service](https://github.com/sandraschi/mcp-links-service) | MCP links service |
+| [nekomimi-mcp](https://github.com/sandraschi/nekomimi-mcp) | Nekomimi MCP |
 
 ### 💬 Chat & AI / LLM
 
@@ -285,12 +302,14 @@ The SVG itself carries everything inline:
 | [chitchat](https://github.com/sandraschi/chitchat) | Lightweight chat server with personality system |
 | [giskard-mcp](https://github.com/sandraschi/giskard-mcp) | Giskard red-team LLM vulnerability scanning |
 | [moltbot-mcp](https://github.com/sandraschi/moltbot-mcp) | Moltbot agent bridge |
+| [unsloth-mcp](https://github.com/sandraschi/unsloth-mcp) | Local LLM fine-tuning — LoRA/QLoRA training with Unsloth, job monitoring |
+| [diffusion-llm-mcp](https://github.com/sandraschi/diffusion-llm-mcp) | Diffusion language models (dLLM) — DiffusionGemma on local RTX 4090 |
 
 ### 🎬 Media & Audio
 
 | Repo | Description |
 | :--- | :--- |
-| [plex-mcp](https://github.com/sandraschi/plex-mcp) | Automated Plex media server management and library curation |
+| [plexmcp](https://github.com/sandraschi/plexmcp) | Automated Plex media server management and library curation |
 | [jellyfin-mcp](https://github.com/sandraschi/jellyfin-mcp) | Jellyfin media server — library, playback, WebSocket events |
 | [readly-mcp](https://github.com/sandraschi/readly-mcp) | Readly digital magazine platform bridge |
 | [audiotool-nexus-mcp](https://github.com/sandraschi/audiotool-nexus-mcp) | Audiotool online DAW bridge |
@@ -310,6 +329,12 @@ The SVG itself carries everything inline:
 | [grandorgue-mcp](https://github.com/sandraschi/grandorgue-mcp) | GrandOrgue pipe organ — console control via MCP |
 | [musicpaint-mcp](https://github.com/sandraschi/musicpaint-mcp) | Audio player + paintings slideshow — sync engine |
 | [directmedia-mcp](https://github.com/sandraschi/directmedia-mcp) | DirectShow media control bridge |
+| [komga-mcp](https://github.com/sandraschi/komga-mcp) | Komga comics/manga/eBook server bridge |
+| [kavita-mcp](https://github.com/sandraschi/kavita-mcp) | Kavita eBook/comics/manga server bridge |
+| [civitai-mcp](https://github.com/sandraschi/civitai-mcp) | Civitai search and checkpoint/LoRA download for ComfyUI |
+| [invokeai-mcp](https://github.com/sandraschi/invokeai-mcp) | InvokeAI creative engine — txt2img, img2img, inpaint, upscale, queue |
+| [midasheng-gen-mcp](https://github.com/sandraschi/midasheng-gen-mcp) | Text-to-audio scene generation — speech, music, sound effects |
+| [demo-vid-mcp](https://github.com/sandraschi/demo-vid-mcp) | Fleet demo video pipeline — narrated walkthroughs synced to speech |
 
 ### 🎮 Games & Fun
 
@@ -338,12 +363,13 @@ The SVG itself carries everything inline:
 | [immich-mcp](https://github.com/sandraschi/immich-mcp) | Immich self-hosted photo/video management |
 | [arr-mcp](https://github.com/sandraschi/arr-mcp) | *arr stack — Sonarr/Radarr/Lidarr/Prowlarr/Overseerr |
 | [rtorrent-mcp](https://github.com/sandraschi/rtorrent-mcp) | rTorrent/ruTorrent client bridge |
+| [benny-the-dog-mcp](https://github.com/sandraschi/benny-the-dog-mcp) | Benny the dog health and care monitor |
 
 ### 🖥️ Windows & Desktop Automation
 
 | Repo | Description |
 | :--- | :--- |
-| [pywinauto-mcp](https://github.com/sandraschi/pywinauto-mcp) | Windows UI automation — reference Tauri/NSIS/CUA impl |
+| [windows-computer-use-mcp](https://github.com/sandraschi/windows-computer-use-mcp) | Windows UI automation — reference Tauri/NSIS/CUA impl |
 | [windows-operations-mcp](https://github.com/sandraschi/windows-operations-mcp) | Windows control plane — accounts, services, registry, firewall, WMI |
 | [windows-computer-use-mcp](https://github.com/sandraschi/windows-computer-use-mcp) | Desktop computer-use agent — UIA, OCR, mouse/keyboard |
 | [winrar-mcp](https://github.com/sandraschi/winrar-mcp) | WinRAR archive automation bridge |
@@ -353,7 +379,7 @@ The SVG itself carries everything inline:
 | [autohotkey-mcp](https://github.com/sandraschi/autohotkey-mcp) | AutoHotkey v2 script management and execution |
 | [sysinternals-mcp](https://github.com/sandraschi/sysinternals-mcp) | Sysinternals toolkit bridge — Process Explorer, Autoruns, etc. |
 | [fastsearch-mcp](https://github.com/sandraschi/fastsearch-mcp) | Everything fast file search integration |
-| [handbrake-mcp](https://github.com/sandraschi/handbrake-mcp) | HandBrake video transcoding bridge |
+| [handbrakemcp](https://github.com/sandraschi/handbrakemcp) | HandBrake video transcoding bridge |
 | [bookmarks-mcp](https://github.com/sandraschi/bookmarks-mcp) | Browser bookmarks management across browsers |
 
 ### 📡 Electronics & Bench
@@ -397,6 +423,10 @@ The SVG itself carries everything inline:
 | [discord-mcp](https://github.com/sandraschi/discord-mcp) | Discord platform bridge — messages, guilds, channels |
 | [telephony-mcp](https://github.com/sandraschi/telephony-mcp) | Telephony audit log and call management |
 | [teleconference-mcp](https://github.com/sandraschi/teleconference-mcp) | Teleconference platform bridge |
+| [comms-mcp](https://github.com/sandraschi/comms-mcp) | Unified messaging channels behind adapters — Telegram first |
+| [mastodon-mcp](https://github.com/sandraschi/mastodon-mcp) | Mastodon / ActivityPub client with human-approved outbox |
+| [bluesky-mcp](https://github.com/sandraschi/bluesky-mcp) | Bluesky / AT Proto client with human-approved outbox |
+| [substack-mcp](https://github.com/sandraschi/substack-mcp) | Substack publishing and dashboard |
 
 ### 🔬 Specialized & Science
 
