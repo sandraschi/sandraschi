@@ -1,0 +1,78 @@
+# ⚡ Sandra Schipal
+
+> [!NOTE]
+> **These repositories are human-architected, AI-implemented.**
+> Architecture, design decisions, and system integration are mine. Code generation and iteration are done by AI agents under my direction. [More on what that means and why →](docs/AGENTIC_AI.md)
+
+![Workshop](assets/sandraschi_header.png)
+
+<sub>*Sandra's workshop, Alsergrund, Vienna. Benny is real. The [Noetix Bumi](https://www.noetix.ai/) humanoid is aspirational (arriving soon).*</sub>
+
+I'm a retired and vibe-reactivated software engineer living in the 9th District (Alsergrund), Vienna. I build DIY robotics, maintain a fleet of 190+ MCP servers, and hang out with my German Shepherd Benny -- and soon, a Noetix Bumi humanoid robot.
+
+---
+
+## 🌐 The MCP Fleet
+
+I maintain a homespun fleet of **190+ repos**, each an MCP server with an associated webapp. MCP for agents, webapp for humans -- files, git, Plex, Calibre, robotics, 3D tools, music production, Vienna transit, and a lot more. Built on [FastMCP 3.4](https://gofastmcp.com).
+
+> 🌙 **All webapps are permanently dark mode. Night-owl approved.** No light toggle, no plans for one. Dim your OLEDs accordingly.
+
+![Fleet Topology](assets/hero.svg)
+
+→ **[Full MCP Project Catalog](MCP_CATALOG.md)** -- visual cards for every server in the fleet  
+→ **[Interactive Fleet Crossconnect Graph](FLEET_CROSSCONNECTS.md)** -- clickable connection map across CAD, VR, robotics, voice, and email clusters
+
+---
+
+## 🔥 Highlights & Vision
+
+- 🚀 **[Fleet Highlights: Superhuman Narrow in Practice](HIGHLIGHTS.md)**  
+  How non-experts direct AI agents to build domain-specific tooling for practical workflows -- featuring video & visual accompaniment for mobile DJs in an experimental C++ [`mixxxx` fork](https://github.com/sandraschi/mixxxxx) ([`mixx-dj-mcp`](https://github.com/sandraschi/mixx-dj-mcp)) and formal proofs via Lean 4 ([`leanforge-mcp`](https://github.com/sandraschi/leanforge-mcp)).
+
+- 🔮 **[Coming Next: sandrafleetbot](COMING_NEXT.md)**  
+  The free, sovereign GrokBot alternative -- running locally on consumer hardware (RTX 4090) at €0 per token with Muse Glimmer 30B, turning 190+ MCP servers into an autonomous agent tool surface.
+
+→ **[Superhuman Narrow Manifesto](docs/SUPERHUMAN_NARROW.md)** • **[Workshop & Hardware](WORKSHOP.md)** • **[Shenzhen Robotics](docs/SHENZHEN_ROBOTICS.md)** • **[Bloopers](docs/BLOOPERS.md)**
+
+---
+
+## 🐾 Benny
+
+**Benny** is a 2-year-old German Shepherd. Primary security consultant and tennis ball lifecycle manager at the Alsergrund node.
+
+---
+
+## 📚 External references
+
+People and sites worth following (no slop):
+
+| | |
+|---|---|
+| 🐦 **Simon Willison** | [simonwillison.net](https://simonwillison.net) -- agentic engineering patterns, AI benchmarks. The pelican test is his. |
+| ⚡ **FastMCP** | [gofastmcp.com](https://gofastmcp.com) -- the framework every server in this fleet is built on. |
+| 🧮 **Lean 4** | [lean-lang.org](https://lean-lang.org) -- formal proof verification. leanforge-mcp runs on this. |
+| 📄 **arXiv** | [arxiv.org](https://arxiv.org) -- where the useful papers live before the blog posts. |
+| 🎥 **Andrej Karpathy** | [YouTube](https://youtube.com/@andrejkarpathy) -- zero-hype technical AI. The "Intro to LLMs" talk is still the best single explanation. |
+| 🎥 **AI Explained** | [YouTube](https://youtube.com/@aiexplained-official) -- covers actual research, not product launches. Best depth-to-accessibility ratio. |
+| 🎥 **ThePrimeTime** | [YouTube](https://youtube.com/@ThePrimeTimeagen) -- dev perspective on AI tooling. Skeptical, calls out bullshit, aligns with the vibe coding vs agentic engineering framing. |
+| 📝 **Ethan Mollick** | [One Useful Thing](https://oneusefulthing.substack.com) -- AI in practice, short dense posts about what actually works. |
+| 📝 **Interconnects** (Nathan Lambert) | [Substack](https://interconnects.substack.com) -- ML research without fluff. Open-weight models, alignment, actual paper analysis. |
+
+<p align="center">
+  <img src="assets/pelican.svg" alt="" width="160"/>
+  <br/>
+  <a href="PELICAN.md"><sub>🐦 about the pelican</sub></a>
+</p>
+
+---
+
+## 🙏 Thanks
+
+Thanks to my brother **Stephan** for the ideas and war stories.
+
+---
+
+<p align="center">
+  <a href="CHANGELOG.md">Changelog</a>
+</p>
