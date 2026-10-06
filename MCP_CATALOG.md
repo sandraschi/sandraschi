@@ -370,7 +370,6 @@ The SVG itself carries everything inline:
 | [windows-computer-use-mcp](https://github.com/sandraschi/windows-computer-use-mcp) | Windows UI automation — reference Tauri/NSIS/CUA impl |
 | [windows-operations-mcp](https://github.com/sandraschi/windows-operations-mcp) | Windows control plane — accounts, services, registry, firewall, WMI |
 | [windows-computer-use-mcp](https://github.com/sandraschi/windows-computer-use-mcp) | Desktop computer-use agent — UIA, OCR, mouse/keyboard |
-| [winrar-mcp](https://github.com/sandraschi/winrar-mcp) | WinRAR archive automation bridge |
 | [beyondcompare-mcp](https://github.com/sandraschi/beyondcompare-mcp) | Beyond Compare diff/merge tool bridge |
 | [notepadpp-mcp](https://github.com/sandraschi/notepadpp-mcp) | Notepad++ editor automation |
 | [libreoffice-mcp](https://github.com/sandraschi/libreoffice-mcp) | LibreOffice headless convert + extension bridge |
