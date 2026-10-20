@@ -23,6 +23,17 @@ flowchart LR
 
 Each repo ships four layers wired to one **wrapee**: an **MCP server** for Claude or Cursor, **webapp** and **winapp** for humans, and **AI specialist chat and workflows** in the web stack. The wrapee itself isn't shipped - you already have it, or the repo helps you find, install, and wire it in (sometimes pointing you at a great but obscure one, like Inkscape, Lean, or a robot car).
 
+### rustification (r11n): the fleet is being rewritten in Rust
+
+**r11n** is the next layer, already running: the same wrapees, rebuilt as
+pure-Rust ArtCraft workspaces - `<domain>-core` / `<domain>-mcp` / `<domain>-app`, one
+`cargo` toolchain, no Python runtime, no Electron, no `node_modules`. First converts:
+`rust-devices-mcp`, `rust-plex-mcp`, `rust-calibre-mcp`, `rust-arr-mcp`,
+`rust-yahboom-mcp`, `rust-sdr-mcp`.
+
+Why it is worth doing, how it runs as an SOP with deterministic gates, and what "done"
+means: **[r11n](RUSTIFICATION.md)**.
+
 ---
 
 ## The idea in 30 seconds
@@ -48,6 +59,7 @@ Details: **[Why the fleet looks like this](WHY_FLEET.md)** - why one repo per to
 | The machine and the hardware behind it | **[Workshop](WORKSHOP.md)** - Goliath, RTX 4090, Boomy, Bumi |
 | Who runs this (workshop photo, Benny, follows, thanks) | **[About Sandra](ABOUT.md)** - the personal tail, kept off this page on purpose |
 | How it is built (developers: tools, tests, standards, CI) | **[Dev Stack](DEV_STACK.md)** - very technical, everyone else stop here |
+| Why the fleet is being rewritten in Rust (r11n) | **[r11n](RUSTIFICATION.md)** - the why, the SOP, the first six converts |
 | The rogues' gallery (Alexa air-gap, listening ops, live demos) | **[Sneaky Feats](SNEAKY_FEATS.md)** - mischief with guardrails |
 | So you want to be a v̶i̶b̶e̶c̶o̶d̶e̶r̶ "agentic architect" | **[Vibecoding Notes](VIBECODING_NOTES.md)** - subscription round-robin, DeepSeek peak-hour gotchas |
 | The wins that actually cleared a real bar | **[Our (Nontrivial) Successes](SUCCESSES.md)** - external validation, hard problems solved, real thresholds crossed |
