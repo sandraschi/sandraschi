@@ -31,8 +31,8 @@ pure-Rust ArtCraft workspaces - `<domain>-core` / `<domain>-mcp` / `<domain>-app
 `rust-devices-mcp`, `rust-plex-mcp`, `rust-calibre-mcp`, `rust-arr-mcp`,
 `rust-yahboom-mcp`, `rust-sdr-mcp`.
 
-Why it is worth doing, how it runs as an SOP with deterministic gates, and what "done"
-means: **[r11n](RUSTIFICATION.md)**.
+Why it is worth doing, how it runs as a standard operating procedure (SOP) with
+deterministic gates, and what "done" means: **[r11n](RUSTIFICATION.md)**.
 
 ---
 

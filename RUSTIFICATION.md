@@ -40,7 +40,8 @@ the port is worth the effort even when the Python repo worked.
 
 1. **Crash classes become compile errors.** `unwrap_used`, `expect_used`, `panic`, `todo`
    and `unimplemented` are denied workspace-wide. A handler that would have thrown a
-   Python traceback at 2am fails `cargo clippy` instead. The SOP adds the runtime half:
+   Python traceback at 2am fails `cargo clippy` instead. The standard operating
+   procedure (SOP) adds the runtime half:
    no byte-index string slicing (German umlauts, degree signs), no `v[i]` indexing,
    read-only SQLite handles with a busy timeout for databases another program also owns.
 2. **No environment drift.** No `.venv`, no uv sync, no Python minor-version surprises,
