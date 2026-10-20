@@ -38,12 +38,18 @@ the port is worth the effort even when the Python repo worked.
 
 ## Why we do it
 
-1. **Crash classes become compile errors.** `unwrap_used`, `expect_used`, `panic`, `todo`
-   and `unimplemented` are denied workspace-wide. A handler that would have thrown a
-   Python traceback at 2am fails `cargo clippy` instead. The standard operating
-   procedure (SOP) adds the runtime half:
-   no byte-index string slicing (German umlauts, degree signs), no `v[i]` indexing,
-   read-only SQLite handles with a busy timeout for databases another program also owns.
+Six reasons, in the order they actually bit us. None of them is "Rust is fast".
+
+1. **Whole crash categories stop compiling.** Bad input that used to throw a Python
+   traceback at 2am now fails the build. The five usual escape hatches are banned
+   workspace-wide - `unwrap_used`, `expect_used`, `panic`, `todo`, `unimplemented` - so
+   "I did not handle this case" has to be written down as a decision instead of being
+   discovered in production. The standard operating procedure (SOP) covers what a
+   compiler cannot see: text is cut by characters, not bytes (one umlaut or degree sign
+   was enough to split a string mid-character), a list is read through a checked accessor
+   instead of `list[i]`, and a database another program is also using (Calibre's
+   `metadata.db`, Plex) is opened read-only with a wait timeout, so the Rust side cannot
+   lock or corrupt the app it is reading from.
 2. **No environment drift.** No `.venv`, no uv sync, no Python minor-version surprises,
    no `node_modules`. Two binaries and a Cargo.lock. "Works on my machine" stops being a
    category of bug.
