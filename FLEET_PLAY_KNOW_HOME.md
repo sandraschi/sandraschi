@@ -56,7 +56,7 @@ The unglamorous half that earns its keep daily.
 | [plex-mcp](https://github.com/sandraschi/plex-mcp) / [jellyfin-mcp](https://github.com/sandraschi/jellyfin-mcp) | Plex / Jellyfin | Library curation without the click marathon |
 | [devices-mcp](https://github.com/sandraschi/devices-mcp) / [home-assistant-mcp](https://github.com/sandraschi/home-assistant-mcp) | Smart home / Home Assistant | One grid for plugs, lights, doorbell alerts to voice |
 | [alexa-mcp](https://github.com/sandraschi/alexa-mcp) / [speech-mcp](https://github.com/sandraschi/speech-mcp) | Alexa / TTS+STT gateway | Command routing in, spoken readouts out ("render done", "intrusion alert") |
-| [mywienerlinien](https://github.com/sandraschi/mywienerlinien) | Wiener Linien transit | Real-time departures for the 9th District |
+| [publictransport-mcp](https://github.com/sandraschi/publictransport-mcp) | Wiener Linien transit | Real-time departures for the 9th District |
 | [email-mcp](https://github.com/sandraschi/email-mcp) / [discord-mcp](https://github.com/sandraschi/discord-mcp) | Email / Discord | Digests in, approvals out, community listening with tone lint |
 | [immich-mcp](https://github.com/sandraschi/immich-mcp) | Immich photos | Self-hosted photo grid, Benny pictures included |
 | [nuki-mcp](https://github.com/sandraschi/nuki-mcp) / [ring-mcp](https://github.com/sandraschi/ring-mcp) / [tapo-mcp](https://github.com/sandraschi/tapo-mcp) | Nuki lock / Ring / Tapo | Door, camera, plugs - each optional, each dashboarded |

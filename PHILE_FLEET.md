@@ -32,7 +32,7 @@ There are fucktons of Japan travel sites. None that we can find ships the 2026 S
 - **Memory.** Quiz scores, streaks, diary: the companion knows where you are in the journey. A travel site forgets you at the tab close.
 - **Voice.** "Speechy japan, quiz me on N4 food words while I cook" - speech-mcp bus, local STT, spoken answers. No travel site does dishes with you.
 - **Local and EUR 0.** Seeds + local model. No account, no subscription, no per-query meter.
-- **Crossconnected.** Manga via komga/kavita, video via bilibili-mcp, goods via prc-shopping-mcp, transit via the mywienerlinien pattern pointed at JR. The guide is a node, not a silo.
+- **Crossconnected.** Manga via komga/kavita, video via bilibili-mcp, goods via prc-shopping-mcp, transit via the publictransport-mcp pattern pointed at JR. The guide is a node, not a silo.
 
 That stack - MCP + skills chat + progress memory + voice + local LLM + fleet links - is the moat. Content can be copied; an operable companion cannot be screenshotted.
 

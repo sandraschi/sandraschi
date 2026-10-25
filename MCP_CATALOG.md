@@ -92,9 +92,9 @@ Physical and simulated robots, plus avatar identity for virtual embodiment.
 
 ## 🏠 Home & Infrastructure
 
-| [![Devices](assets/card_devices.svg)](https://github.com/sandraschi/devices-mcp#readme) | [![Transit](assets/card_transit.svg)](https://github.com/sandraschi/mywienerlinien#readme) |
+| [![Devices](assets/card_devices.svg)](https://github.com/sandraschi/devices-mcp#readme) | [![Transit](assets/card_transit.svg)](https://github.com/sandraschi/publictransport-mcp#readme) |
 | :--- | :--- |
-| **[devices-mcp](https://github.com/sandraschi/devices-mcp)** | **[mywienerlinien](https://github.com/sandraschi/mywienerlinien)** |
+| **[devices-mcp](https://github.com/sandraschi/devices-mcp)** | **[publictransport-mcp](https://github.com/sandraschi/publictransport-mcp)** |
 | Unified interface for Smart Home control and IoT grid management. | Real-time Vienna city transit (Wiener Linien) API integration. |
 
 ---
@@ -349,7 +349,7 @@ The SVG itself carries everything inline:
 | Repo | Description |
 | :--- | :--- |
 | [devices-mcp](https://github.com/sandraschi/devices-mcp) | Smart home control and IoT grid management |
-| [mywienerlinien](https://github.com/sandraschi/mywienerlinien) | Real-time Vienna city transit (Wiener Linien) API |
+| [publictransport-mcp](https://github.com/sandraschi/publictransport-mcp) | Real-time Vienna city transit (Wiener Linien) API |
 | [alexa-mcp](https://github.com/sandraschi/alexa-mcp) | Amazon Alexa smart home bridge |
 | [home-assistant-mcp](https://github.com/sandraschi/home-assistant-mcp) | Home Assistant automation platform bridge |
 | [ring-mcp](https://github.com/sandraschi/ring-mcp) | Ring doorbell/camera API bridge |
