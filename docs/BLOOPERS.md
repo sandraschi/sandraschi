@@ -12,7 +12,7 @@
 
 ### `&&` in PowerShell
 
-This one refuses to die. The [PowerShell standard](https://github.com/sandraschi/mcp-central-docs/blob/master/standards/rules/powershell-script-standards.md)
+This one refuses to die. The [PowerShell standard](https://github.com/sandraschi/documentation-mcp/blob/master/standards/rules/powershell-script-standards.md)
 says, in bold, **no `&&`**. The linter flags it. Every `build.ps1` and
 `start.ps1` in the fleet uses `;` or `if ($?) { ... }`. The AI has read this rule
 hundreds of times.

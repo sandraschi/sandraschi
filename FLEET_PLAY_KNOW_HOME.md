@@ -39,7 +39,7 @@ Research you can ask questions of.
 | Repo | What it wraps | When you want it |
 |---|---|---|
 | [advanced-memory-mcp](https://github.com/sandraschi/advanced-memory-mcp) | Zettelkasten + RAG (LanceDB) | 200+ skills, conversational recall, the fleet's long-term memory |
-| [calibre-mcp](https://github.com/sandraschi/calibre-mcp) | Calibre ebooks (13k) | Full-text + semantic search over your own library |
+| [calibre-mcp](https://github.com/sandraschi/calibremcp) | Calibre ebooks (13k) | Full-text + semantic search over your own library |
 | [arxiv-mcp](https://github.com/sandraschi/arxiv-mcp) | arXiv papers | Search, full text, citation trace, ingest into memory |
 | [aiwatcher-mcp](https://github.com/sandraschi/aiwatcher-mcp) | News + fleet observability | Daily digest to email, breaking-news TTS, archive to Calibre |
 | [leanforge-mcp](https://github.com/sandraschi/leanforge-mcp) | Lean 4 proofs | LLM proposes, compiler verifies, loop until proven. No math degree needed |
@@ -53,7 +53,7 @@ The unglamorous half that earns its keep daily.
 
 | Repo | What it wraps | When you want it |
 |---|---|---|
-| [plex-mcp](https://github.com/sandraschi/plex-mcp) / [jellyfin-mcp](https://github.com/sandraschi/jellyfin-mcp) | Plex / Jellyfin | Library curation without the click marathon |
+| [plex-mcp](https://github.com/sandraschi/plexmcp) / [jellyfin-mcp](https://github.com/sandraschi/jellyfin-mcp) | Plex / Jellyfin | Library curation without the click marathon |
 | [devices-mcp](https://github.com/sandraschi/devices-mcp) / [home-assistant-mcp](https://github.com/sandraschi/home-assistant-mcp) | Smart home / Home Assistant | One grid for plugs, lights, doorbell alerts to voice |
 | [alexa-mcp](https://github.com/sandraschi/alexa-mcp) / [speech-mcp](https://github.com/sandraschi/speech-mcp) | Alexa / TTS+STT gateway | Command routing in, spoken readouts out ("render done", "intrusion alert") |
 | [publictransport-mcp](https://github.com/sandraschi/publictransport-mcp) | Wiener Linien transit | Real-time departures for the 9th District |

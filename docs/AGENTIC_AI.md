@@ -173,7 +173,7 @@ impossible for an individual.
 ## Further reading
 
 - **[SUPERHUMAN_NARROW.md](SUPERHUMAN_NARROW.md)** — domain-specific superhuman AI: why LLM-augmented development isn't just faster, it's structurally different. The intrinsic advantages (tests, docs, infra), the VC vs. FOSS three-phase story, and the maintainer spectrum.
-- **[Fleet standards](https://github.com/sandraschi/mcp-central-docs/tree/master/standards)** — the playbook every repo follows. Tool design, response patterns, Tauri NSIS, PowerShell rules.
+- **[Fleet standards](https://github.com/sandraschi/documentation-mcp/tree/master/standards)** — the playbook every repo follows. Tool design, response patterns, Tauri NSIS, PowerShell rules.
 - **[leanforge-mcp](https://github.com/sandraschi/leanforge-mcp)** — Lean 4 formal proof search via LLM + compiler feedback loop. The most ambitious current project.
 - **[arxiv-mcp](https://github.com/sandraschi/arxiv-mcp)** — pipe into arXiv for the empirical literature on agentic coding.
 - Simon Willison's **[Agentic Engineering Patterns](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/)** — the best writing on working in this mode. His *vibe coding*[^vibe] vs. *agentic engineering*[^agentic] distinction maps directly to how this fleet is built.

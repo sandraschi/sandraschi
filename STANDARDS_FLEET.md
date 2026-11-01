@@ -2,7 +2,7 @@
 
 Yes, the standards are their own meta fleet. 130+ docs with readers, writers, versioning, deprecations, and migration fallout - everything the repo fleet has, except the wrapee is *how we build*. Haha. But also serious: this page explains how the library is organized, how it evolves, and in what order to read it.
 
-Home: [mcp-central-docs](https://github.com/sandraschi/mcp-central-docs) (`standards/`). Enforcer: every agent reads before coding; "I didn't read it" is never an accepted explanation.
+Home: [mcp-central-docs](https://github.com/sandraschi/documentation-mcp) (`standards/`). Enforcer: every agent reads before coding; "I didn't read it" is never an accepted explanation.
 
 ---
 
@@ -41,5 +41,5 @@ Standards are versioned by git history like everything else. Breaking changes go
 
 ## Next
 
-- Parent: [Dev Stack](DEV_STACK.md) - Library: [mcp-central-docs](https://github.com/sandraschi/mcp-central-docs)
+- Parent: [Dev Stack](DEV_STACK.md) - Library: [mcp-central-docs](https://github.com/sandraschi/documentation-mcp)
 - Enforcement arm: [Bug Depot Protocol](BUG_DEPOT_PROTOCOL.md) - Consumer: every agent, every session

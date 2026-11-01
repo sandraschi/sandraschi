@@ -150,7 +150,7 @@ graph TD
   click comms "https://github.com/sandraschi/comms-mcp" "Open comms-mcp on GitHub"
   click vienna "https://github.com/sandraschi/vienna-life-assistant" "Open vienna-life-assistant on GitHub"
   click arxiv "https://github.com/sandraschi/arxiv-mcp" "Open arxiv-mcp on GitHub"
-  click calibre "https://github.com/sandraschi/calibre-mcp" "Open calibre-mcp on GitHub"
+  click calibre "https://github.com/sandraschi/calibremcp" "Open calibre-mcp on GitHub"
   click reaper "https://github.com/sandraschi/reaper-mcp" "Open reaper-mcp on GitHub"
   click virtualdj "https://github.com/sandraschi/virtualdj-mcp" "Open virtualdj-mcp on GitHub"
   click mixxdj "https://github.com/sandraschi/mixx-dj-mcp" "Open mixx-dj-mcp on GitHub"
@@ -190,7 +190,7 @@ Any compute-intensive server (`arxiv-mcp`, `calibre-mcp`, `blender-mcp`, `worldl
 ---
 
 ## 3. Fleet Crossconnect Architecture Rules
-All crossconnects adhere to [`FLEET_CROSSCONNECT_STANDARD.md`](https://github.com/sandraschi/mcp-central-docs/blob/main/standards/FLEET_CROSSCONNECT_STANDARD.md):
+All crossconnects adhere to [`FLEET_CROSSCONNECT_STANDARD.md`](https://github.com/sandraschi/documentation-mcp/blob/master/standards/FLEET_CROSSCONNECT_STANDARD.md):
 - **Rule 1: Standalone by Default**: Every server boots cleanly without requiring companion servers. Crossconnects are optional enhancements.
 - **Rule 2: The 1-Hop Contract**: Repositories document and link only their immediate peers. No transitive dependency chasing.
 - **Rule 3: Soft Degradation**: Missing companions return friendly installation URLs rather than crashing.

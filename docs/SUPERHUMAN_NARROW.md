@@ -522,7 +522,7 @@ exist. The trajectory is clear.
 - The **[Model Context Protocol](https://modelcontextprotocol.io)** — the protocol
   layer that lets AI agents discover and call tools across domains. The fleet's
   entire architecture depends on it.
-- **[open source contributing](https://github.com/sandraschi/mcp-central-docs/blob/master/standards/rules/open_source_contributing.md)** —
+- **[open source contributing](https://github.com/sandraschi/documentation-mcp/blob/master/standards/rules/open_source_contributing.md)** —
   the fleet's own AI-contribution etiquette. File an issue first. Keep diffs small.
   Don't mention AI. The code stands on its own merits.
 

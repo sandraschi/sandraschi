@@ -173,10 +173,10 @@ compared with a port that has to be thrown away.
 
 ## Where the rules live
 
-- Conversion standard: [FLEET_CONVERSION_STANDARD.md](https://github.com/sandraschi/mcp-central-docs/blob/main/standards/rust-artcraft/FLEET_CONVERSION_STANDARD.md)
-- The macro and phases: [REPCONV_SOP.md](https://github.com/sandraschi/mcp-central-docs/blob/main/patterns/REPCONV_SOP.md)
-- Triage and the 4-bucket matrix: [RUST_ARTCRAFT_STANDARD.md](https://github.com/sandraschi/mcp-central-docs/blob/main/standards/RUST_ARTCRAFT_STANDARD.md)
-- Containment harness and the 6-gate definition of done: [CONTAINMENT_AND_CRATES.md](https://github.com/sandraschi/mcp-central-docs/blob/main/standards/rust-artcraft/CONTAINMENT_AND_CRATES.md)
+- Conversion standard: [FLEET_CONVERSION_STANDARD.md](https://github.com/sandraschi/documentation-mcp/blob/master/standards/rust-artcraft/FLEET_CONVERSION_STANDARD.md)
+- The macro and phases: [REPCONV_SOP.md](https://github.com/sandraschi/documentation-mcp/blob/master/patterns/REPCONV_SOP.md)
+- Triage and the 4-bucket matrix: [RUST_ARTCRAFT_STANDARD.md](https://github.com/sandraschi/documentation-mcp/blob/master/standards/RUST_ARTCRAFT_STANDARD.md)
+- Containment harness and the 6-gate definition of done: [CONTAINMENT_AND_CRATES.md](https://github.com/sandraschi/documentation-mcp/blob/master/standards/rust-artcraft/CONTAINMENT_AND_CRATES.md)
 - Golden blueprint: [rust-devices-mcp](https://github.com/sandraschi/rust-devices-mcp)
 
 ## Run it

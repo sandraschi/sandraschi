@@ -39,4 +39,4 @@ Example: I'm in Vienna (UTC+2) and sleep 3am-10am local, so the entire peak wind
 3. Does the cheap tier require a data/training trade-off you're fine with?
 4. Do the benchmarks for your actual workload justify the switch - independently verified score, or just vendor-reported?
 
-Fleet cross-reference: [mcp-central-docs/patterns/AI_SUBSCRIPTION_ROTATION_OPTIMIZER.md](https://github.com/sandraschi/mcp-central-docs/blob/main/patterns/AI_SUBSCRIPTION_ROTATION_OPTIMIZER.md) has the same pattern in fleet-standard doc format.
+Fleet cross-reference: [mcp-central-docs/patterns/AI_SUBSCRIPTION_ROTATION_OPTIMIZER.md](https://github.com/sandraschi/documentation-mcp/blob/master/patterns/AI_SUBSCRIPTION_ROTATION_OPTIMIZER.md) has the same pattern in fleet-standard doc format.

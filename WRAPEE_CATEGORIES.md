@@ -8,7 +8,7 @@
 
 One program you already know. Install it, point the repo at it, done.
 
-Examples: [blender-mcp](https://github.com/sandraschi/blender-mcp) (Blender 3D), [qcad-mcp](https://github.com/sandraschi/qcad-mcp) (QCAD drafting), [plex-mcp](https://github.com/sandraschi/plex-mcp) (Plex media), [obs-mcp](https://github.com/sandraschi/obs-mcp) (OBS Studio), [reaper-mcp](https://github.com/sandraschi/reaper-mcp) (REAPER DAW).
+Examples: [blender-mcp](https://github.com/sandraschi/blender-mcp) (Blender 3D), [qcad-mcp](https://github.com/sandraschi/qcad-mcp) (QCAD drafting), [plex-mcp](https://github.com/sandraschi/plexmcp) (Plex media), [obs-mcp](https://github.com/sandraschi/obs-mcp) (OBS Studio), [reaper-mcp](https://github.com/sandraschi/reaper-mcp) (REAPER DAW).
 
 - **You need:** the program itself, installed separately. Never bundled.
 - **The agent gets:** tool calls driving it (render, export, search library, switch scene).

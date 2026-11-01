@@ -132,4 +132,4 @@ Batch-size limit (max 5 files per operation), timestamped `.bak` copies before a
 
 - Nontechnical start: [Why so many repos?](WHY_FLEET.md) - [Main page](README.md)
 - The agent: [Fritz](FRITZ.md) - The brain: [Local LLM Stack](LOCAL_LLM_STACK.md) - The roadmap: [Coming Next](COMING_NEXT.md)
-- Standards library: [mcp-central-docs](https://github.com/sandraschi/mcp-central-docs) - Docs server: [documentation-mcp](https://github.com/sandraschi/documentation-mcp)
+- Standards library: [mcp-central-docs](https://github.com/sandraschi/documentation-mcp) - Docs server: [documentation-mcp](https://github.com/sandraschi/documentation-mcp)
