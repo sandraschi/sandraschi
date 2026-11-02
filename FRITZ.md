@@ -19,6 +19,8 @@ Fritz does not improvise its job description. Work is declared as YAML workflows
 - **fritz_contribute**: clone -> lint -> issue -> branch -> fix -> PR. End-to-end agentic PRs on test repos.
 - **fritz_surveil**: triage engine over two domains (external news, fleet logs and health). Restart loop 3x in 10 min -> urgent. Transition-aware: it fires when a healthy server goes bad, not for permanently dead ones (that is registry hygiene, not an alert).
 - **Memory hooks**: every agent task ends with a memory note plus a diary entry. Repeated manual asks auto-suggest a cron schedule after 3 in 7 days. Skills are first-class memory cards.
+- **Stigmergic Swarm & r11n** (v0.3.0): decentralized autonomous workers coordinating via `.r11n/claim.json` and declarative invariants (`Observe -> Diff -> Act`). Proven on `fritz-test` autonomous bug repair.
+- **Space-Efficient WSL2 Sandboxing**: no big monolithic VMs; workers run in lightweight WSL2 micro-sandboxes using OverlayFS, sparse VHDX, and Git Worktrees (`git worktree add`) with dynamic memory reclaim. Full spec: [docs/STIGMERGIC_SWARM.md](docs/STIGMERGIC_SWARM.md).
 - **Voice loop**: wake word -> briefing spoken aloud -> report on the board. Verified live, fully local.
 
 ## Connectors: everything through the hub
